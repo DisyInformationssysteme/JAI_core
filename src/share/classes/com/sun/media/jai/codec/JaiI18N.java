@@ -10,12 +10,13 @@
  * $State: Exp $
  */
 package com.sun.media.jai.codec;
-import com.sun.media.jai.codecimpl.util.PropertyUtil;
+
+import com.sun.media.jai.util.PropertyUtil;
 
 class JaiI18N {
-    static String packageName = "com.sun.media.jai.codec";
+  static String packageName = "com.sun.media.jai.codec";
 
-    public static String getString(String key) {
-        return PropertyUtil.getString(packageName, key);
-    }
+  public static String getString(final String key) {
+    return PropertyUtil.getString(packageName, key);
+  }
 }
