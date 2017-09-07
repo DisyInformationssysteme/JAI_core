@@ -1,0 +1,98 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <name>JAI Core</name>
+  <groupId>net.disy.jai</groupId>
+  <artifactId>jai-core</artifactId>
+  <version>1.0.0</version>
+  <packaging>jar</packaging>
+
+
+  <!--<dependencies>-->
+    <!--<dependency>-->
+      <!--<groupId>mlibwrapper_jai</groupId>-->
+      <!--<artifactId>mlibwrapper_jai</artifactId>-->
+      <!--<scope>system</scope>-->
+      <!--<version>1.0</version>-->
+      <!--<systemPath>${basedir}/build/linux-amd64/debug/lib/ext/mlibwrapper_jai.jar</systemPath>-->
+    <!--</dependency>-->
+  <!--</dependencies>-->
+
+
+  <dependencies>
+  <dependency>
+    <groupId>net.disy.jai</groupId>
+    <artifactId>mlibwrapper_jai</artifactId>
+    <version>0.0.1</version>
+  </dependency>
+
+  </dependencies>
+
+  <build>
+  <pluginManagement>
+  <plugins>
+  <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-install-plugin</artifactId>
+    <version>2.5.2</version>
+    <executions>
+      <execution>
+        <id>install-external</id>
+        <phase>clean</phase>
+        <configuration>
+          <file>${basedir}/build/linux-amd64/debug/lib/ext/mlibwrapper_jai.jar</file>
+          <repositoryLayout>default</repositoryLayout>
+          <groupId>net.disy.jai</groupId>
+          <artifactId>mlibwrapper_jai</artifactId>
+          <version>0.0.1</version>
+          <packaging>jar</packaging>
+          <generatePom>true</generatePom>
+        </configuration>
+        <goals>
+          <goal>install-file</goal>
+        </goals>
+      </execution>
+    </executions>
+  </plugin>
+  </plugins>
+  </pluginManagement>
+  </build>
+
+<profiles>
+  <profile>
+    <id>java9</id>
+    <!-- automatically activate the profile if running on Java 9 -->
+    <activation>
+      <jdk>9</jdk>
+    </activation>
+    <build>
+      <pluginManagement>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.6.1</version>
+            <configuration>
+              <compilerId>javac</compilerId>
+              <fork>true</fork>
+              <!-- do not use "release" because it does not work with add-exports -->
+              <source>9</source>
+              <target>9</target>
+              <maxmem>512</maxmem>
+              <meminitial>64</meminitial>
+              <encoding>UTF-8</encoding>
+              <compilerArgs>
+                <arg>--add-modules</arg><arg>java.xml.bind</arg>
+                <arg>--add-exports</arg><arg>java.desktop/java.awt.peer=ALL-UNNAMED</arg>
+                <arg>--add-exports</arg><arg>java.desktop/sun.awt.image=ALL-UNNAMED</arg>
+                <arg>--add-exports</arg><arg>java.base/sun.security.action=ALL-UNNAMED</arg>
+              </compilerArgs>
+            </configuration>
+          </plugin>
+        </plugins>
+      </pluginManagement>
+    </build>
+  </profile>
+</profiles>
+
+</project>
