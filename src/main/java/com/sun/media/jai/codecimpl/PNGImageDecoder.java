@@ -41,7 +41,6 @@ import javax.media.jai.util.ImagingException;
 import com.sun.media.jai.codec.ImageCodec;
 import com.sun.media.jai.codec.ImageDecoderImpl;
 import com.sun.media.jai.codec.PNGDecodeParam;
-import com.sun.media.jai.codec.PNGEncodeParam;
 
 /**
  * @since EA3

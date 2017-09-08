@@ -32,12 +32,10 @@ import javax.media.jai.FloatDoubleColorModel;
 import com.sun.media.jai.codecimpl.BMPCodec;
 import com.sun.media.jai.codecimpl.FPXCodec;
 import com.sun.media.jai.codecimpl.GIFCodec;
-import com.sun.media.jai.codecimpl.ImagingListenerProxy;
 import com.sun.media.jai.codecimpl.PNGCodec;
 import com.sun.media.jai.codecimpl.PNMCodec;
 import com.sun.media.jai.codecimpl.TIFFCodec;
 import com.sun.media.jai.codecimpl.WBMPCodec;
-import com.sun.media.jai.util.SimpleCMYKColorSpace;
 
 /**
  * An abstract class allowing the creation of image decoders and

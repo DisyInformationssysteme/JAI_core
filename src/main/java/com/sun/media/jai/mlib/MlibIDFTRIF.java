@@ -18,12 +18,9 @@ import javax.media.jai.BorderExtender;
 import javax.media.jai.EnumeratedParameter;
 import javax.media.jai.ImageLayout;
 import javax.media.jai.JAI;
-import java.util.Map;
 import javax.media.jai.operator.DFTDescriptor;
-import com.sun.media.jai.opimage.DFTOpImage;
-import com.sun.media.jai.opimage.FFT;
+
 import com.sun.media.jai.opimage.RIFUtil;
-import com.sun.media.jai.util.MathJAI;
 
 /**
  * A <code>RIF</code> supporting the "IDFT" operation in the
@@ -52,7 +49,7 @@ public class MlibIDFTRIF implements RenderedImageFactory {
                                 RenderingHints hints) {
         /* Get ImageLayout and TileCache from RenderingHints. */
         ImageLayout layout = RIFUtil.getImageLayoutHint(hints);
-        
+
 
         if (!MediaLibAccessor.isMediaLibCompatible(new ParameterBlock())) {
             return null;

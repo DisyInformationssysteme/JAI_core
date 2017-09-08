@@ -16,7 +16,6 @@ import java.awt.image.renderable.RenderableImage;
 import javax.media.jai.JAI;
 import javax.media.jai.OperationDescriptorImpl;
 import javax.media.jai.ParameterBlockJAI;
-import javax.media.jai.RenderableOp;
 import javax.media.jai.RenderedOp;
 import javax.media.jai.registry.RenderableRegistryMode;
 import javax.media.jai.registry.RenderedRegistryMode;
@@ -40,7 +39,7 @@ import javax.media.jai.registry.RenderedRegistryMode;
  * unchanged.  This behavior parallels that of the Java unary minus
  * operator (see <i>The Java Language Specification</i>, section
  * 15.14.4).
- * 
+ *
  * <p><table border=1>
  * <caption>Resource List</caption>
  * <tr><th>Name</th>        <th>Value</th></tr>

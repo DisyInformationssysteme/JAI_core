@@ -17,7 +17,6 @@ import java.awt.image.renderable.RenderableImage;
 import javax.media.jai.JAI;
 import javax.media.jai.OperationDescriptorImpl;
 import javax.media.jai.ParameterBlockJAI;
-import javax.media.jai.RenderableOp;
 import javax.media.jai.RenderedOp;
 import javax.media.jai.registry.RenderableRegistryMode;
 import javax.media.jai.registry.RenderedRegistryMode;
@@ -61,7 +60,7 @@ import javax.media.jai.registry.RenderedRegistryMode;
  * <tr><td>Version</td>     <td>1.0</td></tr>
  * <tr><td>arg0Desc</td>    <td>The constants to be subtracted from.</td></tr>
  * </table></p>
- * 
+ *
  * <p><table border=1>
  * <caption>Parameter List</caption>
  * <tr><th>Name</th>      <th>Class Type</th>

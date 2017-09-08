@@ -15,9 +15,7 @@ import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
 import java.awt.image.renderable.RenderedImageFactory;
 import javax.media.jai.ImageLayout;
-import java.util.Map;
-import com.sun.media.jai.opimage.DCTOpImage;
-import com.sun.media.jai.opimage.FCT;
+
 import com.sun.media.jai.opimage.RIFUtil;
 
 /**
@@ -46,7 +44,7 @@ public class MlibIDCTRIF implements RenderedImageFactory {
                                 RenderingHints hints) {
         /* Get ImageLayout and TileCache from RenderingHints. */
         ImageLayout layout = RIFUtil.getImageLayoutHint(hints);
-        
+
 
         if (!MediaLibAccessor.isMediaLibCompatible(new ParameterBlock())) {
             return null;

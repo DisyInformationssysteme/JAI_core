@@ -14,12 +14,9 @@ import java.awt.RenderingHints;
 import java.awt.image.renderable.ParameterBlock;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.HashMap;
 import java.util.Iterator;
-import javax.media.jai.CollectionImage;
+
 import javax.media.jai.CollectionImageFactory;
-import javax.media.jai.CollectionOp;
-import javax.media.jai.ImageLayout;
 import javax.media.jai.PlanarImage;
 import javax.media.jai.RenderedOp;
 

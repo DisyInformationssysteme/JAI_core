@@ -18,14 +18,13 @@ import javax.media.jai.KernelJAI;
 import javax.media.jai.LookupTableJAI;
 import javax.media.jai.OperationDescriptorImpl;
 import javax.media.jai.ParameterBlockJAI;
-import javax.media.jai.ROI;
 import javax.media.jai.RenderedOp;
 import javax.media.jai.registry.RenderedRegistryMode;
 
 /**
  * An <code>OperationDescriptor</code> describing the "ErrorDiffusion"
  * operation.
- * 
+ *
  * <p> The "ErrorDiffusion" operation performs color quantization by
  * finding the nearest color to each pixel in a supplied color map
  * and "diffusing" the color quantization error below and to the right

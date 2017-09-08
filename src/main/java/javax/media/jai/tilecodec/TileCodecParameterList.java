@@ -11,10 +11,9 @@
  */package javax.media.jai.tilecodec;
 
 import javax.media.jai.ParameterListDescriptor;
-import javax.media.jai.ParameterListImpl;
 
 /**
- * A subclass of <code>ParameterListImpl</code> that is specific to 
+ * A subclass of <code>ParameterListImpl</code> that is specific to
  * tile codecs. This class functions in either one or both of the two
  * registry modes supported by the <code>TileCodecDescriptor</code>
  * - "tileEncoder" and "tileDecoder".
@@ -24,8 +23,8 @@ import javax.media.jai.ParameterListImpl;
  * class which can be used as is for representing a parameter list for
  * any tile encoding/decoding format. The <code>ParameterListDescriptor</code>
  * provided as argument to the constructor should be the one returned from
- * the <code>getParameterListDescriptor()</code> method of the 
- * <code>TileCodecDescriptor</code> for the given format name. 
+ * the <code>getParameterListDescriptor()</code> method of the
+ * <code>TileCodecDescriptor</code> for the given format name.
  *
  * <p> If the associated <code>TileCodecDescriptor</code>'s
  * <code>includesSampleModelInfo()</code> method returns false, then for the
@@ -45,10 +44,10 @@ public class TileCodecParameterList extends ParameterListImpl {
     /**
      * Creates a <code>TileCodecParameterList</code>. The
      * <code>validModes</code> argument specifies the registry modes valid
-     * for this <code>TileCodecParameterList</code>. This should contain 
+     * for this <code>TileCodecParameterList</code>. This should contain
      * the "tileEncoder" registry mode or the "tileDecoder" registry
      * mode or both. The supplied descriptor object specifies the names
-     * and number of the valid parameters, their <code>Class</code> types, 
+     * and number of the valid parameters, their <code>Class</code> types,
      * as well as the <code>Range</code> of valid values for each parameter.
      *
      * @param formatName The name of the format, parameters for which are
@@ -71,7 +70,7 @@ public class TileCodecParameterList extends ParameterListImpl {
                                   ParameterListDescriptor descriptor) {
         super(descriptor);
 
-	// Cause IllegalArgumentException to be thrown if any of the 
+	// Cause IllegalArgumentException to be thrown if any of the
 	// arguments is null.
 	if (formatName == null) {
 	    throw new IllegalArgumentException(
@@ -96,12 +95,12 @@ public class TileCodecParameterList extends ParameterListImpl {
      * Returns the name of the format which this parameter list describes.
      */
     public String getFormatName() {
-	return formatName;			  
+	return formatName;
     }
 
     /**
-     * Returns true if the parameters in this 
-     * <code>TileCodecParameterList</code> are valid for the specified 
+     * Returns true if the parameters in this
+     * <code>TileCodecParameterList</code> are valid for the specified
      * registry mode name, false otherwise. The valid modes for
      * this class are the "tileEncoder" registry mode, and the
      * "tileDecoder" registry mode.

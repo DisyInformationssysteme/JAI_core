@@ -16,13 +16,11 @@ import java.awt.image.RenderedImage;
 import java.awt.image.SampleModel;
 import java.awt.image.renderable.ParameterBlock;
 import java.awt.image.renderable.RenderableImage;
-import javax.media.jai.EnumeratedParameter;
+
 import javax.media.jai.JAI;
 import javax.media.jai.OperationDescriptorImpl;
 import javax.media.jai.ParameterBlockJAI;
-import javax.media.jai.RenderableOp;
 import javax.media.jai.RenderedOp;
-import javax.media.jai.operator.CompositeDestAlpha;
 import javax.media.jai.registry.RenderableRegistryMode;
 import javax.media.jai.registry.RenderedRegistryMode;
 
@@ -54,7 +52,7 @@ import javax.media.jai.registry.RenderedRegistryMode;
  * <code>a*A + (1 - a)*(b*B)</code>.  The output alpha value is given
  * by <code>a + (1 - a)*b</code>.  For premultiplied sources tuples
  * <code>(a*A, a)</code> and <code>(b*B, b)</code>, the premultiplied output
- * value is simply <code>(a*A) + (1 - a)*(b*B)</code>. 
+ * value is simply <code>(a*A) + (1 - a)*(b*B)</code>.
  *
  * <p> The color channels of the two source images are supplied via
  * <code>source1</code> and <code>source2</code>. The two sources must
@@ -74,9 +72,9 @@ import javax.media.jai.registry.RenderedRegistryMode;
  * images. It also indicates whether the destination image color channels
  * have the alpha values multiplied to the pixel color values.
  *
- * <p> It should be noted that the <code>source1Alpha</code> and 
+ * <p> It should be noted that the <code>source1Alpha</code> and
  * <code>source1Alpha</code> parameters are <code>RenderedImage</code>s in
- * the "rendered" mode and are <code>RenderableImage</code>s in the 
+ * the "rendered" mode and are <code>RenderableImage</code>s in the
  * "renderable" mode.
  *
  * <p> The destination image is the combination of the two source images.
@@ -178,13 +176,13 @@ public class CompositeDescriptor extends OperationDescriptorImpl {
         {"arg3Desc",    JaiI18N.getString("CompositeDescriptor4")}
     };
 
-    private static final Class[][] sourceClasses = { 
+    private static final Class[][] sourceClasses = {
 	{
-	    java.awt.image.RenderedImage.class, 
+	    java.awt.image.RenderedImage.class,
 	    java.awt.image.RenderedImage.class
-	}, 
+	},
 	{
-	    java.awt.image.renderable.RenderableImage.class, 
+	    java.awt.image.renderable.RenderableImage.class,
 	    java.awt.image.renderable.RenderableImage.class
 	}
     };
@@ -196,7 +194,7 @@ public class CompositeDescriptor extends OperationDescriptorImpl {
 	    java.awt.image.RenderedImage.class,
 	    java.lang.Boolean.class,
 	    CompositeDestAlpha.class
-	}, 
+	},
 	{
 	    java.awt.image.renderable.RenderableImage.class,
 	    java.awt.image.renderable.RenderableImage.class,
@@ -216,7 +214,7 @@ public class CompositeDescriptor extends OperationDescriptorImpl {
 	{
 	    NO_PARAMETER_DEFAULT, null,
 	    Boolean.FALSE, NO_DESTINATION_ALPHA
-	}, 
+	},
 	{
 	    NO_PARAMETER_DEFAULT, null,
 	    Boolean.FALSE, NO_DESTINATION_ALPHA
@@ -230,13 +228,13 @@ public class CompositeDescriptor extends OperationDescriptorImpl {
 
     /** Constructor. */
     public CompositeDescriptor() {
-        super(resources, 
+        super(resources,
 	      supportedModes,
 	      null,
 	      sourceClasses,
 	      paramNames,
-	      paramClasses, 
-	      paramDefaults, 
+	      paramClasses,
+	      paramDefaults,
 	      null);
     }
 
@@ -299,7 +297,7 @@ public class CompositeDescriptor extends OperationDescriptorImpl {
                            JaiI18N.getString("CompositeDescriptor15"));
                 return false;
             }
-        
+
             SampleModel a2sm = afa2.getSampleModel();
             if (s2sm.getTransferType() != a2sm.getTransferType()) {
                 msg.append(getName() + " " +

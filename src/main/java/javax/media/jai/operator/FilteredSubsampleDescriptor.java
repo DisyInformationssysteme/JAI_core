@@ -17,8 +17,6 @@ import java.awt.geom.AffineTransform;
 import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
 import javax.media.jai.Interpolation;
-import javax.media.jai.InterpolationBicubic2;
-import javax.media.jai.InterpolationBicubic;
 import javax.media.jai.InterpolationBilinear;
 import javax.media.jai.InterpolationNearest;
 import javax.media.jai.JAI;
@@ -26,12 +24,7 @@ import javax.media.jai.OpImage;
 import javax.media.jai.OperationDescriptorImpl;
 import javax.media.jai.ParameterBlockJAI;
 import javax.media.jai.PlanarImage;
-import javax.media.jai.PropertyGenerator;
-import javax.media.jai.ROI;
-import javax.media.jai.ROIShape;
-import javax.media.jai.RenderableOp;
 import javax.media.jai.RenderedOp;
-import javax.media.jai.WarpOpImage;
 import javax.media.jai.registry.RenderedRegistryMode;
 
 /**
@@ -245,10 +238,10 @@ class FilteredSubsamplePropertyGenerator extends PropertyGeneratorImpl {
  *
  * <p> The convolution kernel is restricted to have quadrant symmetry (qs). This
  * type of symmetry is also product separable.  The qsFilter is specified by
- * a floating array.  If qsFilter[0], qsFilter[1], ... , 
+ * a floating array.  If qsFilter[0], qsFilter[1], ... ,
  * qsFilter[qsFilter.length - 1]
  * is the filter input, then the entire separable kernel is given by <br>
- * qsFilter[qsFilter.length - 1], ... , qsFilter[0], ... , 
+ * qsFilter[qsFilter.length - 1], ... , qsFilter[0], ... ,
  * qsFilter[qsFilter.length - 1] <br>
  *
  * <p> The restriction of integer parameter constraints allows full product
@@ -276,14 +269,14 @@ class FilteredSubsamplePropertyGenerator extends PropertyGeneratorImpl {
  * <code>configuration</code> so that the operation is performed
  * on the pixel values instead of being performed on the indices into
  * the color map if the source(s) have an <code>IndexColorModel</code>.
- * This addition will take place only if a value for the 
+ * This addition will take place only if a value for the
  * <code>JAI.KEY_REPLACE_INDEX_COLOR_MODEL</code> has not already been
  * provided by the user. Note that the <code>configuration</code> Map
- * is cloned before the new hint is added to it. The operation can be 
+ * is cloned before the new hint is added to it. The operation can be
  * smart about the value of the <code>JAI.KEY_REPLACE_INDEX_COLOR_MODEL</code>
  * <code>RenderingHints</code>, i.e. while the default value for the
  * <code>JAI.KEY_REPLACE_INDEX_COLOR_MODEL</code> is
- * <code>Boolean.TRUE</code>, in some cases the operator could set the 
+ * <code>Boolean.TRUE</code>, in some cases the operator could set the
  * default.
  *
  * <p> "FilteredSubsample" defines a PropertyGenerator that performs an identical
@@ -291,13 +284,13 @@ class FilteredSubsamplePropertyGenerator extends PropertyGeneratorImpl {
  * be retrieved by calling the <code>getProperty</code> method with
  * "ROI" as the property name.
  *
- * <p> One design purpose of this operation is anti-aliasing when 
- * downsampling.  The technique of anti-aliasing applies a good 
- * filter to the area of rendering to generate better results.  Generally, 
- * this filter is required to be (quadrant) symmetric and separable 
- * to obtain good performance.  The widely-used Gaussian filter 
- * satisfies all these requirements.  Thus, the default value for the 
- * parameter "qsFilter" is generated from a Gaussian kernel 
+ * <p> One design purpose of this operation is anti-aliasing when
+ * downsampling.  The technique of anti-aliasing applies a good
+ * filter to the area of rendering to generate better results.  Generally,
+ * this filter is required to be (quadrant) symmetric and separable
+ * to obtain good performance.  The widely-used Gaussian filter
+ * satisfies all these requirements.  Thus, the default value for the
+ * parameter "qsFilter" is generated from a Gaussian kernel
  * based on the following procedure:
  *
  * <p> Define the Gaussian function <code>G(x)</code> as
@@ -306,27 +299,27 @@ class FilteredSubsamplePropertyGenerator extends PropertyGeneratorImpl {
  * <p>where <code>s</code> is the standard deviation, and <code>pi</code>
  * is the ratio of the circumference of a circle to its diameter.
  *
- * <p> For a one-dimensional Gaussian kernel with a size of <code>2N+1</code>, 
- *  the standard deviation of the Gaussian function to generate this kernel 
- *  is chosen as <code>N/3</code>.  The 
- *  one-dimensional Gaussian kernel <code>K<sub>N</sub>(1:2N+1)</code> is 
+ * <p> For a one-dimensional Gaussian kernel with a size of <code>2N+1</code>,
+ *  the standard deviation of the Gaussian function to generate this kernel
+ *  is chosen as <code>N/3</code>.  The
+ *  one-dimensional Gaussian kernel <code>K<sub>N</sub>(1:2N+1)</code> is
  *  <p><code>(G(-N)/S, G(-N+1)/S, ..., G(0),..., G(N-1)/S, G(N)/S), </code>
- * <p> where <code>S</code> is the summation of <code>G(-N), G(-N+1), ...,G(0), 
- * ..., G(N-1)</code>, and <code>G(N)</code>.  A two-dimensional Gaussian 
- * kernel with a size of <code>(2N+1) x (2N+1)</code> is constructed as the 
- * outer product of two <code>K<sub>N</sub></code>s: 
- * the <code>(i, j)</code>th element is 
+ * <p> where <code>S</code> is the summation of <code>G(-N), G(-N+1), ...,G(0),
+ * ..., G(N-1)</code>, and <code>G(N)</code>.  A two-dimensional Gaussian
+ * kernel with a size of <code>(2N+1) x (2N+1)</code> is constructed as the
+ * outer product of two <code>K<sub>N</sub></code>s:
+ * the <code>(i, j)</code>th element is
  * <code>K<sub>N</sub>(i)K<sub>N</sub>(j)</code>.
- * The quadrant symmetric filter corresponding to the 
- * <code>(2N+1) x (2N+1)</code> Gaussian kernel is simply 
+ * The quadrant symmetric filter corresponding to the
+ * <code>(2N+1) x (2N+1)</code> Gaussian kernel is simply
  * <p> <code>(G(0)/S, G(1)/S, ..., G(N)/S)</code>, or
  * <p> <code>(K<sub>N</sub>(N+1), ..., K<sub>N</sub>(2N+1)</code>.
  *
  * <p> Denote the maximum of the X and Y subsample factors as <code>M</code>.
- * If <code>M</code> is even, the default "qsFilter" is the quadrant symmetric 
+ * If <code>M</code> is even, the default "qsFilter" is the quadrant symmetric
  * filter derived from the two-dimensional <code>(M+1) x (M+1)</code>
- * Gaussian kernel. If <code>M</code> is odd, the default 
- * "qsFilter" is the quadrant symmetric filter derived from the 
+ * Gaussian kernel. If <code>M</code> is odd, the default
+ * "qsFilter" is the quadrant symmetric filter derived from the
  * two-dimensional <code>M x M</code> Gaussian kernel.
  *
  * <p><table border=1>
@@ -354,8 +347,8 @@ class FilteredSubsamplePropertyGenerator extends PropertyGeneratorImpl {
  * <tr><td>scaleY</td>        <td>java.lang.Integer</td>
  *                            <td>2</td>
  * <tr><td>qsFilter</td>      <td>java.lang.Float []</td>
- *                            <td>A quadrant symmetric filter 
- *				  generated from a Gaussian kernel 
+ *                            <td>A quadrant symmetric filter
+ *				  generated from a Gaussian kernel
  *				  as described above.</td>
  * <tr><td>interpolation</td> <td>javax.media.jai.Interpolation</td>
  *                            <td>InterpolationNearest</td>

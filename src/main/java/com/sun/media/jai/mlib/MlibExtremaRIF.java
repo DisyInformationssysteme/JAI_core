@@ -14,8 +14,6 @@ import java.awt.RenderingHints;
 import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
 import java.awt.image.renderable.RenderedImageFactory;
-import javax.media.jai.ROI;
-import com.sun.media.jai.opimage.RIFUtil;
 
 /**
  * A <code>RIF</code> supporting the "Extrema" operation in the
@@ -51,7 +49,7 @@ public class MlibExtremaRIF implements RenderedImageFactory {
         int yPeriod = args.getIntParameter(2);
 	boolean saveLocations = ((Boolean)args.getObjectParameter(3)).booleanValue();
 	int maxRuns = args.getIntParameter(4);
-	
+
         int xStart = source.getMinX();	// default values
         int yStart = source.getMinY();
 

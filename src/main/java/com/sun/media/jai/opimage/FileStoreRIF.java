@@ -28,7 +28,7 @@ import javax.media.jai.PlanarImage;
 import javax.media.jai.RenderedImageAdapter;
 import javax.media.jai.registry.RIFRegistry;
 import javax.media.jai.util.ImagingListener;
-import com.sun.media.jai.codec.SeekableOutputStream;
+
 import com.sun.media.jai.util.ImageUtil;
 
 /**

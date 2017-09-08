@@ -18,7 +18,6 @@ import java.awt.image.renderable.RenderableImage;
 import javax.media.jai.JAI;
 import javax.media.jai.OperationDescriptorImpl;
 import javax.media.jai.ParameterBlockJAI;
-import javax.media.jai.RenderableOp;
 import javax.media.jai.RenderedOp;
 import javax.media.jai.registry.RenderableRegistryMode;
 import javax.media.jai.registry.RenderedRegistryMode;
@@ -46,26 +45,26 @@ import javax.media.jai.registry.RenderedRegistryMode;
  * </code>double a <code>ComponentSampleModel</code> will be used
  * regardless of the value of the hint parameter.
  *
- * <p> One of the common uses of the format operator is to cast the 
+ * <p> One of the common uses of the format operator is to cast the
  * pixel values of an image to a given data type. In such a case, if
  * the source image provided has an <code>IndexColorModel</code>, a
  * <code>RenderingHints</code> object for
  * <code>JAI.KEY_REPLACE_INDEX_COLOR_MODEL</code> with the value of
- * <code>Boolean.TRUE</code> will automatically be added to the 
- * configuration <code>Map</code> for the operation. This addition 
- * will only take place if a value for the 
+ * <code>Boolean.TRUE</code> will automatically be added to the
+ * configuration <code>Map</code> for the operation. This addition
+ * will only take place if a value for the
  * <code>JAI.KEY_REPLACE_INDEX_COLOR_MODEL</code> has not already been
  * provided by the user. Note that the <code>configuration</code> Map
- * is cloned before the new hint is added to it. Due to the addition 
+ * is cloned before the new hint is added to it. Due to the addition
  * of this new <code>RenderingHint</code>, using the "format" operation
  * with source(s) that have an <code>IndexColorModel</code> will cause
  * the destination to have an expanded non-<code>IndexColorModel</code>
- * <code>ColorModel</code>. This expansion ensures that the conversion 
+ * <code>ColorModel</code>. This expansion ensures that the conversion
  * to a different data type, <code>ColorModel</code> or
- * <code>SampleModel</code> happens correctly such that the indices 
+ * <code>SampleModel</code> happens correctly such that the indices
  * into the color map (for <code>IndexColorModel</code> images) are
  * not treated as pixel data.  If the format operator is not being used
- * to cast the pixel values of an image to a given data type, the 
+ * to cast the pixel values of an image to a given data type, the
  * expansion will not take place, the resultant image will still have
  * an <code>IndexColorModel</code>.
  *

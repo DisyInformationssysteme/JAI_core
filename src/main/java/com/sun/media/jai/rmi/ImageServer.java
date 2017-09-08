@@ -12,20 +12,12 @@
 package com.sun.media.jai.rmi;
 
 import java.awt.Rectangle;
-import java.awt.RenderingHints;
-import java.awt.image.ColorModel;
-import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
-import java.awt.image.SampleModel;
-import java.awt.image.WritableRaster;
 import java.awt.image.renderable.ParameterBlock;
-import java.awt.image.renderable.RenderContext;
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 import java.util.List;
-import java.util.Vector;
-import javax.media.jai.PropertyChangeEventJAI;
-import javax.media.jai.RenderableOp;
+
 import javax.media.jai.RenderedOp;
 import javax.media.jai.remote.NegotiableCapabilitySet;
 import javax.media.jai.remote.SerializableState;
@@ -238,7 +230,7 @@ public interface ImageServer extends Remote {
      * @param bounds the region of the RenderedImage to be returned.
      * @return a SerializableState containing a copy of the desired data.
      */
-    SerializableState getData(Long id, Rectangle bounds) 
+    SerializableState getData(Long id, Rectangle bounds)
 	throws RemoteException;
 
     /**
@@ -299,7 +291,7 @@ public interface ImageServer extends Remote {
     /// Renderable mode methods
 
 
-    /** 
+    /**
      * Gets the minimum X coordinate of the rendering-independent image
      * stored against the given ID.
      *
@@ -308,7 +300,7 @@ public interface ImageServer extends Remote {
      */
     float getRenderableMinX(Long id) throws RemoteException;
 
-    /** 
+    /**
      * Gets the minimum Y coordinate of the rendering-independent image
      * stored against the given ID.
      *
@@ -317,16 +309,16 @@ public interface ImageServer extends Remote {
      */
     float getRenderableMinY(Long id) throws RemoteException;
 
-    /** 
-     * Gets the width (in user coordinate space) of the 
+    /**
+     * Gets the width (in user coordinate space) of the
      * <code>RenderableImage</code> stored against the given ID.
      *
      * @return the width of the renderable image in user coordinates.
      */
     float getRenderableWidth(Long id) throws RemoteException;
-    
+
     /**
-     * Gets the height (in user coordinate space) of the 
+     * Gets the height (in user coordinate space) of the
      * <code>RenderableImage</code> stored against the given ID.
      *
      * @return the height of the renderable image in user coordinates.
@@ -344,7 +336,7 @@ public interface ImageServer extends Remote {
      * Math.round(h*(getWidth()/getHeight())).
      * Similarly, if h == 0, it will be taken to equal
      * Math.round(w*(getHeight()/getWidth())).  One of
-     * w or h must be non-zero or else an IllegalArgumentException 
+     * w or h must be non-zero or else an IllegalArgumentException
      * will be thrown.
      *
      * <p> The created RenderedImage may have a property identified
@@ -358,13 +350,13 @@ public interface ImageServer extends Remote {
      * @param hints a RenderingHints object containg hints.
      * @return a RenderedImage containing the rendered data.
      */
-    RenderedImage createScaledRendering(Long id, 
-					int w, 
-					int h, 
-					SerializableState hintsState) 
+    RenderedImage createScaledRendering(Long id,
+					int w,
+					int h,
+					SerializableState hintsState)
 	throws RemoteException;
-  
-    /** 
+
+    /**
      * Returnd a RenderedImage instance of this image with a default
      * width and height in pixels.  The RenderContext is built
      * automatically with an appropriate usr2dev transform and an area
@@ -375,8 +367,8 @@ public interface ImageServer extends Remote {
      * @return a RenderedImage containing the rendered data.
      */
     RenderedImage createDefaultRendering(Long id) throws RemoteException;
-  
-    /** 
+
+    /**
      * Creates a RenderedImage that represented a rendering of this image
      * using a given RenderContext.  This is the most general way to obtain a
      * rendering of a RenderableImage.
@@ -391,8 +383,8 @@ public interface ImageServer extends Remote {
      * @param renderContext the RenderContext to use to produce the rendering.
      * @return a RenderedImage containing the rendered data.
      */
-    RenderedImage createRendering(Long id, 
-				  SerializableState renderContextState) 
+    RenderedImage createRendering(Long id,
+				  SerializableState renderContextState)
 	throws RemoteException;
 
     /**
@@ -424,13 +416,13 @@ public interface ImageServer extends Remote {
 			     String opName, int index) throws RemoteException;
 
     /**
-     * Sets the source of the operation refered to by the supplied 
+     * Sets the source of the operation refered to by the supplied
      * <code>id</code> to the <code>RenderableRMIServerProxy</code>
      * that exists on the supplied <code>serverName</code> under the
-     * supplied <code>sourceId</code>. 
+     * supplied <code>sourceId</code>.
      */
     void setRenderableRMIServerProxyAsSource(Long id,
-					     Long sourceId, 
+					     Long sourceId,
 					     String serverName,
 					     String opName,
 					     int index) throws RemoteException;
@@ -517,7 +509,7 @@ public interface ImageServer extends Remote {
     /**
      * Returns a conservative estimate of the destination region that
      * can potentially be affected by the pixels of a rectangle of a
-     * given source. 
+     * given source.
      *
      * @param id          A <code>Long</code> identifying the node for whom
      *                    the destination region needs to be calculated .
@@ -534,7 +526,7 @@ public interface ImageServer extends Remote {
     /**
      * Returns a conservative estimate of the region of a specified
      * source that is required in order to compute the pixels of a
-     * given destination rectangle. 
+     * given destination rectangle.
      *
      * @param id         A <code>Long</code> identifying the node for whom
      *                   the source region needs to be calculated .
@@ -549,18 +541,18 @@ public interface ImageServer extends Remote {
     /**
      * A method that handles a change in some critical parameter.
      */
-    Long handleEvent(Long renderedOpID, 
+    Long handleEvent(Long renderedOpID,
 		     String propName,
-		     Object oldValue, 
+		     Object oldValue,
 		     Object newValue) throws RemoteException;
 
     /**
      * A method that handles a change in one of it's source's rendering,
      * i.e. a change that would be signalled by RenderingChangeEvent.
      */
-    Long handleEvent(Long renderedOpID, 
+    Long handleEvent(Long renderedOpID,
 		     int srcIndex,
-		     SerializableState srcInvalidRegion, 
+		     SerializableState srcInvalidRegion,
 		     Object oldRendering) throws RemoteException;
 
     /**
@@ -577,7 +569,7 @@ public interface ImageServer extends Remote {
      * @param id An ID for the node which must be unique across all clients.
      * @param negotiatedValues    The result of the negotiation.
      */
-    void setServerNegotiatedValues(Long id, 
+    void setServerNegotiatedValues(Long id,
 				   NegotiableCapabilitySet negotiatedValues)
-	throws RemoteException; 
+	throws RemoteException;
 }

@@ -27,7 +27,6 @@ import java.awt.image.MultiPixelPackedSampleModel;
 import java.awt.image.Raster;
 import java.awt.image.SampleModel;
 import java.awt.image.WritableRaster;
-import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.lang.reflect.Method;
 import java.text.MessageFormat;
@@ -35,7 +34,6 @@ import java.util.Locale;
 import java.util.zip.DataFormatException;
 import java.util.zip.Inflater;
 
-import javax.media.jai.DataBufferFloat;
 import javax.media.jai.FloatDoubleColorModel;
 import javax.media.jai.RasterFactory;
 import javax.media.jai.util.ImagingException;
@@ -48,7 +46,6 @@ import com.sun.media.jai.codec.SeekableStream;
 import com.sun.media.jai.codec.TIFFDecodeParam;
 import com.sun.media.jai.codec.TIFFDirectory;
 import com.sun.media.jai.codec.TIFFField;
-import com.sun.media.jai.util.SimpleCMYKColorSpace;
 
 public class TIFFImage extends SimpleRenderedImage {
 
@@ -1896,44 +1893,3 @@ public class TIFFImage extends SimpleRenderedImage {
   }
 }
 
-/**
- * Wrapper class for a <code>SeekableStream</code> but which does not throw
- * an <code>EOFException</code> from <code>readFully()</code> when the end
- * of stream is encountered.
- */
-// NB This is a hack to fix bug 4823200 "Make TIFF decoder robust to (comp)
-// images with no strip/tile byte counts field" but there does not seem to
-// be any other way to work around this without extensive code changes.
-class NoEOFStream extends SeekableStream {
-  private final SeekableStream stream;
-
-  NoEOFStream(final SeekableStream ss) {
-    if (ss == null) {
-      throw new IllegalArgumentException();
-    }
-
-    this.stream = ss;
-  }
-
-  @Override
-  public int read() throws IOException {
-    final int b = this.stream.read();
-    return b < 0 ? 0 : b;
-  }
-
-  @Override
-  public int read(final byte[] b, final int off, final int len) throws IOException {
-    final int count = this.stream.read(b, off, len);
-    return count < 0 ? len : count;
-  }
-
-  @Override
-  public long getFilePointer() throws IOException {
-    return this.stream.getFilePointer();
-  }
-
-  @Override
-  public void seek(final long pos) throws IOException {
-    this.stream.seek(pos);
-  }
-}

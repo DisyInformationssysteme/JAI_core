@@ -11,7 +11,6 @@
  */
 package com.sun.media.jai.codecimpl;
 import java.awt.image.DataBuffer;
-import java.awt.image.PixelInterleavedSampleModel;
 import java.awt.image.RenderedImage;
 import java.awt.image.SampleModel;
 import java.io.File;
@@ -24,7 +23,6 @@ import com.sun.media.jai.codec.ImageDecoder;
 import com.sun.media.jai.codec.ImageDecodeParam;
 import com.sun.media.jai.codec.ImageEncoder;
 import com.sun.media.jai.codec.ImageEncodeParam;
-import com.sun.media.jai.codec.BMPEncodeParam;
 import com.sun.media.jai.codec.SeekableStream;
 
 /**
@@ -87,7 +85,7 @@ public final class BMPCodec extends ImageCodec {
     }
 
     protected ImageDecoder createImageDecoder(File src,
-                                              ImageDecodeParam param) 
+                                              ImageDecodeParam param)
         throws IOException {
         return new BMPImageDecoder(new FileInputStream(src), null);
     }

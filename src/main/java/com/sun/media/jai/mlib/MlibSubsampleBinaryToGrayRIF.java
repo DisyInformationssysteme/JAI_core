@@ -11,21 +11,13 @@
  */
 package com.sun.media.jai.mlib;
 import java.awt.RenderingHints;
-import java.awt.geom.AffineTransform;
-import java.awt.image.DataBuffer;
-import java.awt.image.MultiPixelPackedSampleModel;
 import java.awt.image.RenderedImage;
-import java.awt.image.SampleModel;
 import java.awt.image.renderable.RenderedImageFactory;
 import java.awt.image.renderable.ParameterBlock;
-import javax.media.jai.BorderExtender;
+
 import javax.media.jai.ImageLayout;
-import javax.media.jai.Interpolation;
-import javax.media.jai.InterpolationNearest;
-import java.util.Map;
-import com.sun.media.jai.opimage.CopyOpImage;
+
 import com.sun.media.jai.opimage.RIFUtil;
-import com.sun.media.jai.util.ImageUtil;
 
 /**
  * A <code>RIF</code> supporting the "SubsampleBinaryToGray" operation in the
@@ -37,7 +29,7 @@ public class MlibSubsampleBinaryToGrayRIF implements RenderedImageFactory {
 
     /**
      * The width and height of blocks to be condensed into one gray pixel.
-     * They are expected to be computed in the same way as in 
+     * They are expected to be computed in the same way as in
      * import com.sun.media.jai.opimage.SubsampleBinaryToGrayOpImage;
      */
     private int blockX;
@@ -82,7 +74,7 @@ public class MlibSubsampleBinaryToGrayRIF implements RenderedImageFactory {
 
         float xScale = args.getFloatParameter(0);
         float yScale = args.getFloatParameter(1);
- 
+
 	// When scaling by 1.0 in both x and y, a copy is all we need
 	if (xScale == 1.0F && yScale == 1.0F){
             // Use CopyOpImage as MlibCopyOpImage doesn't handle

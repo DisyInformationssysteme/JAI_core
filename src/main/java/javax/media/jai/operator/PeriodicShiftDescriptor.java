@@ -18,7 +18,6 @@ import java.awt.image.renderable.RenderableImage;
 import javax.media.jai.JAI;
 import javax.media.jai.OperationDescriptorImpl;
 import javax.media.jai.ParameterBlockJAI;
-import javax.media.jai.RenderableOp;
 import javax.media.jai.RenderedOp;
 import javax.media.jai.registry.RenderableRegistryMode;
 import javax.media.jai.registry.RenderedRegistryMode;
@@ -152,7 +151,7 @@ public class PeriodicShiftDescriptor extends OperationDescriptorImpl {
 
         int shiftX = args.getIntParameter(0);
         int shiftY = args.getIntParameter(1);
-        if (shiftX < 0 || shiftX >= src.getWidth() || 
+        if (shiftX < 0 || shiftX >= src.getWidth() ||
             shiftY < 0 || shiftY >= src.getHeight()) {
             msg.append(getName() + " " +
                        JaiI18N.getString("PeriodicShiftDescriptor3"));

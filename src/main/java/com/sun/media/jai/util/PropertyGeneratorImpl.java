@@ -12,7 +12,6 @@
 package com.sun.media.jai.util;
 
 import javax.media.jai.PropertyGenerator;
-import javax.media.jai.RenderableOp;
 import javax.media.jai.RenderedOp;
 
 /**
@@ -177,7 +176,7 @@ public abstract class PropertyGeneratorImpl implements PropertyGenerator {
      *
      * <p> The operation name, sources, and <code>ParameterBlock</code>
      * of the <code>RenderedOp</code> being processed may be obtained by
-     * means of the <code>op.getOperationName</code>, 
+     * means of the <code>op.getOperationName</code>,
      * <code>op.getSources()</code>, and <code>op.getParameterBlock()</code>
      * methods.  It is legal to call <code>getProperty()</code> on the
      * operation's sources.
@@ -192,7 +191,7 @@ public abstract class PropertyGeneratorImpl implements PropertyGenerator {
      * @exception IllegalArgumentException if <code>name</code> or
      *         <code>op</code> is <code>null</code>.
      */
-    public Object getProperty(String name, 
+    public Object getProperty(String name,
                               RenderedOp op) {
         return getProperty(name, (Object)op);
     }
@@ -218,7 +217,7 @@ public abstract class PropertyGeneratorImpl implements PropertyGenerator {
      * @deprecated as of Java(tm) Advanced Imaging 1.1. Use
      *             <code>getProperty(String,Object)</code> instead.
      */
-    public Object getProperty(String name, 
+    public Object getProperty(String name,
                               RenderableOp op) {
         return getProperty(name, (Object)op);
     }

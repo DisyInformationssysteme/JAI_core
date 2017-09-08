@@ -16,7 +16,6 @@ import java.awt.image.renderable.RenderableImage;
 import javax.media.jai.JAI;
 import javax.media.jai.OperationDescriptorImpl;
 import javax.media.jai.ParameterBlockJAI;
-import javax.media.jai.RenderableOp;
 import javax.media.jai.RenderedOp;
 import javax.media.jai.registry.RenderableRegistryMode;
 import javax.media.jai.registry.RenderedRegistryMode;
@@ -65,7 +64,7 @@ import javax.media.jai.registry.RenderedRegistryMode;
  * <tr><td>GlobalName</td>  <td>divide</td></tr>
  * <tr><td>LocalName</td>   <td>divide</td></tr>
  * <tr><td>Vendor</td>      <td>com.sun.media.jai</td></tr>
- * <tr><td>Description</td> <td>Dividies one image by 
+ * <tr><td>Description</td> <td>Dividies one image by
  *                              another image.</td></tr>
  * <tr><td>DocURL</td>      <td>http://java.sun.com/products/java-media/jai/forDevelopers/jai-apidocs/javax/media/jai/operator/DivideDescriptor.html</td></tr>
  * <tr><td>Version</td>     <td>1.0</td></tr>

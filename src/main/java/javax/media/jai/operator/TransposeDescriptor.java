@@ -12,21 +12,17 @@
 package javax.media.jai.operator;
 import com.sun.media.jai.util.PropertyGeneratorImpl;
 import java.awt.RenderingHints;
-import java.awt.geom.AffineTransform;
 import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
 import java.awt.image.renderable.RenderableImage;
-import javax.media.jai.EnumeratedParameter;
+
 import javax.media.jai.Interpolation;
 import javax.media.jai.JAI;
 import javax.media.jai.OperationDescriptorImpl;
 import javax.media.jai.ParameterBlockJAI;
 import javax.media.jai.PlanarImage;
 import javax.media.jai.PropertyGenerator;
-import javax.media.jai.ROI;
-import javax.media.jai.RenderableOp;
 import javax.media.jai.RenderedOp;
-import javax.media.jai.operator.TransposeType;
 import javax.media.jai.registry.RenderableRegistryMode;
 import javax.media.jai.registry.RenderedRegistryMode;
 
@@ -128,14 +124,14 @@ class TransposePropertyGenerator extends PropertyGeneratorImpl {
  * <code>configuration</code> so that the operation is performed
  * on the pixel values instead of being performed on the indices into
  * the color map if the source(s) have an <code>IndexColorModel</code>.
- * This addition will take place only if a value for the 
+ * This addition will take place only if a value for the
  * <code>JAI.KEY_REPLACE_INDEX_COLOR_MODEL</code> has not already been
  * provided by the user. Note that the <code>configuration</code> Map
- * is cloned before the new hint is added to it. The operation can be 
+ * is cloned before the new hint is added to it. The operation can be
  * smart about the value of the <code>JAI.KEY_REPLACE_INDEX_COLOR_MODEL</code>
  * <code>RenderingHints</code>, i.e. while the default value for the
  * <code>JAI.KEY_REPLACE_INDEX_COLOR_MODEL</code> is
- * <code>Boolean.TRUE</code>, in some cases the operator could set the 
+ * <code>Boolean.TRUE</code>, in some cases the operator could set the
  * default.
  *
  * <p> "Transpose" defines a PropertyGenerator that
@@ -224,7 +220,7 @@ public class TransposeDescriptor extends OperationDescriptorImpl {
     public boolean isRenderableSupported() {
         return true;
     }
-    
+
     /**
      * Returns an array of <code>PropertyGenerators</code> implementing
      * property inheritance for the "Transpose" operation.

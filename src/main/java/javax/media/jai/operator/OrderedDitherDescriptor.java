@@ -19,14 +19,13 @@ import javax.media.jai.JAI;
 import javax.media.jai.KernelJAI;
 import javax.media.jai.OperationDescriptorImpl;
 import javax.media.jai.ParameterBlockJAI;
-import javax.media.jai.ROI;
 import javax.media.jai.RenderedOp;
 import javax.media.jai.registry.RenderedRegistryMode;
 
 /**
  * An <code>OperationDescriptor</code> describing the "OrderedDither"
  * operation.
- * 
+ *
  * <p> The "OrderedDither" operation performs color quantization by
  * finding the nearest color to each pixel in a supplied color cube
  * and "shifting" the resulting index value by a pseudo-random amount

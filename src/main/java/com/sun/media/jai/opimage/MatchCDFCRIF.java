@@ -14,9 +14,7 @@ import java.awt.RenderingHints;
 import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
 import javax.media.jai.CRIFImpl;
-import javax.media.jai.Histogram;
 import javax.media.jai.ImageLayout;
-import java.util.Map;
 
 /**
  * A <code>CRIF</code> supporting the "MatchCDF" operation in the rendered
@@ -131,7 +129,7 @@ public class MatchCDFCRIF extends CRIFImpl {
                                 RenderingHints renderHints) {
         // Get ImageLayout from renderHints if any.
         ImageLayout layout = RIFUtil.getImageLayoutHint(renderHints);
-        
+
 
         // Derive breakpoints from the histogram and specified CDF.
 	RenderedImage src = args.getRenderedSource(0);

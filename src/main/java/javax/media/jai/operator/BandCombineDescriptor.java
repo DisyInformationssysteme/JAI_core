@@ -12,16 +12,13 @@
 package javax.media.jai.operator;
 
 import java.awt.RenderingHints;
-import java.awt.image.ColorModel;
 import java.awt.image.RenderedImage;
 import java.awt.image.SampleModel;
 import java.awt.image.renderable.ParameterBlock;
 import java.awt.image.renderable.RenderableImage;
 import javax.media.jai.JAI;
-import javax.media.jai.OpImage;
 import javax.media.jai.OperationDescriptorImpl;
 import javax.media.jai.ParameterBlockJAI;
-import javax.media.jai.RenderableOp;
 import javax.media.jai.RenderedOp;
 import javax.media.jai.registry.RenderableRegistryMode;
 import javax.media.jai.registry.RenderedRegistryMode;
@@ -31,7 +28,7 @@ import javax.media.jai.registry.RenderedRegistryMode;
  *
  * <p> The BandCombing operation computes a set of arbitrary linear
  * combinations of the bands of a rendered or renderable source image,
- * using a specified matrix.  The matrix must a number of rows equal to 
+ * using a specified matrix.  The matrix must a number of rows equal to
  * the number of desired destination bands and a number of columns equal to the
  * number of source bands plus one.  In other words, the array may be
  * constructed using the syntax:
@@ -134,7 +131,7 @@ public class BandCombineDescriptor extends OperationDescriptorImpl {
      * <p> In addition to the standard checks performed by the
      * superclass method, this method checks that "matrix" has at
      * least 1 row and (source bands + 1) columns.
-     * 
+     *
      * <p> The number of source bands is considered to be equal to
      * <code>source.getSampleModel().getNumBands()</code>.
      */

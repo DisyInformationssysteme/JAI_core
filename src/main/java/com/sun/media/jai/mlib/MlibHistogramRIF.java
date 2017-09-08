@@ -14,14 +14,11 @@ import java.awt.Rectangle;
 import java.awt.RenderingHints;
 import java.awt.image.DataBuffer;
 import java.awt.image.RenderedImage;
-import java.awt.image.SampleModel;
 import java.awt.image.renderable.ParameterBlock;
 import java.awt.image.renderable.RenderedImageFactory;
-import javax.media.jai.JAI;
-import javax.media.jai.ROI;
+
 import javax.media.jai.util.ImagingListener;
 import com.sun.media.jai.util.ImageUtil;
-import com.sun.media.jai.opimage.RIFUtil;
 
 /**
  * A <code>RIF</code> supporting the "Histogram" operation in the

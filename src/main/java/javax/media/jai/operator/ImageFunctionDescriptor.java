@@ -12,15 +12,12 @@
 package javax.media.jai.operator;
 import com.sun.media.jai.util.PropertyGeneratorImpl;
 import java.awt.RenderingHints;
-import java.awt.geom.AffineTransform;
-import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
 import javax.media.jai.ImageFunction;
 import javax.media.jai.JAI;
 import javax.media.jai.OperationDescriptorImpl;
 import javax.media.jai.ParameterBlockJAI;
 import javax.media.jai.PropertyGenerator;
-import javax.media.jai.RenderableOp;
 import javax.media.jai.RenderedOp;
 import javax.media.jai.registry.RenderedRegistryMode;
 

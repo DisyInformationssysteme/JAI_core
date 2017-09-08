@@ -13,17 +13,8 @@ package javax.media.jai;
 
 import javax.media.jai.util.Range;
 
-/** A class that signifies that a parameter has no default value. */
-class ParameterNoDefault implements java.io.Serializable {
-    ParameterNoDefault() {}
-
-    public String toString() {
-	return "No Parameter Default";
-    }
-}
-
 /**
- * This interface provides a comprehensive description of a set of 
+ * This interface provides a comprehensive description of a set of
  * parameters including parameter names, parameter defaults,
  * valid parameter value ranges, etc.
  *
@@ -42,7 +33,7 @@ public interface ParameterListDescriptor {
      * An <code>Object</code> that signifies that a parameter has
      * no default value.
      */
-    public static final Object NO_PARAMETER_DEFAULT = ParameterNoDefault.class;
+//    public static final Object NO_PARAMETER_DEFAULT = ParameterNoDefault.class;
 
     /**
      * Returns the total number of parameters.
@@ -57,7 +48,7 @@ public interface ParameterListDescriptor {
     Class[] getParamClasses();
 
     /**
-     * Returns an array of <code>String</code>s that are the 
+     * Returns an array of <code>String</code>s that are the
      * names of the parameters associated with this descriptor. If there
      * are no parameters, this method returns <code>null</code>.
      */

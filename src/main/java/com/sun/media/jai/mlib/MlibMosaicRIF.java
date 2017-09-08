@@ -19,7 +19,6 @@ import java.awt.image.renderable.RenderedImageFactory;
 import java.util.Vector;
 import javax.media.jai.ImageLayout;
 import javax.media.jai.PlanarImage;
-import javax.media.jai.ROI;
 import javax.media.jai.operator.MosaicType;
 import com.sun.media.jai.opimage.RIFUtil;
 

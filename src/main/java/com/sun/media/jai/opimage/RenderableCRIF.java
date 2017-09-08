@@ -20,8 +20,6 @@ import java.lang.ref.SoftReference;
 import java.util.Hashtable;
 import java.util.Vector;
 import javax.media.jai.CRIFImpl;
-import javax.media.jai.ImageMIPMap;
-import javax.media.jai.MultiResolutionRenderableImage;
 import javax.media.jai.RenderedOp;
 
 /**
@@ -183,7 +181,7 @@ public class RenderableCRIF extends CRIFImpl {
      * Gets the output bounding box in rendering-independent space.
      * This method satisfies the implementation of CRIF.
      */
-    public Rectangle2D getBounds2D(ParameterBlock paramBlock) {        
+    public Rectangle2D getBounds2D(ParameterBlock paramBlock) {
         RenderableImage mres = createRenderable(paramBlock);
 
 	return new Rectangle2D.Float(mres.getMinX(), mres.getMinY(),

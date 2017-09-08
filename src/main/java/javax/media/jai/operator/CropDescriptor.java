@@ -20,8 +20,6 @@ import java.awt.image.renderable.RenderableImage;
 import javax.media.jai.JAI;
 import javax.media.jai.OperationDescriptorImpl;
 import javax.media.jai.ParameterBlockJAI;
-import javax.media.jai.PlanarImage;
-import javax.media.jai.RenderableOp;
 import javax.media.jai.RenderedOp;
 import javax.media.jai.registry.RenderableRegistryMode;
 import javax.media.jai.registry.RenderedRegistryMode;
@@ -178,8 +176,8 @@ public class CropDescriptor extends OperationDescriptorImpl {
 
         // Check for out-of-bounds
         RenderedImage src = (RenderedImage)args.getSource(0);
-	
-	Rectangle srcBounds = 
+
+	Rectangle srcBounds =
 	  new Rectangle(src.getMinX(),
 			src.getMinY(),
 			src.getWidth(),

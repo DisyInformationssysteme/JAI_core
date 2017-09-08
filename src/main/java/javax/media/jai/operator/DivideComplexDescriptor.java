@@ -18,7 +18,6 @@ import javax.media.jai.JAI;
 import javax.media.jai.OperationDescriptorImpl;
 import javax.media.jai.ParameterBlockJAI;
 import javax.media.jai.PropertyGenerator;
-import javax.media.jai.RenderableOp;
 import javax.media.jai.RenderedOp;
 import javax.media.jai.registry.RenderableRegistryMode;
 import javax.media.jai.registry.RenderedRegistryMode;
@@ -50,7 +49,7 @@ import javax.media.jai.registry.RenderedRegistryMode;
  * the minimum of the number of bands of the two sources, and the
  * data type is the biggest data type of the sources.
  * However, the number of destination bands can be specified to be
- * M = 2*L through an <code>ImageLayout</code> hint, when 
+ * M = 2*L through an <code>ImageLayout</code> hint, when
  * one source image has 2 bands and the other has N = 2*K bands
  * where K > 1, with a natural restriction 1 <= L <= K.
  * In such a special case,

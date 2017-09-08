@@ -19,7 +19,6 @@ import javax.media.jai.JAI;
 import javax.media.jai.OperationDescriptorImpl;
 import javax.media.jai.ParameterBlockJAI;
 import javax.media.jai.PlanarImage;
-import javax.media.jai.ROI;
 import javax.media.jai.RenderedOp;
 import javax.media.jai.registry.RenderedRegistryMode;
 
@@ -349,7 +348,7 @@ public class MosaicDescriptor extends OperationDescriptorImpl {
      * @param sources <code>RenderedImage</code> sources.
      * @param mosaicType Mosaicking type.
      * May be <code>null</code>.
-     * @param sourceAlpha 
+     * @param sourceAlpha
      * May be <code>null</code>.
      * @param sourceAlpha Source alpha masks.
      * May be <code>null</code>.

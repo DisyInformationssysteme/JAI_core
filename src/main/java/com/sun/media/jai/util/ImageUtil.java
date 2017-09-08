@@ -33,13 +33,11 @@ import java.math.BigInteger;
 import java.util.Arrays;
 import java.util.Map;
 import java.util.Vector;
-import javax.media.jai.DeferredData;
+
 import javax.media.jai.JAI;
 import javax.media.jai.KernelJAI;
-import javax.media.jai.PixelAccessor;
 import javax.media.jai.RasterAccessor;
 import javax.media.jai.PlanarImage;
-import javax.media.jai.UnpackedImageData;
 import javax.media.jai.util.ImagingException;
 import javax.media.jai.util.ImagingListener;
 import java.io.ByteArrayOutputStream;

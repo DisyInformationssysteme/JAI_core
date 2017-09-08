@@ -11,7 +11,6 @@
  */
 package com.sun.media.jai.mlib;
 import java.awt.RenderingHints;
-import java.awt.geom.AffineTransform;
 import java.awt.image.DataBuffer;
 import java.awt.image.MultiPixelPackedSampleModel;
 import java.awt.image.RenderedImage;
@@ -23,10 +22,7 @@ import javax.media.jai.ImageLayout;
 import javax.media.jai.Interpolation;
 import javax.media.jai.InterpolationNearest;
 import javax.media.jai.InterpolationBilinear;
-import javax.media.jai.InterpolationBicubic;
-import javax.media.jai.InterpolationBicubic2;
-import javax.media.jai.InterpolationTable;
-import java.util.Map;
+
 import com.sun.media.jai.opimage.RIFUtil;
 import com.sun.media.jai.opimage.TranslateIntOpImage;
 
@@ -59,7 +55,7 @@ public class MlibScaleRIF implements RenderedImageFactory {
                                 RenderingHints hints) {
         /* Get ImageLayout and TileCache from RenderingHints. */
         ImageLayout layout = RIFUtil.getImageLayoutHint(hints);
-        
+
         Interpolation interp = (Interpolation)args.getObjectParameter(4);
 
 	RenderedImage source = args.getRenderedSource(0);
@@ -68,7 +64,7 @@ public class MlibScaleRIF implements RenderedImageFactory {
             !MediaLibAccessor.hasSameNumBands(args, layout) ||
 	    // Medialib cannot deal with source image having tiles with any
 	    // dimension greater than or equal to 32768
-	    source.getTileWidth() >= 32768 || 
+	    source.getTileWidth() >= 32768 ||
 	    source.getTileHeight() >= 32768) {
             return null;
         }
@@ -76,8 +72,8 @@ public class MlibScaleRIF implements RenderedImageFactory {
         SampleModel sm = source.getSampleModel();
         boolean isBilevel = (sm instanceof MultiPixelPackedSampleModel) &&
             (sm.getSampleSize(0) == 1) &&
-            (sm.getDataType() == DataBuffer.TYPE_BYTE || 
-             sm.getDataType() == DataBuffer.TYPE_USHORT || 
+            (sm.getDataType() == DataBuffer.TYPE_BYTE ||
+             sm.getDataType() == DataBuffer.TYPE_USHORT ||
              sm.getDataType() == DataBuffer.TYPE_INT);
         if (isBilevel) {
             // Let Java code handle it, reformatting is slower
@@ -94,12 +90,12 @@ public class MlibScaleRIF implements RenderedImageFactory {
 
 	// Check and see if we are scaling by 1.0 in both x and y and no
         // translations. If so call the copy operation.
-	if (xScale == 1.0F && yScale == 1.0F && 
+	if (xScale == 1.0F && yScale == 1.0F &&
 	    xTrans == 0.0F && yTrans == 0.0F) {
 	    return new MlibCopyOpImage(source, hints, layout);
 	}
 
-	// Check to see whether the operation specified is a pure 
+	// Check to see whether the operation specified is a pure
 	// integer translation. If so call translate
 	if (xScale == 1.0F && yScale == 1.0F &&
 	    (Math.abs(xTrans - (int)xTrans) < TOLERANCE) &&

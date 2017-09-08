@@ -13,14 +13,12 @@ import java.awt.RenderingHints;
 import java.awt.image.RenderedImage;
 import java.awt.image.SampleModel;
 import java.awt.image.DataBuffer;
-import java.awt.image.MultiPixelPackedSampleModel;
 import java.awt.image.renderable.RenderedImageFactory;
 import java.awt.image.renderable.ParameterBlock;
 import java.util.Map;
-import javax.media.jai.BorderExtender;
+
 import javax.media.jai.ImageLayout;
 import javax.media.jai.JAI;
-import javax.media.jai.ROI;
 import javax.media.jai.operator.ColorQuantizerDescriptor;
 import javax.media.jai.operator.ColorQuantizerType;
 

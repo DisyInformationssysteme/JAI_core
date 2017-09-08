@@ -19,15 +19,11 @@ import java.awt.image.renderable.ParameterBlock;
 import java.awt.image.renderable.RenderableImage;
 import javax.media.jai.GeometricOpImage;
 import javax.media.jai.Interpolation;
-import javax.media.jai.InterpolationNearest;
 import javax.media.jai.JAI;
 import javax.media.jai.OperationDescriptorImpl;
 import javax.media.jai.ParameterBlockJAI;
 import javax.media.jai.PlanarImage;
 import javax.media.jai.PropertyGenerator;
-import javax.media.jai.ROI;
-import javax.media.jai.ROIShape;
-import javax.media.jai.RenderableOp;
 import javax.media.jai.RenderedOp;
 import javax.media.jai.registry.RenderableRegistryMode;
 import javax.media.jai.registry.RenderedRegistryMode;
@@ -138,7 +134,7 @@ class ScalePropertyGenerator extends PropertyGeneratorImpl {
  * with the upper left pixel at (srcMinX, srcMinY) and width of srcWidth
  * and height of srcHeight, the resulting image is defined to have the
  * following bounds:
- * 
+ *
  * <code>
  *       dstMinX = ceil(A), where A = srcMinX * scaleX - 0.5 + transX,
  *       dstMinY = ceil(B), where B = srcMinY * scaleY - 0.5 + transY,
@@ -170,30 +166,30 @@ class ScalePropertyGenerator extends PropertyGeneratorImpl {
  *       dstWidth = ceil (srcHeight * scaleY + transY)
  * </code>
  *
- * <p> When interpolations which require padding the source such as Bilinear  
+ * <p> When interpolations which require padding the source such as Bilinear
  * or Bicubic interpolation are specified, the source needs to be extended
  * such that it has the extra pixels needed to compute all the destination
  * pixels. This extension is performed via the <code>BorderExtender</code>
- * class. The type of Border Extension can be specified as a 
- * <code>RenderingHint</code> to the <code>JAI.create</code> method. 
+ * class. The type of Border Extension can be specified as a
+ * <code>RenderingHint</code> to the <code>JAI.create</code> method.
  *
- * <p> If no Border Extension is specified, the source will not be extended. 
+ * <p> If no Border Extension is specified, the source will not be extended.
  * The scaled image size is still calculated according to the formula
  * specified above. However since there isn't enough source to compute all the
  * destination pixels, only that subset of the destination image's pixels,
- * which can be computed, will be written in the destination. The rest of the 
+ * which can be computed, will be written in the destination. The rest of the
  * destination will not be written.
  *
  * <p> Specifying a scale factor of greater than 1 increases the size
  * of the image, specifying a scale factor between 0 and 1 (non-inclusive)
  * decreases the size of an image. An IllegalArgumentException will be thrown
  * if the specified scale factors are negative or equal to zero.
- * 
+ *
  * <p> It may be noted that the minX, minY, width and height hints as
  * specified through the <code>JAI.KEY_IMAGE_LAYOUT</code> hint in the
  * <code>RenderingHints</code> object are not honored, as this operator
  * calculates the destination image bounds itself. The other
- * <code>ImageLayout</code> hints, like tileWidth and tileHeight, 
+ * <code>ImageLayout</code> hints, like tileWidth and tileHeight,
  * however are honored.
  *
  * <p> It should be noted that this operation automatically adds a
@@ -202,14 +198,14 @@ class ScalePropertyGenerator extends PropertyGeneratorImpl {
  * <code>configuration</code> so that the operation is performed
  * on the pixel values instead of being performed on the indices into
  * the color map if the source(s) have an <code>IndexColorModel</code>.
- * This addition will take place only if a value for the 
+ * This addition will take place only if a value for the
  * <code>JAI.KEY_REPLACE_INDEX_COLOR_MODEL</code> has not already been
  * provided by the user. Note that the <code>configuration</code> Map
- * is cloned before the new hint is added to it. The operation can be 
+ * is cloned before the new hint is added to it. The operation can be
  * smart about the value of the <code>JAI.KEY_REPLACE_INDEX_COLOR_MODEL</code>
  * <code>RenderingHints</code>, i.e. while the default value for the
  * <code>JAI.KEY_REPLACE_INDEX_COLOR_MODEL</code> is
- * <code>Boolean.TRUE</code>, in some cases the operator could set the 
+ * <code>Boolean.TRUE</code>, in some cases the operator could set the
  * default.
  *
  * <p> "Scale" defines a PropertyGenerator that performs an identical

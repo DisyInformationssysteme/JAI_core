@@ -10,15 +10,10 @@
  * $State: Exp $
  */package javax.media.jai.tilecodec;
 
-import java.awt.Point;
-import java.awt.image.Raster;
 import java.awt.image.SampleModel;
 import java.io.InputStream;
-import java.io.IOException;
-import javax.media.jai.JAI;
+
 import javax.media.jai.ParameterListDescriptor;
-import javax.media.jai.tilecodec.TileCodecDescriptor;
-import com.sun.media.jai.tilecodec.TileCodecUtils;
 
 /**
  * A partial implementation of the <code>TileDecoder</code> interface
@@ -40,21 +35,21 @@ public abstract class TileDecoderImpl implements TileDecoder {
 
     /**
      * The <code>TileCodecParameterList</code> object containing the
-     * decoding parameters. 
+     * decoding parameters.
      */
     protected TileCodecParameterList paramList;
 
     /**
      * Constructs a <code>TileDecoderImpl</code>. An
      * <code>IllegalArgumentException</code> will be thrown if
-     * <code>param</code>'s <code>getParameterListDescriptor()</code> 
+     * <code>param</code>'s <code>getParameterListDescriptor()</code>
      * method does not return the same descriptor as that from
-     * the associated <code>TileCodecDescriptor</code>'s 
-     * <code>getParameterListDescriptor</code> method for the "tileDecoder" 
-     * registry mode. 
+     * the associated <code>TileCodecDescriptor</code>'s
+     * <code>getParameterListDescriptor</code> method for the "tileDecoder"
+     * registry mode.
      *
      * <p> If param is null, then the default parameter list for decoding
-     * as defined by the associated <code>TileCodecDescriptor</code>'s 
+     * as defined by the associated <code>TileCodecDescriptor</code>'s
      * <code>getDefaultParameters()</code> method will be used for decoding.
      * If this too is null, an <code>IllegalArgumentException</code> will
      * be thrown if the <code>ParameterListDescriptor</code> associated
@@ -70,7 +65,7 @@ public abstract class TileDecoderImpl implements TileDecoder {
      * @throws IllegalArgumentException if input is null.
      * @throws IllegalArgumentException if param's getFormatName() method does
      * not return the same formatName as the one specified to this method.
-     * @throws IllegalArgumentException if the ParameterListDescriptor 
+     * @throws IllegalArgumentException if the ParameterListDescriptor
      * associated with the param and the associated TileCodecDescriptor are
      * not equal.
      * @throws IllegalArgumentException if param does not have "tileDecoder"
@@ -80,7 +75,7 @@ public abstract class TileDecoderImpl implements TileDecoder {
      * "sampleModel" parameter is not supplied in the supplied parameter list.
      */
     public TileDecoderImpl(String formatName,
-			   InputStream input, 
+			   InputStream input,
 			   TileCodecParameterList param) {
 
 	// Cause IllegalArgumentException to be thrown if formatName,
@@ -95,7 +90,7 @@ public abstract class TileDecoderImpl implements TileDecoder {
 				JaiI18N.getString("TileDecoderImpl0"));
 	}
 
-        TileCodecDescriptor tcd = 
+        TileCodecDescriptor tcd =
 	    TileCodecUtils.getTileCodecDescriptor("tileDecoder", formatName);
 
 	// If param is null, get the default parameter list.
@@ -110,8 +105,8 @@ public abstract class TileDecoderImpl implements TileDecoder {
 		throw new IllegalArgumentException(
 					  JaiI18N.getString("TileDecoderImpl1"));
 	    }
-	    
-	    // Check whether the supplied parameterList supports the 
+
+	    // Check whether the supplied parameterList supports the
 	    // "tileDecoder" mode.
 	    if (param.isValidForMode("tileDecoder") == false) {
 		throw new IllegalArgumentException(
@@ -136,13 +131,13 @@ public abstract class TileDecoderImpl implements TileDecoder {
 					  JaiI18N.getString("TileDecoderImpl3"));
 		}
 
-		if (sm == null || 
+		if (sm == null ||
 		    sm == ParameterListDescriptor.NO_PARAMETER_DEFAULT) {
-		    
+
 		    if (tcd.getParameterListDescriptor("tileDecoder").
 			        getParamDefaultValue("sampleModel") == null) {
 			// If a non-null value was not set on the parameter list
-			// and wasn't available thru the descriptor either 
+			// and wasn't available thru the descriptor either
 			throw new IllegalArgumentException(
 					  JaiI18N.getString("TileDecoderImpl4"));
 		    }
@@ -151,9 +146,9 @@ public abstract class TileDecoderImpl implements TileDecoder {
 
 	} else {
 
-	    // If the supplied parameterList is null and the default one is 
+	    // If the supplied parameterList is null and the default one is
 	    // null too, then check whether this format supports no parameters
-	    ParameterListDescriptor pld = 
+	    ParameterListDescriptor pld =
 		tcd.getParameterListDescriptor("tileDecoder");
 
 	    // Check whether a non-null samplemodel value is needed
@@ -163,7 +158,7 @@ public abstract class TileDecoderImpl implements TileDecoder {
 					  JaiI18N.getString("TileDecoderImpl5"));
 	    }
 
-	    // If the PLD is not null and says that there are supposed to 
+	    // If the PLD is not null and says that there are supposed to
 	    // be some parameters (numParameters returns non-zero value)
 	    // throw an IllegalArgumentException
 	    if (pld != null && pld.getNumParameters() != 0) {
@@ -176,7 +171,7 @@ public abstract class TileDecoderImpl implements TileDecoder {
 	this.inputStream = input;
 	this.paramList = param;
     }
-    
+
     /**
      * Returns the format name.
      */
@@ -193,11 +188,11 @@ public abstract class TileDecoderImpl implements TileDecoder {
     }
 
     /**
-     * Returns the <code>InputStream</code> associated with this 
+     * Returns the <code>InputStream</code> associated with this
      * <code>TileDecoder</code>.
      */
     public InputStream getInputStream() {
         return inputStream;
-    } 
+    }
 }
 

@@ -17,23 +17,17 @@ import java.awt.image.MultiPixelPackedSampleModel;
 import java.awt.image.RenderedImage;
 import java.awt.image.SampleModel;
 import java.awt.image.renderable.RenderableImage;
-import java.awt.image.renderable.RenderableImageOp;
 import java.awt.image.renderable.RenderContext;
 import java.awt.image.renderable.ParameterBlock;
-import java.awt.image.renderable.RenderedImageFactory;
+
 import javax.media.jai.BorderExtender;
 import javax.media.jai.ImageLayout;
 import javax.media.jai.Interpolation;
-import javax.media.jai.InterpolationBicubic;
-import javax.media.jai.InterpolationBicubic2;
 import javax.media.jai.InterpolationBilinear;
 import javax.media.jai.InterpolationNearest;
-import javax.media.jai.InterpolationTable;
-import javax.media.jai.PlanarImage;
-import javax.media.jai.RenderedOp;
 import javax.media.jai.TileCache;
 import javax.media.jai.CRIFImpl;
-import java.util.Map;
+
 import java.awt.geom.Rectangle2D;
 import java.awt.geom.Point2D;
 
@@ -106,7 +100,7 @@ public class AffineCRIF extends CRIFImpl {
         // In which case call translate. Note that only integer translate
         // is applicable. For non-integer translate we'll have to do the
         // affine.
-        // If the hints contain an ImageLayout hint, we can't use 
+        // If the hints contain an ImageLayout hint, we can't use
 	// TranslateIntOpImage since it isn't capable of dealing with that.
         if ((tr[0] == 1.0) &&
             (tr[3] == 1.0) &&

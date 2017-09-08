@@ -13,14 +13,13 @@ package javax.media.jai.operator;
 import java.awt.RenderingHints;
 import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
-import java.awt.image.renderable.RenderableImage;
+
 import javax.media.jai.BorderExtender;
 import javax.media.jai.Interpolation;
 import javax.media.jai.JAI;
 import javax.media.jai.KernelJAI;
 import javax.media.jai.OperationDescriptorImpl;
 import javax.media.jai.ParameterBlockJAI;
-import javax.media.jai.RenderableOp;
 import javax.media.jai.RenderedOp;
 import javax.media.jai.registry.RenderableRegistryMode;
 
@@ -162,8 +161,8 @@ public class RenderableDescriptor extends OperationDescriptorImpl {
             // Create the down-sampler operation chain consisting of a 5x5
             // Gaussian filter followed by a subsampling by 2. Use a kernel
             // which satisfies the description in P. J. Burt and
-            // E. H. Adelson, "The Laplacian pyramid as a compact image code", 
-            // IEEE Transactions on Communications., pp. 532-540, 1983. 
+            // E. H. Adelson, "The Laplacian pyramid as a compact image code",
+            // IEEE Transactions on Communications., pp. 532-540, 1983.
 
             // Add the filtering operation.
             ParameterBlock pb = new ParameterBlock();
@@ -183,7 +182,7 @@ public class RenderableDescriptor extends OperationDescriptorImpl {
             } else {
                 hints.put(JAI.KEY_BORDER_EXTENDER, extender);
             }
-                                   
+
             RenderedOp filter = new RenderedOp("convolve", pb, hints);
 
             // Add the subsampling operation.

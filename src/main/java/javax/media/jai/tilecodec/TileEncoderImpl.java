@@ -10,14 +10,9 @@
  * $State: Exp $
  */package javax.media.jai.tilecodec;
 
-import java.awt.image.Raster;
-import java.awt.image.SampleModel;
-import java.io.IOException;
 import java.io.OutputStream;
-import javax.media.jai.JAI ;
+
 import javax.media.jai.ParameterListDescriptor;
-import javax.media.jai.tilecodec.TileCodecDescriptor;
-import com.sun.media.jai.tilecodec.TileCodecUtils;
 
 /**
  * A partial implementation of the <code>TileEncoder</code> interface
@@ -26,13 +21,13 @@ import com.sun.media.jai.tilecodec.TileCodecUtils;
  * @since JAI 1.1
  */
 public abstract class TileEncoderImpl implements TileEncoder {
-    
+
     /**
      * The name of the format.
      */
     protected String formatName;
 
-    /** 
+    /**
      * The <code>OutputStream</code>  to write the encoded data to.
      */
     protected OutputStream outputStream;
@@ -48,17 +43,17 @@ public abstract class TileEncoderImpl implements TileEncoder {
      * <code>IllegalArgumentException</code> will be thrown if
      * <code>param</code>'s <code>getParameterListDescriptor()</code> method
      * does not return the same descriptor as that from the associated
-     * <code>TileCodecDescriptor</code>'s 
-     * <code>getParameterListDescriptor</code> method for the "tileEncoder" 
-     * registry mode. 
+     * <code>TileCodecDescriptor</code>'s
+     * <code>getParameterListDescriptor</code> method for the "tileEncoder"
+     * registry mode.
      *
      * <p> If param is null, then the default parameter list for encoding
-     * as defined by the associated <code>TileCodecDescriptor</code>'s 
+     * as defined by the associated <code>TileCodecDescriptor</code>'s
      * <code>getDefaultParameters()</code> method will be used for encoding.
      * If this too is null, an <code>IllegalArgumentException</code> will
      * be thrown if the <code>ParameterListDescriptor</code> associated
      * with the associated <code>TileCodecDescriptor</code> for the
-     * "tileEncoder" registry mode, reports that the number of parameters 
+     * "tileEncoder" registry mode, reports that the number of parameters
      * for this format is non-zero.
      *
      * @param formatName The name of the format.
@@ -69,11 +64,11 @@ public abstract class TileEncoderImpl implements TileEncoder {
      * @throws IllegalArgumentException if output is null.
      * @throws IllegalArgumentException if param's getFormatName() method does
      * not return the same formatName as the one specified to this method.
-     * @throws IllegalArgumentException if the ParameterListDescriptors 
+     * @throws IllegalArgumentException if the ParameterListDescriptors
      * associated with the param and the associated TileCodecDescriptor are
      * not equal.
      * @throws IllegalArgumentException if param does not have "tileEncoder"
-     * as one of the valid modes that it supports. 
+     * as one of the valid modes that it supports.
      */
     public TileEncoderImpl(String formatName,
 			   OutputStream output,
@@ -91,7 +86,7 @@ public abstract class TileEncoderImpl implements TileEncoder {
 				JaiI18N.getString("TileEncoderImpl0"));
 	}
 
-        TileCodecDescriptor tcd = 
+        TileCodecDescriptor tcd =
 	    TileCodecUtils.getTileCodecDescriptor("tileEncoder", formatName);
 
 	// If param is null, get the default parameter list.
@@ -106,8 +101,8 @@ public abstract class TileEncoderImpl implements TileEncoder {
 		throw new IllegalArgumentException(
 					  JaiI18N.getString("TileEncoderImpl1"));
 	    }
-	    
-	    // Check whether the supplied parameterList supports the 
+
+	    // Check whether the supplied parameterList supports the
 	    // "tileDecoder" mode.
 	    if (param.isValidForMode("tileEncoder") == false) {
 		throw new IllegalArgumentException(
@@ -115,18 +110,18 @@ public abstract class TileEncoderImpl implements TileEncoder {
 	    }
 
 	    // Check whether the ParameterListDescriptors are the same.
-	    if (param.getParameterListDescriptor().equals( 
+	    if (param.getParameterListDescriptor().equals(
 			tcd.getParameterListDescriptor("tileEncoder")) == false)
             throw new IllegalArgumentException(JaiI18N.getString("TileCodec0"));
 
 	} else {
 
-	    // If the supplied parameterList is null and the default one is 
+	    // If the supplied parameterList is null and the default one is
 	    // null too, then check whether this format supports no parameters
-	    ParameterListDescriptor pld = 
+	    ParameterListDescriptor pld =
 		tcd.getParameterListDescriptor("tileEncoder");
 
-	    // If the PLD is not null and says that there are supposed to 
+	    // If the PLD is not null and says that there are supposed to
 	    // be some parameters (numParameters returns non-zero value)
 	    // throw an IllegalArgumentException
 	    if (pld != null && pld.getNumParameters() != 0) {
@@ -139,7 +134,7 @@ public abstract class TileEncoderImpl implements TileEncoder {
 	this.outputStream = output;
 	this.paramList = param;
     }
-    
+
     /**
      * Returns the format name of the encoding scheme.
      */
@@ -155,7 +150,7 @@ public abstract class TileEncoderImpl implements TileEncoder {
 	return paramList;
     }
 
-    /** 
+    /**
      * Returns the <code>OutputStream</code> to which the encoded data will
      * be written.
      */

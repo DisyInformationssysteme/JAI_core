@@ -19,13 +19,9 @@ import javax.media.jai.EnumeratedParameter;
 import javax.media.jai.BorderExtender;
 import javax.media.jai.ImageLayout;
 import javax.media.jai.Interpolation;
-import javax.media.jai.InterpolationBicubic2;
-import javax.media.jai.InterpolationBicubic;
 import javax.media.jai.InterpolationBilinear;
 import javax.media.jai.InterpolationNearest;
-import javax.media.jai.InterpolationTable;
-import java.util.Map;
-import javax.media.jai.BorderExtender;
+
 import javax.media.jai.operator.ShearDescriptor;
 import com.sun.media.jai.opimage.RIFUtil;
 

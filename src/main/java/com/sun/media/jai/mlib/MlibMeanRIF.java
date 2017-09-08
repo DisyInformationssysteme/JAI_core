@@ -14,8 +14,6 @@ import java.awt.RenderingHints;
 import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
 import java.awt.image.renderable.RenderedImageFactory;
-import javax.media.jai.ROI;
-import com.sun.media.jai.opimage.RIFUtil;
 
 /**
  * A <code>RIF</code> supporting the "Mean" operation in the
@@ -49,7 +47,7 @@ public class MlibMeanRIF implements RenderedImageFactory {
 	ROI roi = (ROI)args.getObjectParameter(0);
         int xPeriod = args.getIntParameter(1);
         int yPeriod = args.getIntParameter(2);
-	
+
         int xStart = source.getMinX();	// default values
         int yStart = source.getMinY();
 

@@ -19,13 +19,7 @@ import javax.media.jai.ImageLayout;
 import javax.media.jai.Interpolation;
 import javax.media.jai.InterpolationNearest;
 import javax.media.jai.InterpolationBilinear;
-import javax.media.jai.InterpolationBicubic;
-import javax.media.jai.InterpolationBicubic2;
-import javax.media.jai.InterpolationTable;
-import java.util.Map;
-import javax.media.jai.Warp;
-import javax.media.jai.WarpGrid;
-import javax.media.jai.WarpPolynomial;
+
 import com.sun.media.jai.opimage.RIFUtil;
 
 import com.sun.medialib.mlib.*;
@@ -58,7 +52,7 @@ public class MlibWarpRIF implements RenderedImageFactory {
                                 RenderingHints hints) {
         /* Get ImageLayout and TileCache from RenderingHints. */
         ImageLayout layout = RIFUtil.getImageLayoutHint(hints);
-        
+
         RenderedImage source = args.getRenderedSource(0);
 
 
@@ -66,7 +60,7 @@ public class MlibWarpRIF implements RenderedImageFactory {
             !MediaLibAccessor.hasSameNumBands(args, layout) ||
 	    // Medialib cannot deal with source image having tiles with any
 	    // dimension greater than or equal to 32768
-	    source.getTileWidth() >= 32768 || 
+	    source.getTileWidth() >= 32768 ||
 	    source.getTileHeight() >= 32768) {
             return null;
         }

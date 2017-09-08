@@ -19,7 +19,6 @@ import java.awt.image.renderable.RenderableImage;
 import javax.media.jai.JAI;
 import javax.media.jai.OperationDescriptorImpl;
 import javax.media.jai.ParameterBlockJAI;
-import javax.media.jai.RenderableOp;
 import javax.media.jai.RenderedOp;
 import javax.media.jai.registry.RenderableRegistryMode;
 import javax.media.jai.registry.RenderedRegistryMode;
@@ -109,7 +108,7 @@ public class AndDescriptor extends OperationDescriptorImpl {
 				      ParameterBlock args,
                                       StringBuffer msg) {
 
-        if (!super.validateSources(modeName, args, msg)) { 
+        if (!super.validateSources(modeName, args, msg)) {
             return false;
         }
 

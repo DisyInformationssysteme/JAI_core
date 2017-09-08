@@ -15,10 +15,8 @@ import java.awt.RenderingHints;
 import java.awt.image.renderable.ParameterBlock;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Vector;
-import javax.media.jai.CollectionImage;
+
 import javax.media.jai.CollectionImageFactory;
-import javax.media.jai.CollectionOp;
 import javax.media.jai.JAI;
 import javax.media.jai.OperationNode;
 import javax.media.jai.OperationRegistry;
@@ -335,14 +333,14 @@ public final class CIFRegistry  {
 
     /**
      * Constructs and returns a <code>PropertySource</code> suitable for
-     * use by a given <code>CollectionOp</code>.  The 
+     * use by a given <code>CollectionOp</code>.  The
      * <code>PropertySource</code> includes properties copied from prior
-     * nodes as well as those generated at the node itself. Additionally, 
+     * nodes as well as those generated at the node itself. Additionally,
      * property suppression is taken into account. The actual implementation
      * of <code>getPropertySource()</code> may make use of deferred
      * execution and caching.
      *
-     * @param op the <code>CollectionOp</code> requesting its 
+     * @param op the <code>CollectionOp</code> requesting its
      *        <code>PropertySource</code>.
      *
      * @throws IllegalArgumentException if <code>op</code> is <code>null</code>

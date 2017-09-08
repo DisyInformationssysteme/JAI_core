@@ -26,7 +26,6 @@ import com.sun.media.jai.codec.ImageDecodeParam;
 import com.sun.media.jai.codec.ImageEncoder;
 import com.sun.media.jai.codec.ImageEncodeParam;
 import com.sun.media.jai.codec.PNGDecodeParam;
-import com.sun.media.jai.codec.PNGEncodeParam;
 import com.sun.media.jai.codec.SeekableStream;
 
 
@@ -132,7 +131,7 @@ public final class PNGCodec extends ImageCodec {
     }
 
     protected ImageDecoder createImageDecoder(File src,
-                                              ImageDecodeParam param) 
+                                              ImageDecodeParam param)
         throws IOException {
         PNGDecodeParam p = null;
         if (param != null) {

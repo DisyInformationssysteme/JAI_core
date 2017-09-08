@@ -13,7 +13,6 @@ package javax.media.jai.operator;
 import com.sun.media.jai.util.PropertyGeneratorImpl;
 import java.awt.Rectangle;
 import java.awt.RenderingHints;
-import java.awt.geom.AffineTransform;
 import java.awt.geom.Point2D;
 import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
@@ -26,11 +25,7 @@ import javax.media.jai.OperationDescriptorImpl;
 import javax.media.jai.ParameterBlockJAI;
 import javax.media.jai.PlanarImage;
 import javax.media.jai.PropertyGenerator;
-import javax.media.jai.ROI;
-import javax.media.jai.ROIShape;
-import javax.media.jai.RenderableOp;
 import javax.media.jai.RenderedOp;
-import javax.media.jai.Warp;
 import javax.media.jai.registry.RenderedRegistryMode;
 
 /**
@@ -169,14 +164,14 @@ class WarpPropertyGenerator extends PropertyGeneratorImpl {
  * <code>configuration</code> so that the operation is performed
  * on the pixel values instead of being performed on the indices into
  * the color map if the source(s) have an <code>IndexColorModel</code>.
- * This addition will take place only if a value for the 
+ * This addition will take place only if a value for the
  * <code>JAI.KEY_REPLACE_INDEX_COLOR_MODEL</code> has not already been
  * provided by the user. Note that the <code>configuration</code> Map
- * is cloned before the new hint is added to it. The operation can be 
+ * is cloned before the new hint is added to it. The operation can be
  * smart about the value of the <code>JAI.KEY_REPLACE_INDEX_COLOR_MODEL</code>
  * <code>RenderingHints</code>, i.e. while the default value for the
  * <code>JAI.KEY_REPLACE_INDEX_COLOR_MODEL</code> is
- * <code>Boolean.TRUE</code>, in some cases the operator could set the 
+ * <code>Boolean.TRUE</code>, in some cases the operator could set the
  * default.
  *
  * <p><table border=1>

@@ -10,10 +10,8 @@
  * $State: Exp $
  */
 package javax.media.jai.operator;
-import com.sun.media.jai.codec.FPXDecodeParam;
 import com.sun.media.jai.codec.SeekableStream;
 import java.awt.RenderingHints;
-import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
 import javax.media.jai.JAI;
 import javax.media.jai.OperationDescriptorImpl;
@@ -35,7 +33,7 @@ import javax.media.jai.registry.RenderedRegistryMode;
  * package are not a committed part of the JAI API.  Future releases
  * of JAI will make use of new classes in their place.  This
  * class will change accordingly.</b>
- * 
+ *
  * <p><table border=1>
  * <caption>Resource List</caption>
  * <tr><th>Name</th>        <th>Value</th></tr>

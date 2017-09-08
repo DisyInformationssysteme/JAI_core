@@ -17,7 +17,6 @@ import java.awt.image.renderable.RenderableImage;
 import javax.media.jai.JAI;
 import javax.media.jai.OperationDescriptorImpl;
 import javax.media.jai.ParameterBlockJAI;
-import javax.media.jai.RenderableOp;
 import javax.media.jai.RenderedOp;
 import javax.media.jai.registry.RenderableRegistryMode;
 import javax.media.jai.registry.RenderedRegistryMode;
@@ -32,9 +31,9 @@ import javax.media.jai.registry.RenderedRegistryMode;
  * <p> By default the destination image bounds are equal to those of the
  * source image.  The <code>SampleModel</code> of the destination image is
  * an instance of <code>MultiPixelPackedSampleModel</code>.
- * 
+ *
  * <p> The pseudocode for "Binarize" is as follows:
- * <pre> 
+ * <pre>
  *      dst(x, y) = src(x, y) >= threshold ? 1 : 0;
  * </pre>
  *
@@ -129,7 +128,7 @@ public class BinarizeDescriptor extends OperationDescriptorImpl {
         if (numBands != 1){
             msg.append(getName() + " " +
                            JaiI18N.getString("BinarizeDescriptor2"));
-            return false;	  
+            return false;
         }
 
         return true;

@@ -12,7 +12,6 @@
 package com.sun.media.jai.opimage;
 import java.awt.RenderingHints;
 import java.awt.geom.Rectangle2D;
-import java.awt.geom.Point2D;
 import java.awt.geom.AffineTransform;
 import java.awt.image.DataBuffer;
 import java.awt.image.MultiPixelPackedSampleModel;
@@ -20,19 +19,15 @@ import java.awt.image.SampleModel;
 import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
 import java.awt.image.renderable.RenderableImage;
-import java.awt.image.renderable.RenderableImageOp;
 import java.awt.image.renderable.RenderContext;
-import java.awt.image.renderable.RenderedImageFactory;
+
 import javax.media.jai.BorderExtender;
 import javax.media.jai.ImageLayout;
 import javax.media.jai.Interpolation;
 import javax.media.jai.InterpolationNearest;
 import javax.media.jai.InterpolationBilinear;
-import javax.media.jai.InterpolationBicubic;
-import javax.media.jai.InterpolationBicubic2;
 import javax.media.jai.TileCache;
 import javax.media.jai.CRIFImpl;
-import java.util.Map;
 
 /**
  * This image factory supports image operator <code>TranslateOpImage</code>
@@ -67,21 +62,21 @@ public class TranslateCRIF extends CRIFImpl {
 
 	// If there is a layout hint, TranslateIntOpImage can't deal with it
         if ((Math.abs(xTrans - (int)xTrans) < TOLERANCE) &&
-            (Math.abs(yTrans - (int)yTrans) < TOLERANCE) && 
+            (Math.abs(yTrans - (int)yTrans) < TOLERANCE) &&
 	    layout == null) {
-            return new TranslateIntOpImage(source, 
+            return new TranslateIntOpImage(source,
 					   renderHints,
-					   (int)xTrans, 
+					   (int)xTrans,
 					   (int)yTrans);
         } else {
-            
+
             // Get TileCache from renderHints if any.
             TileCache cache = RIFUtil.getTileCacheHint(renderHints);
 
             // Get BorderExtender from renderHints if any.
-            BorderExtender extender = 
+            BorderExtender extender =
                 RIFUtil.getBorderExtenderHint(renderHints);
-            
+
             //
             // Call the Scale operation, since it encapsulates Translate
             // and is better optimized than Affine.
@@ -92,13 +87,13 @@ public class TranslateCRIF extends CRIFImpl {
 	    boolean isBinary =
 	      (sm instanceof MultiPixelPackedSampleModel) &&
 	      (sm.getSampleSize(0) == 1) &&
-	      (sm.getDataType() == DataBuffer.TYPE_BYTE || 
-	       sm.getDataType() == DataBuffer.TYPE_USHORT || 
+	      (sm.getDataType() == DataBuffer.TYPE_BYTE ||
+	       sm.getDataType() == DataBuffer.TYPE_USHORT ||
 	       sm.getDataType() == DataBuffer.TYPE_INT);
-	    
-            if (interp instanceof InterpolationNearest) 
+
+            if (interp instanceof InterpolationNearest)
 	    {
-	      if (isBinary) 
+	      if (isBinary)
 	      {
 		return new ScaleNearestBinaryOpImage(source,
 						     extender,
@@ -109,8 +104,8 @@ public class TranslateCRIF extends CRIFImpl {
 						     xTrans,
 						     yTrans,
 						     interp);
-	      } 
-	      else 
+	      }
+	      else
 	      {
 		return new ScaleNearestOpImage(source,
 					       extender,
@@ -120,11 +115,11 @@ public class TranslateCRIF extends CRIFImpl {
 					       xTrans, yTrans,
 					       interp);
 	      }
-            } 
-	    else 
-	      if (interp instanceof InterpolationBilinear) 
+            }
+	    else
+	      if (interp instanceof InterpolationBilinear)
 	      {
-		if (isBinary) 
+		if (isBinary)
 		{
 		  return new ScaleBilinearBinaryOpImage(source,
 							extender,
@@ -135,9 +130,9 @@ public class TranslateCRIF extends CRIFImpl {
 							xTrans,
 							yTrans,
 							interp);
-		} 
-		else 
-		{		
+		}
+		else
+		{
 		  return new ScaleBilinearOpImage(source,
 						  extender,
 						  renderHints,
@@ -146,10 +141,10 @@ public class TranslateCRIF extends CRIFImpl {
 						  xTrans, yTrans,
 						  interp);
 		}
-	      } 
-	      else 
+	      }
+	      else
 		if ((interp instanceof InterpolationBicubic) ||
-                       (interp instanceof InterpolationBicubic2)) 
+                       (interp instanceof InterpolationBicubic2))
 		{
 		  return new ScaleBicubicOpImage(source,
 						 extender,
@@ -158,8 +153,8 @@ public class TranslateCRIF extends CRIFImpl {
 						 xScale, yScale,
 						 xTrans, yTrans,
 						 interp);
-		} 
-		else 
+		}
+		else
 		{
 		  return new ScaleGeneralOpImage(source, extender,
 						 renderHints,

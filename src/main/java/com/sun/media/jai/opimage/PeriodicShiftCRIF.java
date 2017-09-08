@@ -11,21 +11,11 @@
  */
 package com.sun.media.jai.opimage;
 import java.awt.RenderingHints;
-import java.awt.geom.Rectangle2D;
-import java.awt.geom.AffineTransform;
 import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
-import java.awt.image.renderable.RenderableImage;
-import java.awt.image.renderable.RenderableImageOp;
-import java.awt.image.renderable.RenderContext;
-import java.awt.image.renderable.RenderedImageFactory;
+
 import javax.media.jai.CRIFImpl;
 import javax.media.jai.ImageLayout;
-import javax.media.jai.Interpolation;
-import javax.media.jai.InterpolationNearest;
-import javax.media.jai.InterpolationBilinear;
-import javax.media.jai.InterpolationBicubic;
-import java.util.Map;
 
 /**
  * This image factory supports image operator <code>PeriodicShiftOpImage</code>
@@ -49,8 +39,8 @@ public class PeriodicShiftCRIF extends CRIFImpl {
                                 RenderingHints renderHints) {
         // Get ImageLayout from renderHints if any.
         ImageLayout layout = RIFUtil.getImageLayoutHint(renderHints);
-        
-        
+
+
         // Get the source image.
         RenderedImage source = paramBlock.getRenderedSource(0);
 

@@ -18,14 +18,9 @@ import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
 import java.awt.image.renderable.RenderableImage;
 import javax.media.jai.JAI;
-import javax.media.jai.OpImage;
 import javax.media.jai.OperationDescriptorImpl;
 import javax.media.jai.ParameterBlockJAI;
-import javax.media.jai.PixelAccessor;
 import javax.media.jai.PropertyGenerator;
-import javax.media.jai.ROI;
-import javax.media.jai.ROIShape;
-import javax.media.jai.RenderableOp;
 import javax.media.jai.RenderedOp;
 import javax.media.jai.registry.RenderableRegistryMode;
 import javax.media.jai.registry.RenderedRegistryMode;
@@ -126,9 +121,9 @@ class SubsampleBinaryToGrayPropertyGenerator extends PropertyGeneratorImpl {
  * and  <code> yScale</code> must be between (0, 1] and strictly bigger
  * than 0.
  *
- * <p> The destination image is a byte image whose 
- * dimensions are: 
- * 
+ * <p> The destination image is a byte image whose
+ * dimensions are:
+ *
  * <code><pre>
  *       dstWidth  = floor(srcWidth * xScale)
  *       dstHeight = floor(srcHeight * yScale)
@@ -144,10 +139,10 @@ class SubsampleBinaryToGrayPropertyGenerator extends PropertyGeneratorImpl {
  * <p> It should be noted that this operation automatically adds a
  * value of <code>Boolean.FALSE</code> for the
  * <code>JAI.KEY_REPLACE_INDEX_COLOR_MODEL</code> to the given
- * <code>configuration</code> since this operation is capable of 
+ * <code>configuration</code> since this operation is capable of
  * dealing correctly with a source that has an <code>IndexColorModel</code>,
  * without having to expand the <code>IndexColorModel</code>.
- * This addition will take place only if a value for the 
+ * This addition will take place only if a value for the
  * <code>JAI.KEY_REPLACE_INDEX_COLOR_MODEL</code> has not already been
  * provided by the user. Note that the <code>configuration</code> Map
  * is cloned before the new hint is added to it.
@@ -155,7 +150,7 @@ class SubsampleBinaryToGrayPropertyGenerator extends PropertyGeneratorImpl {
  * <p> Specifying a scale factor of greater than 1 or less than 0
  * will cause an exception. To scale image sizes up or down,
  * see <code>Scale</code> operator.
- * 
+ *
  * <p><table border=1>
  * <caption>Resource List</caption>
  * <tr><th>Name</th>        <th>Value</th></tr>
@@ -254,15 +249,15 @@ public class SubsampleBinaryToGrayDescriptor extends OperationDescriptorImpl {
         }
 
         // Checks for source to be Binary and Dest Grayscale
-        // to be in the RIF 
-	
+        // to be in the RIF
+
 	RenderedImage src = (RenderedImage)args.getSource(0);
 
 	PixelAccessor srcPA = new PixelAccessor(src);
 	if (!srcPA.isPacked || !srcPA.isMultiPixelPackedSM){
             msg.append(getName() + " " +
                        JaiI18N.getString("SubsampleBinaryToGray3"));
-	    return false;	  
+	    return false;
 	}
 
         float xScale = args.getFloatParameter(0);

@@ -16,7 +16,6 @@ import java.awt.image.renderable.ParameterBlock;
 import java.awt.image.renderable.RenderedImageFactory;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
-import java.io.IOException;
 import java.lang.reflect.AccessibleObject;
 import java.lang.reflect.Method;
 import javax.media.jai.JAI;
@@ -25,7 +24,7 @@ import javax.media.jai.OpImage;
 import javax.media.jai.RenderedImageAdapter;
 import javax.media.jai.registry.RIFRegistry;
 import javax.media.jai.util.ImagingListener;
-import com.sun.media.jai.codec.FileSeekableStream;
+
 import com.sun.media.jai.codec.ImageDecodeParam;
 import com.sun.media.jai.codec.SeekableStream;
 import com.sun.media.jai.util.ImageUtil;

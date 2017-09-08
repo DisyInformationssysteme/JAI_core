@@ -15,13 +15,11 @@ import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ContextualRenderedImageFactory;
 import java.awt.image.renderable.ParameterBlock;
 import java.awt.image.renderable.RenderContext;
-import java.util.Vector;
+
 import javax.media.jai.JAI;
 import javax.media.jai.OperationNode;
 import javax.media.jai.OperationRegistry;
 import javax.media.jai.PropertySource;
-import javax.media.jai.RenderableOp;
-
 
 /**
  * Utility class to provide type-safe interaction
@@ -157,14 +155,14 @@ public final class CRIFRegistry {
 
     /**
      * Constructs and returns a <code>PropertySource</code> suitable for
-     * use by a given <code>RenderableOp</code>.  The 
+     * use by a given <code>RenderableOp</code>.  The
      * <code>PropertySource</code> includes properties copied from prior
-     * nodes as well as those generated at the node itself. Additionally, 
+     * nodes as well as those generated at the node itself. Additionally,
      * property suppression is taken into account. The actual implementation
      * of <code>getPropertySource()</code> may make use of deferred
      * execution and caching.
      *
-     * @param op the <code>RenderableOp</code> requesting its 
+     * @param op the <code>RenderableOp</code> requesting its
      *        <code>PropertySource</code>.
      *
      * @throws IllegalArgumentException if <code>op</code> is <code>null</code>

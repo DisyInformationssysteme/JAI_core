@@ -17,7 +17,6 @@ import java.awt.image.renderable.RenderableImage;
 import javax.media.jai.JAI;
 import javax.media.jai.OperationDescriptorImpl;
 import javax.media.jai.ParameterBlockJAI;
-import javax.media.jai.RenderableOp;
 import javax.media.jai.RenderedOp;
 import javax.media.jai.registry.RenderableRegistryMode;
 import javax.media.jai.registry.RenderedRegistryMode;
@@ -65,12 +64,12 @@ public class DCTDescriptor extends OperationDescriptorImpl {
     public DCTDescriptor() {
         super(resources, 1, null, null, null);
     }
-    
+
     /** Returns <code>true</code> since renderable operation is supported. */
     public boolean isRenderableSupported() {
         return true;
     }
-    
+
 
 
     /**
