@@ -33,6 +33,7 @@ import com.sun.media.jai.codecimpl.BMPCodec;
 import com.sun.media.jai.codecimpl.FPXCodec;
 import com.sun.media.jai.codecimpl.GIFCodec;
 import com.sun.media.jai.codecimpl.ImagingListenerProxy;
+import com.sun.media.jai.codecimpl.JPEGCodec;
 import com.sun.media.jai.codecimpl.PNGCodec;
 import com.sun.media.jai.codecimpl.PNMCodec;
 import com.sun.media.jai.codecimpl.TIFFCodec;
@@ -79,7 +80,7 @@ public abstract class ImageCodec {
     registerCodec(new BMPCodec());
     registerCodec(new GIFCodec());
     registerCodec(new FPXCodec());
-//    registerCodec(new JPEGCodec());
+    registerCodec(new JPEGCodec());
     registerCodec(new PNGCodec());
     registerCodec(new PNMCodec());
     registerCodec(new TIFFCodec());

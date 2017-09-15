@@ -37,14 +37,9 @@ import javax.media.jai.RasterFactory;
 import javax.media.jai.util.ImagingException;
 import javax.media.jai.util.ImagingListener;
 import java.util.Map;
-// exists in other places:
-//import com.sun.media.jai.codecimpl.JPEGCodec;
-//import com.sun.media.jai.codec.JPEGDecodeParam;
-//import com.sun.media.jai.codecimpl.JPEGImageDecoder;
-// original, should be removed
-//import com.sun.image.codec.jpeg.JPEGCodec;
-//import com.sun.image.codec.jpeg.JPEGDecodeParam;
-//import com.sun.image.codec.jpeg.JPEGImageDecoder;
+import com.sun.image.codec.jpeg.JPEGCodec;
+import com.sun.image.codec.jpeg.JPEGDecodeParam;
+import com.sun.image.codec.jpeg.JPEGImageDecoder;
 import com.sun.media.jai.util.ImageUtil;
 
 /**
@@ -114,7 +109,7 @@ public class IIPResolutionOpImage extends OpImage {
     private int numXTiles;
 
     /* The JPEGDecodeParam cache */
-//    private JPEGDecodeParam[] decodeParamCache = new JPEGDecodeParam[255];
+    private JPEGDecodeParam[] decodeParamCache = new JPEGDecodeParam[255];
 
     /* Property initialization flag. */
     private boolean arePropertiesInitialized = false;
@@ -830,9 +825,9 @@ public class IIPResolutionOpImage extends OpImage {
                 case TILE_SINGLE_COLOR:
                     raster = getSingleColorTile(tx, ty, compressionSubType);
                     break;
-//                case TILE_JPEG:
-//                    raster = getJPEGTile(tx, ty, compressionSubType, data);
-//                    break;
+                case TILE_JPEG:
+                    raster = getJPEGTile(tx, ty, compressionSubType, data);
+                    break;
                 case TILE_INVALID:
                 default:
                     raster = createWritableRaster(sampleModel,
@@ -914,43 +909,43 @@ public class IIPResolutionOpImage extends OpImage {
     /*
      * Create a Raster from a JPEG-compressed data stream.
      */
-//    private Raster getJPEGTile(int tx, int ty, int subType, byte[] data) {
-//        int tableIndex = (subType >> 24) & 0x000000ff;;
-//        boolean colorConversion = (subType & 0x00ff0000) != 0;
-//        JPEGDecodeParam decodeParam = null;
-//        if(tableIndex != 0) {
-//            decodeParam = getJPEGDecodeParam(tableIndex);
-//        }
-//
-//        ByteArrayInputStream byteStream = new ByteArrayInputStream(data);
-//        JPEGImageDecoder decoder = decodeParam == null ?
-//            JPEGCodec.createJPEGDecoder(byteStream) :
-//            JPEGCodec.createJPEGDecoder(byteStream, decodeParam);
-//
-//        Raster raster = null;
-//        try {
-//            raster = decoder.decodeAsRaster().createTranslatedChild(tx, ty);
-//        } catch(Exception e) {
-//
-//            ImagingListener listener =
-//                ImageUtil.getImagingListener(renderHints);
-//            listener.errorOccurred(JaiI18N.getString("IIPResolutionOpImage3"),
-//                                   new ImagingException(e),
-//                                   this, false);
-///*
-//            String msg = JaiI18N.getString("IIPResolutionOpImage3")+" "+
-//                e.getMessage();
-//            throw new RuntimeException(msg);
-//*/
-//        }
-//        closeStream(byteStream);
-//
-//        if(colorSpaceType == CS_NIFRGB && colorConversion) {
-//            YCbCrToNIFRGB(raster);
-//        }
-//
-//        return raster;
-//    }
+    private Raster getJPEGTile(int tx, int ty, int subType, byte[] data) {
+        int tableIndex = (subType >> 24) & 0x000000ff;;
+        boolean colorConversion = (subType & 0x00ff0000) != 0;
+        JPEGDecodeParam decodeParam = null;
+        if(tableIndex != 0) {
+            decodeParam = getJPEGDecodeParam(tableIndex);
+        }
+
+        ByteArrayInputStream byteStream = new ByteArrayInputStream(data);
+        JPEGImageDecoder decoder = decodeParam == null ?
+            JPEGCodec.createJPEGDecoder(byteStream) :
+            JPEGCodec.createJPEGDecoder(byteStream, decodeParam);
+
+        Raster raster = null;
+        try {
+            raster = decoder.decodeAsRaster().createTranslatedChild(tx, ty);
+        } catch(Exception e) {
+
+            ImagingListener listener =
+                ImageUtil.getImagingListener(renderHints);
+            listener.errorOccurred(JaiI18N.getString("IIPResolutionOpImage3"),
+                                   new ImagingException(e),
+                                   this, false);
+/*
+            String msg = JaiI18N.getString("IIPResolutionOpImage3")+" "+
+                e.getMessage();
+            throw new RuntimeException(msg);
+*/
+        }
+        closeStream(byteStream);
+
+        if(colorSpaceType == CS_NIFRGB && colorConversion) {
+            YCbCrToNIFRGB(raster);
+        }
+
+        return raster;
+    }
 
     /*
      * Retrieve the JPEGDecodeParam object for the indicated table. If the
@@ -958,42 +953,42 @@ public class IIPResolutionOpImage extends OpImage {
      * the server. An ArrayIndexOutOfBoundsException will be thrown if
      * the parameter is not in the range [1,256].
      */
-//    private synchronized JPEGDecodeParam getJPEGDecodeParam(int tableIndex) {
-//        JPEGDecodeParam decodeParam = decodeParamCache[tableIndex-1];
-//
-//        if(decodeParam == null) {
-//            String cmd = new String("OBJ=Comp-group,"+
-//                                    TILE_JPEG+","+tableIndex);
-//            InputStream stream = postCommands(new String[] {cmd});
-//            String label = null;
-//            while((label = getLabel(stream)) != null) {
-//                if(label.startsWith("comp-group")) {
-//                    byte[] table = getDataAsByteArray(stream);
-//                    ByteArrayInputStream tableStream =
-//                        new ByteArrayInputStream(table);
-//                    JPEGImageDecoder decoder =
-//                        JPEGCodec.createJPEGDecoder(tableStream);
-//                    try {
-//                        // This call is necessary.
-//                        decoder.decodeAsRaster();
-//                    } catch(Exception e) {
-//                        // Ignore.
-//                    }
-//                    decodeParam = decoder.getJPEGDecodeParam();
-//                } else {
-//                    checkError(label, stream, true);
-//                }
-//            }
-//
-//            endResponse(stream);
-//
-//            if(decodeParam != null) {
-//                decodeParamCache[tableIndex-1] = decodeParam;
-//            }
-//        }
-//
-//        return decodeParam;
-//    }
+    private synchronized JPEGDecodeParam getJPEGDecodeParam(int tableIndex) {
+        JPEGDecodeParam decodeParam = decodeParamCache[tableIndex-1];
+
+        if(decodeParam == null) {
+            String cmd = new String("OBJ=Comp-group,"+
+                                    TILE_JPEG+","+tableIndex);
+            InputStream stream = postCommands(new String[] {cmd});
+            String label = null;
+            while((label = getLabel(stream)) != null) {
+                if(label.startsWith("comp-group")) {
+                    byte[] table = getDataAsByteArray(stream);
+                    ByteArrayInputStream tableStream =
+                        new ByteArrayInputStream(table);
+                    JPEGImageDecoder decoder =
+                        JPEGCodec.createJPEGDecoder(tableStream);
+                    try {
+                        // This call is necessary.
+                        decoder.decodeAsRaster();
+                    } catch(Exception e) {
+                        // Ignore.
+                    }
+                    decodeParam = decoder.getJPEGDecodeParam();
+                } else {
+                    checkError(label, stream, true);
+                }
+            }
+
+            endResponse(stream);
+
+            if(decodeParam != null) {
+                decodeParamCache[tableIndex-1] = decodeParam;
+            }
+        }
+
+        return decodeParam;
+    }
 
     /*
      * Obtain valid properties from IIP server and use

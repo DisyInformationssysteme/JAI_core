@@ -26,9 +26,9 @@ import java.util.Hashtable;
 
 import javax.media.jai.RasterFactory;
 
-//import com.sun.image.codec.jpeg.JPEGCodec;
-//import com.sun.image.codec.jpeg.JPEGDecodeParam;
-//import com.sun.image.codec.jpeg.JPEGImageDecoder;
+import com.sun.image.codec.jpeg.JPEGCodec;
+import com.sun.image.codec.jpeg.JPEGDecodeParam;
+import com.sun.image.codec.jpeg.JPEGImageDecoder;
 import com.sun.media.jai.codec.FPXDecodeParam;
 import com.sun.media.jai.codec.ImageCodec;
 import com.sun.media.jai.codec.SeekableStream;
@@ -856,101 +856,101 @@ public class FPXImage extends SimpleRenderedImage {
     return ras;
   }
 
-//  private Raster getJPEGCompressedTile(final int tileX, final int tileY) throws IOException {
-//    // System.out.println("JPEG compressed tile.");
-//
-//    final int tileIndex = tileY * this.tilesAcross + tileX;
-//
-//    final int tx = tileXToX(tileX);
-//    final int ty = tileYToY(tileY);
-//
-//    final int subtype = getCompressionSubtype(tileIndex);
-//    final int interleave = (subtype >> 0) & 0xff;
-//    final int chroma = (subtype >> 8) & 0xff;
-//    final int conversion = (subtype >> 16) & 0xff;
-//    final int table = (subtype >> 24) & 0xff;
-//
-//    JPEGImageDecoder dec;
-//    JPEGDecodeParam param = null;
-//
-//    if (table != 0) {
-//      final InputStream tableStream = new ByteArrayInputStream(this.JPEGTable[table]);
-//      dec = JPEGCodec.createJPEGDecoder(tableStream);
-//      final Raster junk = dec.decodeAsRaster();
-//      param = dec.getJPEGDecodeParam();
-//    }
-//
-//    this.subimageDataStream.seek(getTileOffset(tileIndex));
-//    if (param != null) {
-//      dec = JPEGCodec.createJPEGDecoder(this.subimageDataStream, param);
-//    } else {
-//      dec = JPEGCodec.createJPEGDecoder(this.subimageDataStream);
-//    }
-//    final Raster ras = dec.decodeAsRaster().createTranslatedChild(tx, ty);
-//
-//    final DataBufferByte dataBuffer = (DataBufferByte) ras.getDataBuffer();
-//    final byte[] data = dataBuffer.getData();
-//
-//    final int subimageColorType = this.subimageColor[this.resolution][0] >> 16;
-//
-//    final int size = this.tileWidth * this.tileHeight;
-//    if ((conversion == 0) && (subimageColorType == 2)) {
-//      // System.out.println("Converting PhotoYCC to NIFRGB");
-//      int offset = 0;
-//      for (int i = 0; i < size; i++) {
-//        final float Y = data[offset] & 0xff;
-//        final float Cb = data[offset + 1] & 0xff;
-//        final float Cr = data[offset + 2] & 0xff;
-//
-//        final float scaledY = Y * 1.3584F;
-//        final byte red = PhotoYCCToNIFRed(scaledY, Cb, Cr);
-//        final byte green = PhotoYCCToNIFGreen(scaledY, Cb, Cr);
-//        final byte blue = PhotoYCCToNIFBlue(scaledY, Cb, Cr);
-//
-//        data[offset] = red;
-//        data[offset + 1] = green;
-//        data[offset + 2] = blue;
-//
-//        offset += this.numChannels;
-//      }
-//    } else if ((conversion == 1) && (subimageColorType == 3)) {
-//      // System.out.println("Converting YCC to NIFRGB");
-//      int offset = 0;
-//      for (int i = 0; i < size; i++) {
-//        final float Y = data[offset] & 0xff;
-//        final float Cb = data[offset + 1] & 0xff;
-//        final float Cr = data[offset + 2] & 0xff;
-//
-//        final byte red = YCCToNIFRed(Y, Cb, Cr);
-//        final byte green = YCCToNIFGreen(Y, Cb, Cr);
-//        final byte blue = YCCToNIFBlue(Y, Cb, Cr);
-//
-//        data[offset] = red;
-//        data[offset + 1] = green;
-//        data[offset + 2] = blue;
-//
-//        offset += this.numChannels;
-//      }
-//    }
-//
-//    // Perform special inversion step when output space is
-//    // NIF RGB (subimageColorType == 3) with premultiplied opacity
-//    // (numChannels == 4).
-//    if ((conversion == 1) && (subimageColorType == 3) && (this.numChannels == 4)) {
-//      // System.out.println("Flipping NIFRGB");
-//
-//      int offset = 0;
-//      for (int i = 0; i < size; i++) {
-//        data[offset + 0] = (byte) (255 - data[offset + 0]);
-//        data[offset + 1] = (byte) (255 - data[offset + 1]);
-//        data[offset + 2] = (byte) (255 - data[offset + 2]);
-//
-//        offset += 4;
-//      }
-//    }
-//
-//    return ras;
-//  }
+  private Raster getJPEGCompressedTile(final int tileX, final int tileY) throws IOException {
+    // System.out.println("JPEG compressed tile.");
+
+    final int tileIndex = tileY * this.tilesAcross + tileX;
+
+    final int tx = tileXToX(tileX);
+    final int ty = tileYToY(tileY);
+
+    final int subtype = getCompressionSubtype(tileIndex);
+    final int interleave = (subtype >> 0) & 0xff;
+    final int chroma = (subtype >> 8) & 0xff;
+    final int conversion = (subtype >> 16) & 0xff;
+    final int table = (subtype >> 24) & 0xff;
+
+    JPEGImageDecoder dec;
+    JPEGDecodeParam param = null;
+
+    if (table != 0) {
+      final InputStream tableStream = new ByteArrayInputStream(this.JPEGTable[table]);
+      dec = JPEGCodec.createJPEGDecoder(tableStream);
+      final Raster junk = dec.decodeAsRaster();
+      param = dec.getJPEGDecodeParam();
+    }
+
+    this.subimageDataStream.seek(getTileOffset(tileIndex));
+    if (param != null) {
+      dec = JPEGCodec.createJPEGDecoder(this.subimageDataStream, param);
+    } else {
+      dec = JPEGCodec.createJPEGDecoder(this.subimageDataStream);
+    }
+    final Raster ras = dec.decodeAsRaster().createTranslatedChild(tx, ty);
+
+    final DataBufferByte dataBuffer = (DataBufferByte) ras.getDataBuffer();
+    final byte[] data = dataBuffer.getData();
+
+    final int subimageColorType = this.subimageColor[this.resolution][0] >> 16;
+
+    final int size = this.tileWidth * this.tileHeight;
+    if ((conversion == 0) && (subimageColorType == 2)) {
+      // System.out.println("Converting PhotoYCC to NIFRGB");
+      int offset = 0;
+      for (int i = 0; i < size; i++) {
+        final float Y = data[offset] & 0xff;
+        final float Cb = data[offset + 1] & 0xff;
+        final float Cr = data[offset + 2] & 0xff;
+
+        final float scaledY = Y * 1.3584F;
+        final byte red = PhotoYCCToNIFRed(scaledY, Cb, Cr);
+        final byte green = PhotoYCCToNIFGreen(scaledY, Cb, Cr);
+        final byte blue = PhotoYCCToNIFBlue(scaledY, Cb, Cr);
+
+        data[offset] = red;
+        data[offset + 1] = green;
+        data[offset + 2] = blue;
+
+        offset += this.numChannels;
+      }
+    } else if ((conversion == 1) && (subimageColorType == 3)) {
+      // System.out.println("Converting YCC to NIFRGB");
+      int offset = 0;
+      for (int i = 0; i < size; i++) {
+        final float Y = data[offset] & 0xff;
+        final float Cb = data[offset + 1] & 0xff;
+        final float Cr = data[offset + 2] & 0xff;
+
+        final byte red = YCCToNIFRed(Y, Cb, Cr);
+        final byte green = YCCToNIFGreen(Y, Cb, Cr);
+        final byte blue = YCCToNIFBlue(Y, Cb, Cr);
+
+        data[offset] = red;
+        data[offset + 1] = green;
+        data[offset + 2] = blue;
+
+        offset += this.numChannels;
+      }
+    }
+
+    // Perform special inversion step when output space is
+    // NIF RGB (subimageColorType == 3) with premultiplied opacity
+    // (numChannels == 4).
+    if ((conversion == 1) && (subimageColorType == 3) && (this.numChannels == 4)) {
+      // System.out.println("Flipping NIFRGB");
+
+      int offset = 0;
+      for (int i = 0; i < size; i++) {
+        data[offset + 0] = (byte) (255 - data[offset + 0]);
+        data[offset + 1] = (byte) (255 - data[offset + 1]);
+        data[offset + 2] = (byte) (255 - data[offset + 2]);
+
+        offset += 4;
+      }
+    }
+
+    return ras;
+  }
 
   @Override
   public synchronized Raster getTile(final int tileX, final int tileY) {
@@ -963,8 +963,7 @@ public class FPXImage extends SimpleRenderedImage {
       } else if (ctype == 1) {
         return getSingleColorCompressedTile(tileX, tileY);
       } else if (ctype == 2) {
-        return null;
-//        return getJPEGCompressedTile(tileX, tileY);
+        return getJPEGCompressedTile(tileX, tileY);
       }
       return null;
     } catch (final IOException e) {
