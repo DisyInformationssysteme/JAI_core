@@ -162,7 +162,6 @@ descriptor	javax.media.jai.operator.XorDescriptor
 # tile codec descriptor
 #
 descriptor	javax.media.jai.tilecodec.GZIPTileCodecDescriptor
-descriptor	javax.media.jai.tilecodec.JPEGTileCodecDescriptor
 descriptor	javax.media.jai.tilecodec.RawTileCodecDescriptor
 
 #
@@ -405,14 +404,12 @@ collection	com.sun.media.jai.opimage.AddConstToCollectionCIF	com.sun.media.jai	a
 # tile decoder factory objects
 #
 tileDecoder com.sun.media.jai.tilecodec.GZIPTileDecoderFactory	com.sun.media.jai	gzip			sungziptiledecoderfactory
-tileDecoder com.sun.media.jai.tilecodec.JPEGTileDecoderFactory	com.sun.media.jai	jpeg			suntiledecoderfactory	
 tileDecoder com.sun.media.jai.tilecodec.RawTileDecoderFactory	com.sun.media.jai	raw			sunrawtiledecoderfactory
 
 #
 # tile encoder factory objects
 #
 tileEncoder com.sun.media.jai.tilecodec.GZIPTileEncoderFactory	com.sun.media.jai	gzip			sungziptileencoderfactory
-tileEncoder com.sun.media.jai.tilecodec.JPEGTileEncoderFactory	com.sun.media.jai	jpeg			sunjpegtileencoderfactory
 tileEncoder com.sun.media.jai.tilecodec.RawTileEncoderFactory	com.sun.media.jai	raw			sunrawtileencoderfactory
 
 #
