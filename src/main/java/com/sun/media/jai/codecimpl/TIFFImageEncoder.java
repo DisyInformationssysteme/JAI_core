@@ -640,50 +640,50 @@ public class TIFFImageEncoder extends ImageEncoderImpl {
       }
     }
 
-    // Initialize some JPEG variables.
-    com.sun.image.codec.jpeg.JPEGEncodeParam jpegEncodeParam = null;
-    com.sun.image.codec.jpeg.JPEGImageEncoder jpegEncoder = null;
-    int jpegColorID = 0;
-
-    if (compression == COMP_JPEG_TTN2) {
-
-      // Initialize JPEG color ID.
-      jpegColorID = com.sun.image.codec.jpeg.JPEGDecodeParam.COLOR_ID_UNKNOWN;
-      switch (imageType) {
-        case TIFF_GRAY:
-        case TIFF_PALETTE:
-          jpegColorID = com.sun.image.codec.jpeg.JPEGDecodeParam.COLOR_ID_GRAY;
-          break;
-        case TIFF_RGB:
-          jpegColorID = com.sun.image.codec.jpeg.JPEGDecodeParam.COLOR_ID_RGB;
-          break;
-        case TIFF_YCBCR:
-          jpegColorID = com.sun.image.codec.jpeg.JPEGDecodeParam.COLOR_ID_YCbCr;
-          break;
-      }
-
-      // Get the JDK encoding parameters.
-      final Raster tile00 = im.getTile(im.getMinTileX(), im.getMinTileY());
-      jpegEncodeParam = com.sun.image.codec.jpeg.JPEGCodec.getDefaultJPEGEncodeParam(tile00, jpegColorID);
-
-      // Modify per values passed in.
-      JPEGImageEncoder.modifyEncodeParam(jep, jpegEncodeParam, numBands);
-
-      // JPEGTables field.
-      if (jep.getWriteImageOnly()) {
-        // Write an abbreviated tables-only stream to JPEGTables field.
-        jpegEncodeParam.setImageInfoValid(false);
-        jpegEncodeParam.setTableInfoValid(true);
-        final ByteArrayOutputStream tableStream = new ByteArrayOutputStream();
-        jpegEncoder = com.sun.image.codec.jpeg.JPEGCodec.createJPEGEncoder(tableStream, jpegEncodeParam);
-        jpegEncoder.encode(tile00);
-        final byte[] tableData = tableStream.toByteArray();
-        fields.add(new TIFFField(TIFF_JPEG_TABLES, TIFFField.TIFF_UNDEFINED, tableData.length, tableData));
-
-        // Reset encoder so it's recreated below.
-        jpegEncoder = null;
-      }
-    }
+//    // Initialize some JPEG variables.
+//    com.sun.image.codec.jpeg.JPEGEncodeParam jpegEncodeParam = null;
+//    com.sun.image.codec.jpeg.JPEGImageEncoder jpegEncoder = null;
+//    int jpegColorID = 0;
+//
+//    if (compression == COMP_JPEG_TTN2) {
+//
+//      // Initialize JPEG color ID.
+//      jpegColorID = com.sun.image.codec.jpeg.JPEGDecodeParam.COLOR_ID_UNKNOWN;
+//      switch (imageType) {
+//        case TIFF_GRAY:
+//        case TIFF_PALETTE:
+//          jpegColorID = com.sun.image.codec.jpeg.JPEGDecodeParam.COLOR_ID_GRAY;
+//          break;
+//        case TIFF_RGB:
+//          jpegColorID = com.sun.image.codec.jpeg.JPEGDecodeParam.COLOR_ID_RGB;
+//          break;
+//        case TIFF_YCBCR:
+//          jpegColorID = com.sun.image.codec.jpeg.JPEGDecodeParam.COLOR_ID_YCbCr;
+//          break;
+//      }
+//
+//      // Get the JDK encoding parameters.
+//      final Raster tile00 = im.getTile(im.getMinTileX(), im.getMinTileY());
+//      jpegEncodeParam = com.sun.image.codec.jpeg.JPEGCodec.getDefaultJPEGEncodeParam(tile00, jpegColorID);
+//
+//      // Modify per values passed in.
+//      JPEGImageEncoder.modifyEncodeParam(jep, jpegEncodeParam, numBands);
+//
+//      // JPEGTables field.
+//      if (jep.getWriteImageOnly()) {
+//        // Write an abbreviated tables-only stream to JPEGTables field.
+//        jpegEncodeParam.setImageInfoValid(false);
+//        jpegEncodeParam.setTableInfoValid(true);
+//        final ByteArrayOutputStream tableStream = new ByteArrayOutputStream();
+//        jpegEncoder = com.sun.image.codec.jpeg.JPEGCodec.createJPEGEncoder(tableStream, jpegEncodeParam);
+//        jpegEncoder.encode(tile00);
+//        final byte[] tableData = tableStream.toByteArray();
+//        fields.add(new TIFFField(TIFF_JPEG_TABLES, TIFFField.TIFF_UNDEFINED, tableData.length, tableData));
+//
+//        // Reset encoder so it's recreated below.
+//        jpegEncoder = null;
+//      }
+//    }
 
     if (imageType == TIFF_YCBCR) {
       // YCbCrSubSampling: 2 is the default so we must write 1 as
@@ -1148,43 +1148,43 @@ public class TIFFImageEncoder extends ImageEncoderImpl {
               final int numCompressedBytes = compressPackBits(bpixels, rows, (int) bytesPerRow, compressBuf);
               tileByteCounts[tileNum++] = numCompressedBytes;
               this.output.write(compressBuf, 0, numCompressedBytes);
-            } else if (compression == COMP_JPEG_TTN2) {
-              final long startPos = getOffset(this.output);
-
-              // Recreate encoder and parameters if the encoder
-              // is null (first data segment) or if its size
-              // doesn't match the current data segment.
-              if (jpegEncoder == null
-                  || jpegEncodeParam.getWidth() != src.getWidth()
-                  || jpegEncodeParam.getHeight() != src.getHeight()) {
-
-                jpegEncodeParam = com.sun.image.codec.jpeg.JPEGCodec.getDefaultJPEGEncodeParam(src, jpegColorID);
-
-                JPEGImageEncoder.modifyEncodeParam(jep, jpegEncodeParam, numBands);
-
-                jpegEncoder = com.sun.image.codec.jpeg.JPEGCodec.createJPEGEncoder(this.output, jpegEncodeParam);
-              }
-
-              if (jpegRGBToYCbCr) {
-                WritableRaster wRas = null;
-                if (src instanceof WritableRaster) {
-                  wRas = (WritableRaster) src;
-                } else {
-                  wRas = src.createCompatibleWritableRaster();
-                  wRas.setRect(src);
-                }
-
-                if (wRas.getMinX() != 0 || wRas.getMinY() != 0) {
-                  wRas = wRas.createWritableTranslatedChild(0, 0);
-                }
-                final BufferedImage bi = new BufferedImage(colorModel, wRas, false, null);
-                jpegEncoder.encode(bi);
-              } else {
-                jpegEncoder.encode(src.createTranslatedChild(0, 0));
-              }
-
-              final long endPos = getOffset(this.output);
-              tileByteCounts[tileNum++] = (int) (endPos - startPos);
+//            } else if (compression == COMP_JPEG_TTN2) {
+//              final long startPos = getOffset(this.output);
+//
+//              // Recreate encoder and parameters if the encoder
+//              // is null (first data segment) or if its size
+//              // doesn't match the current data segment.
+//              if (jpegEncoder == null
+//                  || jpegEncodeParam.getWidth() != src.getWidth()
+//                  || jpegEncodeParam.getHeight() != src.getHeight()) {
+//
+//                jpegEncodeParam = com.sun.image.codec.jpeg.JPEGCodec.getDefaultJPEGEncodeParam(src, jpegColorID);
+//
+//                JPEGImageEncoder.modifyEncodeParam(jep, jpegEncodeParam, numBands);
+//
+//                jpegEncoder = com.sun.image.codec.jpeg.JPEGCodec.createJPEGEncoder(this.output, jpegEncodeParam);
+//              }
+//
+//              if (jpegRGBToYCbCr) {
+//                WritableRaster wRas = null;
+//                if (src instanceof WritableRaster) {
+//                  wRas = (WritableRaster) src;
+//                } else {
+//                  wRas = src.createCompatibleWritableRaster();
+//                  wRas.setRect(src);
+//                }
+//
+//                if (wRas.getMinX() != 0 || wRas.getMinY() != 0) {
+//                  wRas = wRas.createWritableTranslatedChild(0, 0);
+//                }
+//                final BufferedImage bi = new BufferedImage(colorModel, wRas, false, null);
+//                jpegEncoder.encode(bi);
+//              } else {
+//                jpegEncoder.encode(src.createTranslatedChild(0, 0));
+//              }
+//
+//              final long endPos = getOffset(this.output);
+//              tileByteCounts[tileNum++] = (int) (endPos - startPos);
             } else if (compression == COMP_DEFLATE) {
               final int numCompressedBytes = deflate(deflater, bpixels, compressBuf);
               tileByteCounts[tileNum++] = numCompressedBytes;
