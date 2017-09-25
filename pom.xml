@@ -6,7 +6,11 @@
   <artifactId>jai-core</artifactId>
   <version>1.0.0-SNAPSHOT</version>
   <packaging>jar</packaging>
-
+  <parent>
+    <groupId>net.disy</groupId>
+    <artifactId>disy-parent</artifactId>
+    <version>10.0.0</version>
+  </parent>
 
   <dependencies>
     <dependency>
