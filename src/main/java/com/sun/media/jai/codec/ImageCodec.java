@@ -82,7 +82,7 @@ public abstract class ImageCodec {
 //    registerCodec(new JPEGCodec());
     registerCodec(new PNGCodec());
     registerCodec(new PNMCodec());
-    registerCodec(new TIFFCodec());
+//    registerCodec(new TIFFCodec());
     registerCodec(new WBMPCodec());
   }
 
