@@ -2,6 +2,8 @@
 
 This repository contains a slightly customized/minimized version of the Java Advanced Imaging (JAI) library.
 
+Based on a dump from java.net on 2017-04-16, see `License.txt` for license information
+
 As part of the changes in Java 9, the `com.sun.image.codec.jpeg` package is no longer part of the JDK.
 
 The following changes were made to remove references to said package and enable a Java 9 build:
