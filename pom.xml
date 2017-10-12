@@ -22,6 +22,20 @@
     </dependency>
   </dependencies>
 
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.7.0</version>
+        <configuration>
+          <compilerId>javac</compilerId>
+          <source>1.8</source>
+          <target>1.8</target>
+          <encoding>UTF-8</encoding>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 
   <profiles>
     <profile>
@@ -31,35 +45,24 @@
         <jdk>9</jdk>
       </activation>
       <build>
-        <pluginManagement>
-          <plugins>
-            <plugin>
-              <groupId>org.apache.maven.plugins</groupId>
-              <artifactId>maven-compiler-plugin</artifactId>
-              <version>3.6.1</version>
-              <configuration>
-                <compilerId>javac</compilerId>
-                <fork>true</fork>
-                <!-- do not use "release" because it does not work with add-exports -->
-                <source>9</source>
-                <target>9</target>
-                <maxmem>512</maxmem>
-                <meminitial>64</meminitial>
-                <encoding>UTF-8</encoding>
-                <compilerArgs>
-                  <arg>--add-modules</arg>
-                  <arg>java.xml.bind</arg>
-                  <arg>--add-exports</arg>
-                  <arg>java.desktop/java.awt.peer=ALL-UNNAMED</arg>
-                  <arg>--add-exports</arg>
-                  <arg>java.desktop/sun.awt.image=ALL-UNNAMED</arg>
-                  <arg>--add-exports</arg>
-                  <arg>java.base/sun.security.action=ALL-UNNAMED</arg>
-                </compilerArgs>
-              </configuration>
-            </plugin>
-          </plugins>
-        </pluginManagement>
+        <plugins>
+          <plugin>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <configuration>
+              <compilerId>javac</compilerId>
+              <fork>true</fork>
+              <!-- do not use "release" because it does not work with add-exports -->
+              <source>9</source>
+              <target>9</target>
+              <compilerArgs>
+                <arg>--add-modules=java.xml.bind</arg>
+                <arg>--add-exports=java.desktop/java.awt.peer=ALL-UNNAMED</arg>
+                <arg>--add-exports=java.desktop/sun.awt.image=ALL-UNNAMED</arg>
+                <arg>--add-exports=java.base/sun.security.action=ALL-UNNAMED</arg>
+              </compilerArgs>
+            </configuration>
+          </plugin>
+        </plugins>
       </build>
     </profile>
   </profiles>
