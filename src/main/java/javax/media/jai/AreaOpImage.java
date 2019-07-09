@@ -10,16 +10,13 @@
  * $State: Exp $
  */
 package javax.media.jai;
+import java.awt.Point;
 import java.awt.Rectangle;
 import java.awt.RenderingHints;
-import java.awt.image.RenderedImage;
-import java.awt.image.renderable.ParameterBlock;
 import java.awt.image.Raster;
+import java.awt.image.RenderedImage;
 import java.awt.image.WritableRaster;
-import java.awt.Point;
 import java.util.Map;
-import java.util.Vector;
-import javax.media.jai.util.CaselessStringKey;
 
 /**
  * An abstract base class for image operators that require only a

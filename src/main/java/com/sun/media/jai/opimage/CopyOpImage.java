@@ -15,16 +15,13 @@ import java.awt.image.DataBuffer;
 import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
 import java.awt.image.WritableRaster;
-import java.awt.image.renderable.ParameterBlock;
-import javax.media.jai.ImageLayout;
-import javax.media.jai.JAI;
-import javax.media.jai.PointOpImage;
-import javax.media.jai.OpImage;
-import javax.media.jai.RasterAccessor;
-import javax.media.jai.RasterFormatTag;
-import java.util.Hashtable;
 import java.util.Map;
 // import com.sun.media.jai.test.OpImageTester;
+
+import javax.media.jai.ImageLayout;
+import javax.media.jai.PointOpImage;
+import javax.media.jai.RasterAccessor;
+import javax.media.jai.RasterFormatTag;
 
 /**
  * An OpImage class that copies an image from source to dest.

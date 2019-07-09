@@ -11,6 +11,7 @@
  */package javax.media.jai.registry;
 
 import java.lang.reflect.Method;
+
 import javax.media.jai.JAI;
 import javax.media.jai.RegistryMode;
 import javax.media.jai.tilecodec.TileCodecDescriptor;

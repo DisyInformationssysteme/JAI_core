@@ -19,14 +19,15 @@ import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
 import java.awt.image.SampleModel;
 import java.awt.image.WritableRaster;
-import java.awt.image.renderable.RenderableImage;
 import java.awt.image.renderable.RenderContext;
 import java.io.Serializable;
 import java.net.InetAddress;
 import java.rmi.Naming;
 import java.rmi.RemoteException;
 import java.util.Vector;
+
 import javax.media.jai.remote.SerializableRenderedImage;
+
 import com.sun.media.jai.rmi.RMIImage;
 import com.sun.media.jai.rmi.RasterProxy;
 import com.sun.media.jai.rmi.RenderContextProxy;

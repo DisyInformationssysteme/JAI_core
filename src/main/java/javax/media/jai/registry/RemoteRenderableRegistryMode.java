@@ -11,10 +11,11 @@
  */package javax.media.jai.registry;
 
 import java.lang.reflect.Method;
+
 import javax.media.jai.JAI;
 import javax.media.jai.RegistryMode;
-import javax.media.jai.util.ImagingListener;
 import javax.media.jai.remote.RemoteDescriptor;
+import javax.media.jai.util.ImagingListener;
 
 /**
  * A class which provides information about the "remoteRenderable" registry

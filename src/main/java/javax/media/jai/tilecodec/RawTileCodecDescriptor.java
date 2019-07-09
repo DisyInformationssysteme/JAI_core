@@ -11,11 +11,9 @@
  */package javax.media.jai.tilecodec ;
 
 import java.awt.image.SampleModel ;
-import javax.media.jai.PropertyGenerator;
+
 import javax.media.jai.ParameterListDescriptor;
 import javax.media.jai.ParameterListDescriptorImpl;
-import javax.media.jai.tilecodec.TileCodecDescriptorImpl ;
-import javax.media.jai.tilecodec.TileCodecParameterList ;
 
 /**
  * This class is the descriptor for the "Raw" tile codec. The "Raw" tile

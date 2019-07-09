@@ -17,8 +17,6 @@ import java.awt.image.RenderedImage;
 import java.awt.image.WritableRaster;
 import java.util.Map;
 import java.util.Vector;
-import javax.media.jai.ImageLayout;
-import javax.media.jai.PlanarImage;
 
 /**
  * A general class for single-source operations which require cobbled

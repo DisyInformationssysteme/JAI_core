@@ -21,17 +21,18 @@ import java.awt.image.RenderedImage;
 import java.awt.image.SampleModel;
 import java.awt.image.WritableRaster;
 import java.io.BufferedInputStream;
-import java.io.InputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.OutputStream;
+
 import com.sun.media.jai.codec.ForwardSeekableStream;
 import com.sun.media.jai.codec.ImageCodec;
+import com.sun.media.jai.codec.ImageDecodeParam;
 import com.sun.media.jai.codec.ImageDecoder;
 import com.sun.media.jai.codec.ImageDecoderImpl;
-import com.sun.media.jai.codec.ImageDecodeParam;
+import com.sun.media.jai.codec.ImageEncodeParam;
 import com.sun.media.jai.codec.ImageEncoder;
 import com.sun.media.jai.codec.ImageEncoderImpl;
-import com.sun.media.jai.codec.ImageEncodeParam;
 import com.sun.media.jai.codec.SeekableStream;
 
 /**

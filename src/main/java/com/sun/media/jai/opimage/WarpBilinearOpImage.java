@@ -16,13 +16,14 @@ import java.awt.image.DataBuffer;
 import java.awt.image.IndexColorModel;
 import java.awt.image.RenderedImage;
 import java.awt.image.WritableRaster;
+import java.util.Map;
+
 import javax.media.jai.BorderExtender;
 import javax.media.jai.ImageLayout;
 import javax.media.jai.Interpolation;
 import javax.media.jai.PlanarImage;
 import javax.media.jai.RasterAccessor;
 import javax.media.jai.RasterFormatTag;
-import java.util.Map;
 import javax.media.jai.Warp;
 import javax.media.jai.WarpOpImage;
 import javax.media.jai.iterator.RandomIter;

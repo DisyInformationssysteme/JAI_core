@@ -10,16 +10,10 @@
  * $State: Exp $
  */
 package com.sun.media.jai.opimage;
-import java.io.InputStream;
 import java.awt.RenderingHints;
 import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
 import java.awt.image.renderable.RenderedImageFactory;
-import javax.media.jai.NullOpImage;
-import javax.media.jai.OpImage;
-import com.sun.media.jai.codec.ImageCodec;
-import com.sun.media.jai.codec.ImageDecoder;
-import com.sun.media.jai.codec.SeekableStream;
 
 /**
  * @see javax.media.jai.operator.JPEGDescriptor

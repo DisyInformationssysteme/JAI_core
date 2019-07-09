@@ -10,17 +10,16 @@
  * $State: Exp $
  */
 package javax.media.jai;
+import java.awt.Point;
 import java.awt.Rectangle;
 import java.awt.RenderingHints;
 import java.awt.geom.Point2D;
 import java.awt.image.DataBuffer;
-import java.awt.image.RenderedImage;
 import java.awt.image.Raster;
 import java.awt.image.WritableRaster;
-import java.awt.Point;
 import java.util.Map;
 import java.util.Vector;
-import javax.media.jai.util.CaselessStringKey;
+
 import com.sun.media.jai.util.ImageUtil;
 
 /**

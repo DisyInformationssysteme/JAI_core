@@ -18,13 +18,15 @@ import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
 import java.awt.image.SampleModel;
 import java.awt.image.WritableRaster;
-import java.util.Vector;
-import javax.media.jai.ImageLayout;
-import javax.media.jai.PointOpImage;
 import java.util.Map;
+import java.util.Vector;
+
+import javax.media.jai.ImageLayout;
 import javax.media.jai.PixelAccessor;
-import javax.media.jai.UnpackedImageData;
+import javax.media.jai.PointOpImage;
 import javax.media.jai.RasterFactory;
+import javax.media.jai.UnpackedImageData;
+
 import com.sun.media.jai.util.JDKWorkarounds;
 
 /**

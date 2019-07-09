@@ -14,13 +14,13 @@ import java.awt.Rectangle;
 import java.awt.image.DataBuffer;
 import java.awt.image.SampleModel;
 import java.awt.image.WritableRaster;
-import java.lang.ref.SoftReference;
+import java.util.Map;
+
 import javax.media.jai.ImageFunction;
 import javax.media.jai.ImageLayout;
 import javax.media.jai.PlanarImage;
 import javax.media.jai.RasterFactory;
 import javax.media.jai.SourcelessOpImage;
-import java.util.Map;
 
 /**
  * An OpImage class to generate an image from a functional description.

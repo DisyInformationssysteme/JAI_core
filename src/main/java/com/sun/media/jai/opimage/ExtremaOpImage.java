@@ -10,23 +10,18 @@
  * $State: Exp $
  */
 package com.sun.media.jai.opimage;
-import java.awt.Image;
 import java.awt.Rectangle;
 import java.awt.image.DataBuffer;
 import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
 import java.util.ArrayList;
-import java.util.Hashtable;
 import java.util.LinkedList;
 import java.util.ListIterator;
-import javax.media.jai.ImageLayout;
-import javax.media.jai.OpImage;
+
 import javax.media.jai.PixelAccessor;
-import javax.media.jai.PlanarImage;
 import javax.media.jai.ROI;
 import javax.media.jai.StatisticsOpImage;
 import javax.media.jai.UnpackedImageData;
-import com.sun.media.jai.util.ImageUtil;
 
 /**
  * An <code>OpImage</code> implementing the "Extrema" operation as

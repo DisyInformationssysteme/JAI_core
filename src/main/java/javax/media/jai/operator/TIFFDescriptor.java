@@ -10,16 +10,17 @@
  * $State: Exp $
  */
 package javax.media.jai.operator;
-import com.sun.media.jai.codec.SeekableStream;
-import com.sun.media.jai.codec.TIFFDecodeParam;
 import java.awt.RenderingHints;
-import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
+
 import javax.media.jai.JAI;
 import javax.media.jai.OperationDescriptorImpl;
 import javax.media.jai.ParameterBlockJAI;
 import javax.media.jai.RenderedOp;
 import javax.media.jai.registry.RenderedRegistryMode;
+
+import com.sun.media.jai.codec.SeekableStream;
+import com.sun.media.jai.codec.TIFFDecodeParam;
 
 /**
  * An <code>OperationDescriptor</code> describing the "TIFF" operation.

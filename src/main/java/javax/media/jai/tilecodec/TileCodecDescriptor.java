@@ -11,8 +11,8 @@
  */package javax.media.jai.tilecodec;
 
 import java.awt.image.SampleModel;
+
 import javax.media.jai.RegistryElementDescriptor;
-import javax.media.jai.ParameterListDescriptor;
 
 /**
  * A class to describe a particular tile codec format. The <code>getName</code>

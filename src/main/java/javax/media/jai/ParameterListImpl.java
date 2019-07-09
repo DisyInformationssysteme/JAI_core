@@ -12,11 +12,10 @@
  */
 package javax.media.jai;
 
-import com.sun.media.jai.util.CaselessStringArrayTable;
 import java.text.MessageFormat;
-import java.util.Hashtable;
 import java.util.Locale;
-import javax.media.jai.util.CaselessStringKey;
+
+import com.sun.media.jai.util.CaselessStringArrayTable;
 
 /**
  * A concrete implementation of the <code>ParameterList</code>

@@ -28,6 +28,7 @@ import java.awt.image.SampleModel;
 import java.awt.image.SinglePixelPackedSampleModel;
 import java.awt.image.WritableRaster;
 import java.util.Vector;
+
 import com.sun.media.jai.util.DataBufferUtils;
 import com.sun.media.jai.util.ImageUtil;
 import com.sun.media.jai.util.JDKWorkarounds;

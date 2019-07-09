@@ -11,10 +11,9 @@
  */
 package com.sun.media.jai.codecimpl;
 import java.awt.image.RenderedImage;
-import java.io.InputStream;
 import java.io.IOException;
+
 import com.sun.media.jai.codec.FPXDecodeParam;
-import com.sun.media.jai.codec.ImageDecoder;
 import com.sun.media.jai.codec.ImageDecodeParam;
 import com.sun.media.jai.codec.ImageDecoderImpl;
 import com.sun.media.jai.codec.SeekableStream;

@@ -16,7 +16,9 @@ import java.awt.image.DataBuffer;
 import java.text.NumberFormat;
 import java.util.Arrays;
 import java.util.Locale;
+
 import javax.media.jai.operator.DFTDescriptor;
+
 import com.sun.media.jai.util.MathJAI;
 
 /**

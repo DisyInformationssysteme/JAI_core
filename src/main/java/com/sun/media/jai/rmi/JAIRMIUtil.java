@@ -14,10 +14,11 @@ import java.awt.RenderingHints;
 import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
 import java.io.Serializable;
-import java.util.Vector;
 import java.util.Hashtable;
-import javax.media.jai.RenderedOp;
+import java.util.Vector;
+
 import javax.media.jai.PlanarImage;
+import javax.media.jai.RenderedOp;
 import javax.media.jai.remote.RemoteRenderedOp;
 import javax.media.jai.remote.SerializableRenderedImage;
 

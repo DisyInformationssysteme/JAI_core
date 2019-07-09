@@ -13,6 +13,7 @@ package javax.media.jai.operator;
 
 import javax.media.jai.RenderableOp;
 import javax.media.jai.RenderedOp;
+
 import com.sun.media.jai.util.PropertyGeneratorImpl;
 
 /**

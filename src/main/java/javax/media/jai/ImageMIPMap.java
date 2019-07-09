@@ -10,14 +10,12 @@
  * $State: Exp $
  */
 package javax.media.jai;
-import java.awt.Image;
 import java.awt.geom.AffineTransform;
 import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
 import java.awt.image.renderable.RenderableImage;
 import java.beans.PropertyChangeListener;
 import java.util.Vector;
-import com.sun.media.jai.util.PropertyUtil;
 
 /**
  * A class implementing the "MIP map" operation on a

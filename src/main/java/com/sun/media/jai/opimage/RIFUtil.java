@@ -11,6 +11,7 @@
  */
 package com.sun.media.jai.opimage;
 import java.awt.RenderingHints;
+
 import javax.media.jai.BorderExtender;
 import javax.media.jai.ImageLayout;
 import javax.media.jai.JAI;

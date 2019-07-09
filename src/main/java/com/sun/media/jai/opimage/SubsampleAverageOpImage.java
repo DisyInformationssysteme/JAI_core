@@ -18,76 +18,17 @@ import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
 import java.awt.image.WritableRaster;
 import java.util.Map;
+
 import javax.media.jai.GeometricOpImage;
 import javax.media.jai.ImageLayout;
-import javax.media.jai.Interpolation;
 import javax.media.jai.RasterAccessor;
 import javax.media.jai.RasterFormatTag;
+
 import com.sun.media.jai.util.ImageUtil;
 import com.sun.media.jai.util.InterpAverage;
 
 public class SubsampleAverageOpImage extends GeometricOpImage {
-    /* XXX
-    public static void main(String[] args) throws Throwable {
-        javax.media.jai.PlanarImage source =
-            javax.media.jai.JAI.create("fileload", args[0]);
-        double scaleX = args.length > 1 ?
-            Double.valueOf(args[1]).doubleValue() : 0.25;
-        double scaleY = args.length > 2 ?
-            Double.valueOf(args[2]).doubleValue() : scaleX;
-
-        source.getTiles();
-
-        javax.media.jai.PlanarImage dest =
-            new SubsampleAverageOpImage(source, null, null,
-                                        scaleX, scaleY);
-        long t1 = System.currentTimeMillis();
-        dest.getTiles();
-        long t2 = System.currentTimeMillis();
-        System.out.println("Java time = "+(t2 - t1));
-
-        javax.media.jai.PlanarImage destML =
-            new MlibSubsampleAverageOpImage(source, null, null,
-                                            scaleX, scaleY);
-        long t3 = System.currentTimeMillis();
-        destML.getTiles();
-        long t4 = System.currentTimeMillis();
-        System.out.println("Mlib time = "+(t4 - t3));
-
-        RenderedImage diff = javax.media.jai.JAI.create("subtract",
-                                   javax.media.jai.JAI.create("format", dest,
-                                                              DataBuffer.TYPE_SHORT),
-                                   javax.media.jai.JAI.create("format", destML,
-                                                              DataBuffer.TYPE_SHORT));
-        RenderedImage absDiff = javax.media.jai.JAI.create("absolute", diff);
-        double[] maxima =
-            (double[])javax.media.jai.JAI.create("extrema", absDiff).getProperty("maximum");
-        for(int i = 0; i < maxima.length; i++) {
-            System.out.println(maxima[i]);
-        }
-
-        System.out.println(source.getClass().getName()+": "+
-                           new ImageLayout(source));
-        System.out.println(dest.getClass().getName()+": "+
-                           new ImageLayout(dest));
-        System.out.println(destML.getClass().getName()+": "+
-                           new ImageLayout(destML));
-
-        java.awt.Frame frame = new java.awt.Frame("Mlib Sub-average Test");
-        frame.setLayout(new java.awt.GridLayout(1, 2));
-        javax.media.jai.widget.ScrollingImagePanel ps =
-            new javax.media.jai.widget.ScrollingImagePanel(dest,
-                                                           512, 512);
-        javax.media.jai.widget.ScrollingImagePanel pd =
-            new javax.media.jai.widget.ScrollingImagePanel(destML,
-                                                           512, 512);
-        frame.add(ps);
-        frame.add(pd);
-        frame.pack();
-        frame.show();
-    }
-    */
-
+ 
     /** The horizontal scale factor. */
     protected double scaleX;
 

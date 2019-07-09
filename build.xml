@@ -70,15 +70,8 @@ $State: Exp $
   
       ant -DBUILD_TYPE=stable ...
 
-    The "MLIB_DIR" property may be used via the ant "-D" command line
-    option to specify the directory containing mlibwrapper_jai.jar;
-    the default value is src/share/mediaLib.
-
     Class files are compiled into build/${platform}/debug/classes or
     build/${platform}/opt/classes.
-
-    Jar files are created in build/${platform}/debug/lib/ext or
-    build/${platform}/opt/lib/ext.
 
     Native libraries are copied to build/${platform}/debug/bin or
     build/${platform}/opt/bin on Windows and
@@ -186,7 +179,6 @@ $State: Exp $
     <property name="ostype" value="linux"/>
     <property name="platform" value="linux-amd64"/>
     <property name="arch" value="amd64"/>
-    <property name="mlibarch" value="linux/amd64"/>
     <property name="jrenativesubdir" value="lib/${arch}"/>
   </target>
 
@@ -194,7 +186,6 @@ $State: Exp $
     <property name="ostype" value="linux"/>
     <property name="platform" value="linux-i586"/>
     <property name="arch" value="i386"/>
-    <property name="mlibarch" value="linux/i386"/>
     <property name="jrenativesubdir" value="lib/${arch}"/>
   </target>
 
@@ -202,7 +193,6 @@ $State: Exp $
     <property name="ostype" value="solaris"/>
     <property name="platform" value="solaris-amd64"/>
     <property name="arch" value="amd64"/>
-    <property name="mlibarch" value="solaris/amd64"/>
     <property name="jrenativesubdir" value="lib/${arch}"/>
   </target>
 
@@ -210,7 +200,6 @@ $State: Exp $
     <property name="ostype" value="solaris"/>
     <property name="platform" value="solaris-sparc"/>
     <property name="arch" value="sparc"/>
-    <property name="mlibarch" value="solaris/sparc"/>
     <property name="jrenativesubdir" value="lib/${arch}"/>
   </target>
 
@@ -218,7 +207,6 @@ $State: Exp $
     <property name="ostype" value="solaris"/>
     <property name="platform" value="solaris-sparcv9"/>
     <property name="arch" value="sparcv9"/>
-    <property name="mlibarch" value="solaris/sparcv9"/>
     <property name="jrenativesubdir" value="lib/${arch}"/>
   </target>
 
@@ -226,7 +214,6 @@ $State: Exp $
     <property name="ostype" value="solaris"/>
     <property name="platform" value="solaris-i586"/>
     <property name="arch" value="i386"/>
-    <property name="mlibarch" value="solaris/i386"/>
     <property name="jrenativesubdir" value="lib/${arch}"/>
   </target>
 
@@ -234,7 +221,6 @@ $State: Exp $
     <property name="ostype" value="windows"/>
     <property name="platform" value="windows-i586"/>
     <property name="arch" value="i386"/>
-    <property name="mlibarch" value="windows/i386"/>
     <property name="jrenativesubdir" value="bin"/>
   </target>
 
@@ -322,22 +308,9 @@ $State: Exp $
 	  unless="platform"/>
   </target>
 
-  <!-- Sets "mlib" property to "MLIB_DIR" environment variable. -->
-  <target name="mlib-env" if="MLIB_DIR">
-    <property name="mlib" value="${MLIB_DIR}"/>
-  </target>
-
-  <!-- Sets "mlib" property to default value. -->
-  <target name="mlib-def" unless="MLIB_DIR">
-    <property name="mlib" value="src/share/mediaLib"/>
-  </target>
-
-  <!-- Sets "mlib" property. -->
-  <target name="mlib-property" depends="mlib-env,mlib-def"/>
-
-  <!-- Sets the platform-dependent properties, the "mlib" property,
+  <!-- Sets the platform-dependent properties, 
        and the time stamps. -->
-  <target name="init" depends="setupPlatform,mlib-property">
+  <target name="init" depends="setupPlatform">
     <!-- Create the time stamp -->
     <tstamp>
       <!-- Set time stamp properties -->
@@ -348,7 +321,7 @@ $State: Exp $
     </tstamp>
   </target>
 
-  <target name="echo" depends="setupPlatform,mlib-property"
+  <target name="echo" depends="setupPlatform"
 	  description="Prints the values of pertinent properties.">
     <echo message="os.arch         = ${os.arch}"/>
     <echo message="os.name         = ${os.name}"/>	
@@ -362,7 +335,6 @@ $State: Exp $
     <echo message="platform        = ${platform}"/>
     <echo message="ostype          = ${ostype}"/>
     <echo message="arch            = ${arch}"/>
-    <echo message="mlibarch        = ${mlibarch}"/>
     <echo message="jrenativesubdir = ${jrenativesubdir}"/>
 
     <echo message=""/>
@@ -373,7 +345,6 @@ $State: Exp $
     <echo message=""/>
 
     <echo message="src             = ${src}"/>
-    <echo message="mlib            = ${mlib}"/>
     <echo message="textdir         = ${textdir}"/>
     <echo message="packageListLoc  = ${packageListLoc}"/>
     <echo message="docurl          = ${docurl}"/>
@@ -578,33 +549,6 @@ $State: Exp $
     <property name="codec_util_built" value="true"/>
   </target>
 
-  <!-- Copies mediaLib debug mode files. -->
-  <target name="mlib-debug">
-    <antcall target="debugcall">
-      <param name="targetname" value="mlib"/>
-    </antcall>
-  </target>
-
-  <!-- Copies mediaLib non-debug mode files. -->
-  <target name="mlib-opt">
-    <antcall target="optcall">
-      <param name="targetname" value="mlib"/>
-    </antcall>
-  </target>
-
-  <!-- Copies mediaLib files. -->
-  <target name="mlib">
-    <!-- Copy the mediaLib jar file -->
-    <copy file="${mlib}/mlibwrapper_jai.jar" todir="${jardir}"/>
-
-    <!-- Copy the mediaLib native libraries -->
-    <copy todir="${libdir}">
-        <fileset dir="${mlib}/${mlibarch}"
-                 includes="**"
-                 excludes="cpu,cpu/**"/> <!-- Exclude old "cpu" subdir -->
-    </copy>
-  </target>
-
   <target name="compilation" depends="codec-util">
     <!-- Create the class file directory -->
     <mkdir dir="${classdir}"/>
@@ -625,7 +569,6 @@ $State: Exp $
     <!-- Compile the java code from ${src} into ${classdir} -->
     <javac sourcepath="" srcdir="${src}"
            destdir="${classdir}"
-           classpath="${mlib}/mlibwrapper_jai.jar"
            debug="${debugsetting}"
            debuglevel="lines,source"
            deprecation="on"
@@ -645,14 +588,14 @@ $State: Exp $
 	  classpath="${classdir}"/>
   </target>
 
-  <target name="compile-debug" depends="codec-util,mlib-debug"
+  <target name="compile-debug" depends="codec-util"
 	  description="Builds all classes with debug compilation.">
     <antcall target="debugcall">
       <param name="targetname" value="compilation"/>
     </antcall>
   </target>
 
-  <target name="compile-opt" depends="codec-util,mlib-opt"
+  <target name="compile-opt" depends="codec-util"
 	  description="Builds all classes with non-debug compilation.">
     <antcall target="optcall">
       <param name="targetname" value="compilation"/>

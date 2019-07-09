@@ -12,26 +12,18 @@
 package com.sun.media.jai.opimage;
 import java.awt.Rectangle;
 import java.awt.RenderingHints;
-import java.awt.image.DataBuffer;
-import java.awt.image.DataBufferByte;
-import java.awt.image.DataBufferInt;
-import java.awt.image.DataBufferUShort;
-import java.awt.image.MultiPixelPackedSampleModel;
-import java.awt.image.SampleModel;
 import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
 import java.awt.image.WritableRaster;
-import java.awt.image.renderable.ParameterBlock;
-import java.awt.image.renderable.RenderedImageFactory;
+import java.util.Map;
+
 import javax.media.jai.AreaOpImage;
 import javax.media.jai.BorderExtender;
 import javax.media.jai.ImageLayout;
 import javax.media.jai.JAI;
 import javax.media.jai.KernelJAI;
-import javax.media.jai.OpImage;
-import java.util.Map;
-import javax.media.jai.PixelAccessor;
 import javax.media.jai.PackedImageData;
+import javax.media.jai.PixelAccessor;
 
 /**
  *

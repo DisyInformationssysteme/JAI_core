@@ -11,18 +11,14 @@
  */
 package com.sun.media.jai.opimage;
 import java.awt.RenderingHints;
-import java.awt.Rectangle;
 import java.awt.geom.AffineTransform;
 import java.awt.geom.Rectangle2D;
 import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
-import java.awt.image.renderable.RenderableImage;
 import java.awt.image.renderable.RenderContext;
+
 import javax.media.jai.CRIFImpl;
-import javax.media.jai.ImageLayout;
 import javax.media.jai.JAI;
-import javax.media.jai.PlanarImage;
-import java.util.Map;
 
 /**
  * A <code>CRIF</code> supporting the "Crop" operation in the rendered

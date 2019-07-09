@@ -13,12 +13,13 @@ package com.sun.media.jai.opimage;
 import java.awt.RenderingHints;
 import java.awt.geom.Rectangle2D;
 import java.awt.image.RenderedImage;
-import java.awt.image.renderable.RenderContext;
 import java.awt.image.renderable.ParameterBlock;
+import java.awt.image.renderable.RenderContext;
 import java.awt.image.renderable.RenderableImage;
 import java.lang.ref.SoftReference;
 import java.util.Hashtable;
 import java.util.Vector;
+
 import javax.media.jai.CRIFImpl;
 import javax.media.jai.ImageMIPMap;
 import javax.media.jai.MultiResolutionRenderableImage;

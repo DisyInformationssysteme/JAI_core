@@ -11,7 +11,6 @@
  */
 package javax.media.jai;
 import java.awt.image.DataBuffer;
-import javax.media.jai.LookupTableJAI;
 
 
 /**

@@ -12,9 +12,8 @@
 package javax.media.jai.operator;
 
 import java.awt.RenderingHints;
-import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
-import java.awt.image.renderable.RenderableImage;
+
 import javax.media.jai.JAI;
 import javax.media.jai.OperationDescriptorImpl;
 import javax.media.jai.ParameterBlockJAI;

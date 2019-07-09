@@ -22,8 +22,10 @@ import java.awt.image.RenderedImage;
 import java.awt.image.SampleModel;
 import java.io.IOException;
 import java.io.OutputStream;
-import com.sun.media.jai.codec.ImageEncoderImpl;
+import java.security.PrivilegedAction;
+
 import com.sun.media.jai.codec.ImageEncodeParam;
+import com.sun.media.jai.codec.ImageEncoderImpl;
 import com.sun.media.jai.codec.PNMEncodeParam;
 
 /**
@@ -85,7 +87,7 @@ public class PNMImageEncoder extends ImageEncoderImpl {
         ColorModel colorModel = im.getColorModel();
 
         String ls = (String)java.security.AccessController.doPrivileged(
-               new sun.security.action.GetPropertyAction("line.separator"));
+        		(PrivilegedAction<String>) () -> System.getProperty("line.separator"));
         lineSeparator = ls.getBytes();
 
         int dataType = sampleModel.getTransferType();

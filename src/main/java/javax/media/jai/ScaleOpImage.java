@@ -11,18 +11,17 @@
  */
 package javax.media.jai;
 
-import com.sun.media.jai.util.Rational;
-import com.sun.media.jai.util.ImageUtil;
+import java.awt.Point;
 import java.awt.Rectangle;
 import java.awt.RenderingHints;
 import java.awt.geom.Point2D;
 import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
 import java.awt.image.WritableRaster;
-import java.awt.Point;
 import java.util.Map;
-import java.util.LinkedList;
-import javax.media.jai.util.CaselessStringKey;
+
+import com.sun.media.jai.util.ImageUtil;
+import com.sun.media.jai.util.Rational;
 
 /**
  * A class extending <code>WarpOpImage</code> for use by further

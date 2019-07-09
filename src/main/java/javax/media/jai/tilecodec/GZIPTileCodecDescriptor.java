@@ -10,9 +10,9 @@
  * $State: Exp $
  */package javax.media.jai.tilecodec ;
 import java.awt.image.SampleModel ;
+
 import javax.media.jai.ParameterListDescriptor;
 import javax.media.jai.ParameterListDescriptorImpl;
-import javax.media.jai.PropertyGenerator;
 
 /**
  * <p>This class is the descriptor for the "GZIP" tile codec. This codec

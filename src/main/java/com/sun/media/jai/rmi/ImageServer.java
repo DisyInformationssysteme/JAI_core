@@ -12,19 +12,12 @@
 package com.sun.media.jai.rmi;
 
 import java.awt.Rectangle;
-import java.awt.RenderingHints;
-import java.awt.image.ColorModel;
-import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
-import java.awt.image.SampleModel;
-import java.awt.image.WritableRaster;
 import java.awt.image.renderable.ParameterBlock;
-import java.awt.image.renderable.RenderContext;
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 import java.util.List;
-import java.util.Vector;
-import javax.media.jai.PropertyChangeEventJAI;
+
 import javax.media.jai.RenderableOp;
 import javax.media.jai.RenderedOp;
 import javax.media.jai.remote.NegotiableCapabilitySet;

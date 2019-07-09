@@ -11,8 +11,6 @@
  */
 package com.sun.media.jai.codec;
 
-import java.awt.image.RenderedImage;
-import java.util.Collections;
 import java.util.Iterator;
 import java.util.zip.Deflater;
 

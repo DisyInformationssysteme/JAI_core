@@ -15,10 +15,10 @@ import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
 import java.awt.image.renderable.RenderedImageFactory;
 import java.util.Arrays;
+
 import javax.media.jai.BorderExtender;
 import javax.media.jai.ImageLayout;
 import javax.media.jai.KernelJAI;
-import java.util.Map;
 
 /**
  * A <code>RIF</code> supporting the "BoxFilter" operation in the rendered

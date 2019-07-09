@@ -24,16 +24,17 @@ import java.lang.ref.SoftReference;
 import java.util.Arrays;
 import java.util.Map;
 import java.util.Vector;
+
 import javax.media.jai.ColorCube;
 import javax.media.jai.ImageLayout;
 import javax.media.jai.KernelJAI;
-import javax.media.jai.OpImage;
 import javax.media.jai.PointOpImage;
 import javax.media.jai.RasterAccessor;
-import javax.media.jai.RasterFormatTag;
 import javax.media.jai.RasterFactory;
-import com.sun.media.jai.util.JDKWorkarounds;
+import javax.media.jai.RasterFormatTag;
+
 import com.sun.media.jai.util.ImageUtil;
+import com.sun.media.jai.util.JDKWorkarounds;
 
 /**
  * An <code>OpImage</code> implementing the ordered dither operation as

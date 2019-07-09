@@ -12,10 +12,8 @@
 
 import java.awt.Point;
 import java.awt.image.Raster;
-import java.awt.image.SampleModel;
 import java.io.IOException;
 import java.io.InputStream;
-import javax.media.jai.remote.NegotiableCapability;
 
 /**
  * An interface describing objects that transform an <code>InputStream</code>

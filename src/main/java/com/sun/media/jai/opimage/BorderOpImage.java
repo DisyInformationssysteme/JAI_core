@@ -10,28 +10,15 @@
  * $State: Exp $
  */
 package com.sun.media.jai.opimage;
-import java.awt.Point;
 import java.awt.Rectangle;
-import java.awt.image.ColorModel;
-import java.awt.image.DataBuffer;
 import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
 import java.awt.image.WritableRaster;
-import javax.media.jai.BorderExtender;
-import javax.media.jai.BorderExtenderConstant;
-import javax.media.jai.ImageLayout;
-import javax.media.jai.IntegerSequence;
-import javax.media.jai.OpImage;
-import javax.media.jai.PlanarImage;
-import javax.media.jai.RasterFactory;
-import javax.media.jai.RasterFormatTag;
-import javax.media.jai.RasterAccessor;
-import javax.media.jai.RasterFormatTag;
 import java.util.Map;
-import javax.media.jai.iterator.RandomIter;
-import javax.media.jai.iterator.RandomIterFactory;
-import javax.media.jai.operator.BorderDescriptor;
-import com.sun.media.jai.util.ImageUtil;
+
+import javax.media.jai.BorderExtender;
+import javax.media.jai.ImageLayout;
+import javax.media.jai.OpImage;
 
 /**
  * An <code>OpImage</code> implementing the "border" operation.

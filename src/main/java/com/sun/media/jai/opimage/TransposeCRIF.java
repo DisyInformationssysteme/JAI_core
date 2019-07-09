@@ -13,19 +13,13 @@ package com.sun.media.jai.opimage;
 import java.awt.RenderingHints;
 import java.awt.image.DataBuffer;
 import java.awt.image.MultiPixelPackedSampleModel;
-import java.awt.image.SampleModel;
 import java.awt.image.RenderedImage;
-import java.awt.image.renderable.RenderableImage;
-import java.awt.image.renderable.RenderContext;
+import java.awt.image.SampleModel;
 import java.awt.image.renderable.ParameterBlock;
-import java.awt.image.renderable.RenderedImageFactory;
+
 import javax.media.jai.CRIFImpl;
 import javax.media.jai.EnumeratedParameter;
 import javax.media.jai.ImageLayout;
-import javax.media.jai.JAI;
-import javax.media.jai.PlanarImage;
-import javax.media.jai.RenderedOp;
-import java.util.Map;
 
 /**
  * @see TransposeOpImage 

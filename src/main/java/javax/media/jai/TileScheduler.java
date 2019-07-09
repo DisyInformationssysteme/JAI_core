@@ -10,8 +10,8 @@
  * $State: Exp $
  */
 package javax.media.jai;
-import java.awt.image.Raster;
 import java.awt.Point;
+import java.awt.image.Raster;
 
 
 /**

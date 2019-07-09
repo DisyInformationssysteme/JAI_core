@@ -10,11 +10,11 @@
  * $State: Exp $
  */
 package javax.media.jai.operator;
-import com.sun.media.jai.util.PropertyGeneratorImpl;
 import java.awt.RenderingHints;
 import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
 import java.awt.image.renderable.RenderableImage;
+
 import javax.media.jai.EnumeratedParameter;
 import javax.media.jai.JAI;
 import javax.media.jai.OperationDescriptorImpl;
@@ -22,10 +22,10 @@ import javax.media.jai.ParameterBlockJAI;
 import javax.media.jai.PropertyGenerator;
 import javax.media.jai.RenderableOp;
 import javax.media.jai.RenderedOp;
-import javax.media.jai.operator.DFTDataNature;
-import javax.media.jai.operator.DFTScalingType;
 import javax.media.jai.registry.RenderableRegistryMode;
 import javax.media.jai.registry.RenderedRegistryMode;
+
+import com.sun.media.jai.util.PropertyGeneratorImpl;
 
 /**
  * This property generator computes the properties for the operation

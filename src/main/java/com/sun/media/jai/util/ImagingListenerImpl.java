@@ -12,6 +12,7 @@
  */
 package com.sun.media.jai.util;
 import java.lang.ref.SoftReference;
+
 import javax.media.jai.OperationRegistry;
 import javax.media.jai.util.ImagingListener;
 

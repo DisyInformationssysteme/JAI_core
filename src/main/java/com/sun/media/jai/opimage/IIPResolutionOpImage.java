@@ -23,29 +23,17 @@ import java.awt.image.ComponentColorModel;
 import java.awt.image.DataBuffer;
 import java.awt.image.DataBufferByte;
 import java.awt.image.Raster;
-import java.awt.image.RenderedImage;
-import java.awt.image.SampleModel;
-import java.awt.image.WritableRaster;
 import java.io.InputStream;
-import java.io.ByteArrayInputStream;
 import java.net.URL;
+import java.util.Map;
 import java.util.Vector;
+
 import javax.media.jai.ImageLayout;
 import javax.media.jai.JAI;
 import javax.media.jai.OpImage;
 import javax.media.jai.RasterFactory;
 import javax.media.jai.util.ImagingException;
 import javax.media.jai.util.ImagingListener;
-import java.util.Map;
-// exists in other places:
-//import com.sun.media.jai.codecimpl.JPEGCodec;
-//import com.sun.media.jai.codec.JPEGDecodeParam;
-//import com.sun.media.jai.codecimpl.JPEGImageDecoder;
-// original, should be removed
-//import com.sun.image.codec.jpeg.JPEGCodec;
-//import com.sun.image.codec.jpeg.JPEGDecodeParam;
-//import com.sun.image.codec.jpeg.JPEGImageDecoder;
-import com.sun.media.jai.util.ImageUtil;
 
 /**
  * An OpImage class to generate an image from an IIP connection. A single

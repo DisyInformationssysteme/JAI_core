@@ -12,13 +12,13 @@
 package com.sun.media.jai.util;
 
 import java.awt.Rectangle;
-import java.awt.geom.AffineTransform;
 import java.awt.image.renderable.ParameterBlock;
+
 import javax.media.jai.AreaOpImage;
 import javax.media.jai.PlanarImage;
-import javax.media.jai.RenderedOp;
 import javax.media.jai.ROI;
 import javax.media.jai.ROIShape;
+import javax.media.jai.RenderedOp;
 
 public class AreaOpPropertyGenerator extends PropertyGeneratorImpl {
     /** Constructor. */

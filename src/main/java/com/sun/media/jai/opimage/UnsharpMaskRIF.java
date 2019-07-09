@@ -11,17 +11,17 @@
  */
 package com.sun.media.jai.opimage;
 
-import com.sun.media.jai.util.ImageUtil;
 import java.awt.RenderingHints;
 import java.awt.image.DataBuffer;
 import java.awt.image.RenderedImage;
-import java.awt.image.SampleModel;
 import java.awt.image.renderable.ParameterBlock;
 import java.awt.image.renderable.RenderedImageFactory;
+
 import javax.media.jai.BorderExtender;
 import javax.media.jai.ImageLayout;
 import javax.media.jai.KernelJAI;
-import java.util.Map;
+
+import com.sun.media.jai.util.ImageUtil;
 
 /**
  * @see UnsharpMaskOpImage

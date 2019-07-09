@@ -15,9 +15,7 @@ import java.awt.RenderingHints;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.io.Serializable;
 import java.util.Hashtable;
-import javax.media.jai.remote.SerializerFactory;
 
 /**
  * This class is a serializable proxy for the predefined <code>

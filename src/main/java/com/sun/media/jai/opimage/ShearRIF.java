@@ -14,22 +14,19 @@ import java.awt.RenderingHints;
 import java.awt.geom.AffineTransform;
 import java.awt.image.DataBuffer;
 import java.awt.image.MultiPixelPackedSampleModel;
-import java.awt.image.SampleModel;
 import java.awt.image.RenderedImage;
+import java.awt.image.SampleModel;
 import java.awt.image.renderable.ParameterBlock;
 import java.awt.image.renderable.RenderedImageFactory;
-import javax.media.jai.EnumeratedParameter;
+
 import javax.media.jai.BorderExtender;
+import javax.media.jai.EnumeratedParameter;
 import javax.media.jai.ImageLayout;
 import javax.media.jai.Interpolation;
-import javax.media.jai.InterpolationBicubic2;
 import javax.media.jai.InterpolationBicubic;
+import javax.media.jai.InterpolationBicubic2;
 import javax.media.jai.InterpolationBilinear;
 import javax.media.jai.InterpolationNearest;
-import javax.media.jai.InterpolationTable;
-import javax.media.jai.PlanarImage;
-import javax.media.jai.RenderedOp;
-import java.util.Map;
 import javax.media.jai.operator.ShearDescriptor;
 
 /**

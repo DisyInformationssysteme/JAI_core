@@ -10,8 +10,9 @@
  * $State: Exp $
  */package javax.media.jai.remote;
 
-import java.math.BigInteger;
 import java.math.BigDecimal;
+import java.math.BigInteger;
+
 import javax.media.jai.util.Range;
 
 /**

@@ -10,13 +10,12 @@
  * $State: Exp $
  */
 package com.sun.media.jai.opimage;
-import java.awt.Point;
 import java.awt.Rectangle;
 import java.awt.RenderingHints;
 import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
 import java.util.Map;
-import java.util.Vector;
+
 import javax.media.jai.ImageLayout;
 import javax.media.jai.JAI;
 import javax.media.jai.OpImage;

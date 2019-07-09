@@ -12,31 +12,30 @@
  */package javax.media.jai.remote;
 
 import java.awt.RenderingHints;
-import java.awt.Rectangle;
 import java.awt.image.renderable.ParameterBlock;
-import java.net.URL;
 import java.net.InetAddress;
+import java.net.URL;
 import java.rmi.Naming;
-import java.rmi.RemoteException;
 import java.text.MessageFormat;
-import java.util.Iterator;
 import java.util.Enumeration;
 import java.util.Hashtable;
-import java.util.Locale;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Locale;
 import java.util.Vector;
+
 import javax.media.jai.JAI;
 import javax.media.jai.OperationDescriptor;
 import javax.media.jai.OperationNode;
-import javax.media.jai.RenderedOp;
 import javax.media.jai.ParameterListDescriptor;
+import javax.media.jai.RenderedOp;
 import javax.media.jai.util.CaselessStringKey;
 import javax.media.jai.util.ImagingException;
 import javax.media.jai.util.ImagingListener;
+
 import com.sun.media.jai.rmi.ImageServer;
-import com.sun.media.jai.rmi.RMIServerProxy;
 import com.sun.media.jai.rmi.JAIRMIUtil;
-import com.sun.media.jai.util.ImageUtil;
+import com.sun.media.jai.rmi.RMIServerProxy;
 
 /**
  * This class describes the "jairmi" remote imaging protocol. This protocol

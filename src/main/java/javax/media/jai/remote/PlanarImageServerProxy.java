@@ -14,22 +14,18 @@
 import java.awt.Image;
 import java.awt.Rectangle;
 import java.awt.RenderingHints;
-import java.awt.image.RenderedImage;
+import java.awt.image.ColorModel;
 import java.awt.image.Raster;
 import java.awt.image.SampleModel;
-import java.awt.image.ColorModel;
 import java.awt.image.renderable.ParameterBlock;
-import java.io.IOException;
 import java.util.Vector;
-import java.util.Hashtable;
+
 import javax.media.jai.ImageLayout;
 import javax.media.jai.JAI;
 import javax.media.jai.OperationRegistry;
 import javax.media.jai.PlanarImage;
-import javax.media.jai.RenderedOp;
 import javax.media.jai.TileCache;
 import javax.media.jai.util.ImagingListener;
-import com.sun.media.jai.util.ImageUtil;
 
 /**
  * A subclass of <code>PlanarImage</code> which represents an image on a

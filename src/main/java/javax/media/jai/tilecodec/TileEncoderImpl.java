@@ -10,13 +10,10 @@
  * $State: Exp $
  */package javax.media.jai.tilecodec;
 
-import java.awt.image.Raster;
-import java.awt.image.SampleModel;
-import java.io.IOException;
 import java.io.OutputStream;
-import javax.media.jai.JAI ;
+
 import javax.media.jai.ParameterListDescriptor;
-import javax.media.jai.tilecodec.TileCodecDescriptor;
+
 import com.sun.media.jai.tilecodec.TileCodecUtils;
 
 /**

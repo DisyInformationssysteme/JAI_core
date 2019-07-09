@@ -12,6 +12,7 @@
 
 import java.awt.image.SampleModel;
 import java.io.OutputStream;
+
 import javax.media.jai.remote.NegotiableCapability;
 
 /**

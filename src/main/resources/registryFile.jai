@@ -173,116 +173,74 @@ descriptor    javax.media.jai.remote.JAIRMIDescriptor
 # "rendered" factory objects
 #
 rendered    com.sun.media.jai.opimage.AbsoluteCRIF		com.sun.media.jai	absolute		sunabsoluterif
-rendered    com.sun.media.jai.mlib.MlibAbsoluteRIF		com.sun.media.jai	absolute		mlibabsoluterif
 rendered    com.sun.media.jai.opimage.AddCollectionCRIF		com.sun.media.jai	addcollection		sunaddcollectionrif
 rendered    com.sun.media.jai.opimage.AddConstCRIF		com.sun.media.jai	addconst		sunaddconstrif
-rendered    com.sun.media.jai.mlib.MlibAddConstRIF		com.sun.media.jai	addconst		mlibaddconstrif
 rendered    com.sun.media.jai.opimage.AddCRIF			com.sun.media.jai	add			sunaddrif
-rendered    com.sun.media.jai.mlib.MlibAddRIF			com.sun.media.jai	add			mlibaddrif
 rendered    com.sun.media.jai.opimage.AffineCRIF		com.sun.media.jai	affine			sunaffinerif
-rendered    com.sun.media.jai.mlib.MlibAffineRIF		com.sun.media.jai	affine			mlibaffinerif
 rendered    com.sun.media.jai.opimage.AndConstCRIF		com.sun.media.jai	andconst		sunandconstrif
-rendered    com.sun.media.jai.mlib.MlibAndConstRIF		com.sun.media.jai	andconst		mlibandconstrif
 rendered    com.sun.media.jai.opimage.AndCRIF			com.sun.media.jai	and			sunandrif
-rendered    com.sun.media.jai.mlib.MlibAndRIF			com.sun.media.jai	and			mlibandrif
 rendered    com.sun.media.jai.opimage.AWTImageRIF		com.sun.media.jai	awtimage		sunawtimagerif
 rendered    com.sun.media.jai.opimage.BandCombineCRIF		com.sun.media.jai	bandcombine		sunbandcombinerif
 rendered    com.sun.media.jai.opimage.BandMergeCRIF		com.sun.media.jai	bandmerge		sunbandmergerif
-rendered    com.sun.media.jai.mlib.MlibBandCombineRIF		com.sun.media.jai	bandcombine		mlibbandcombinerif
 rendered    com.sun.media.jai.opimage.BandSelectCRIF		com.sun.media.jai	bandselect		sunbandselectrif
-rendered    com.sun.media.jai.mlib.MlibBandSelectRIF		com.sun.media.jai	bandselect		mlibbandselectrif
 rendered    com.sun.media.jai.opimage.BinarizeCRIF		com.sun.media.jai	binarize		sunbinarizerif
-rendered    com.sun.media.jai.mlib.MlibBinarizeRIF		com.sun.media.jai	binarize		mlibbinarizerif
 rendered    com.sun.media.jai.opimage.BMPRIF			com.sun.media.jai	bmp			sunbmprif
 rendered    com.sun.media.jai.opimage.BorderRIF			com.sun.media.jai	border			sunborderrif
 rendered    com.sun.media.jai.opimage.BoxFilterRIF		com.sun.media.jai	boxfilter		sunboxfilterrif
-rendered    com.sun.media.jai.mlib.MlibBoxFilterRIF		com.sun.media.jai	boxfilter		mlibboxfilterrif
 rendered    com.sun.media.jai.opimage.ClampCRIF			com.sun.media.jai	clamp			sunclamprif
-rendered    com.sun.media.jai.mlib.MlibClampRIF			com.sun.media.jai	clamp			mlibclamprif
 rendered    com.sun.media.jai.opimage.ColorConvertCRIF		com.sun.media.jai	colorconvert		suncolorconvertrif
 rendered    com.sun.media.jai.opimage.ColorQuantizerRIF		com.sun.media.jai	colorquantizer		suncolorquantizerrif
 rendered    com.sun.media.jai.opimage.CompositeCRIF		com.sun.media.jai	composite		suncompositerif
-rendered    com.sun.media.jai.mlib.MlibCompositeRIF		com.sun.media.jai	composite		mlibcompositerif
 rendered    com.sun.media.jai.opimage.ConstantCRIF		com.sun.media.jai	constant		sunconstrif1
 rendered    com.sun.media.jai.opimage.ConjugateCRIF		com.sun.media.jai	conjugate		sunconjugaterif
 rendered    com.sun.media.jai.opimage.ConvolveRIF		com.sun.media.jai	convolve		sunconvolverif
-rendered    com.sun.media.jai.mlib.MlibConvolveRIF		com.sun.media.jai	convolve		mlibconvolverif
 rendered    com.sun.media.jai.opimage.CropCRIF			com.sun.media.jai	crop			suncroprif
 rendered    com.sun.media.jai.opimage.DCTCRIF			com.sun.media.jai	dct			sundctrif
-rendered    com.sun.media.jai.mlib.MlibDCTRIF			com.sun.media.jai	dct			mlibdctrif
 rendered    com.sun.media.jai.opimage.DFTCRIF			com.sun.media.jai	dft			sundftrif
-rendered    com.sun.media.jai.mlib.MlibDFTRIF			com.sun.media.jai	dft			mlibdftrif
 rendered    com.sun.media.jai.opimage.DilateRIF			com.sun.media.jai	dilate			sundilaterif
-rendered    com.sun.media.jai.mlib.MlibDilateRIF		com.sun.media.jai	dilate			mlibdilaterif
 rendered    com.sun.media.jai.opimage.DivideCRIF		com.sun.media.jai	divide			sundividerif
 rendered    com.sun.media.jai.opimage.DivideComplexCRIF		com.sun.media.jai	dividecomplex		sundividecomplexrif
-rendered    com.sun.media.jai.mlib.MlibDivideRIF		com.sun.media.jai	divide			mlibdividerif
 rendered    com.sun.media.jai.opimage.DivideByConstCRIF		com.sun.media.jai	dividebyconst		sundividebyconstrif
-rendered    com.sun.media.jai.mlib.MlibDivideByConstRIF		com.sun.media.jai	dividebyconst		mlibdividebyconstrif
 rendered    com.sun.media.jai.opimage.DivideIntoConstCRIF	com.sun.media.jai	divideintoconst		sundivideintoconstrif
-rendered    com.sun.media.jai.mlib.MlibDivideIntoConstRIF	com.sun.media.jai	divideintoconst		mlibdivideintoconstrif
 rendered    com.sun.media.jai.opimage.EncodeRIF			com.sun.media.jai	encode   		sunencoderif
 rendered    com.sun.media.jai.opimage.ErodeRIF			com.sun.media.jai	erode			suneroderif
-rendered    com.sun.media.jai.mlib.MlibErodeRIF			com.sun.media.jai	erode			mliberoderif
 rendered    com.sun.media.jai.opimage.ErrorDiffusionRIF		com.sun.media.jai	errordiffusion		sunerrordiffusionrif
 rendered    com.sun.media.jai.opimage.ExpCRIF		        com.sun.media.jai	exp			sunexprif
-rendered    com.sun.media.jai.mlib.MlibExpRIF		        com.sun.media.jai	exp			mlibexprif
 rendered    com.sun.media.jai.opimage.ExtremaRIF		com.sun.media.jai	extrema			sunextremarif
-rendered    com.sun.media.jai.mlib.MlibExtremaRIF		com.sun.media.jai	extrema			mlibextremarif
 rendered    com.sun.media.jai.opimage.FileLoadRIF		com.sun.media.jai	fileload		sunfileloadrif
 rendered    com.sun.media.jai.opimage.FileStoreRIF		com.sun.media.jai	filestore		sunfilestorerif
 rendered    com.sun.media.jai.opimage.FilteredSubsampleRIF      com.sun.media.jai       filteredsubsample       sunfilteredsubsamplerif
-rendered    com.sun.media.jai.mlib.MlibFilteredSubsampleRIF     com.sun.media.jai       filteredsubsample       mlibfilteredsubsamplerif
 rendered    com.sun.media.jai.opimage.FormatCRIF		com.sun.media.jai	format			sunformatrif
 rendered    com.sun.media.jai.opimage.FPXRIF		        com.sun.media.jai	fpx			sunfpxrif
 rendered    com.sun.media.jai.opimage.GIFRIF		        com.sun.media.jai	gif			sungifrif
-rendered    com.sun.media.jai.mlib.MlibGradientRIF		com.sun.media.jai	gradientmagnitude	mlibgradientrif
 rendered    com.sun.media.jai.opimage.GradientRIF		com.sun.media.jai	gradientmagnitude	sungradientrif
 rendered    com.sun.media.jai.opimage.HistogramRIF		com.sun.media.jai	histogram		sunhistogramrif
-rendered    com.sun.media.jai.mlib.MlibHistogramRIF		com.sun.media.jai	histogram		mlibhistogramrif
 rendered    com.sun.media.jai.opimage.IDCTCRIF			com.sun.media.jai	idct			sunidctrif
-rendered    com.sun.media.jai.mlib.MlibIDCTRIF			com.sun.media.jai	idct			mlibidctrif
 rendered    com.sun.media.jai.opimage.IDFTCRIF			com.sun.media.jai	idft			sunidftrif
-rendered    com.sun.media.jai.mlib.MlibIDFTRIF			com.sun.media.jai	idft			mlibidftrif
 rendered    com.sun.media.jai.opimage.IIPCRIF			com.sun.media.jai	iip			suniipcrif
 rendered    com.sun.media.jai.opimage.IIPResolutionRIF		com.sun.media.jai	iipresolution		suniipresolutionrif
 rendered    com.sun.media.jai.opimage.ImageFunctionRIF		com.sun.media.jai	imagefunction		sunimagefunctionrif
 rendered    com.sun.media.jai.opimage.InvertCRIF		com.sun.media.jai	invert			suninvertrif
-rendered    com.sun.media.jai.mlib.MlibInvertRIF		com.sun.media.jai	invert			mlibinvertrif
 rendered    com.sun.media.jai.opimage.JPEGRIF		        com.sun.media.jai	jpeg			sunjpegrif
 rendered    com.sun.media.jai.opimage.LogCRIF		        com.sun.media.jai	log			sunlogrif
-rendered    com.sun.media.jai.mlib.MlibLogRIF		        com.sun.media.jai	log			mliblogrif
 rendered    com.sun.media.jai.opimage.LookupCRIF		com.sun.media.jai	lookup			sunlookuprif
-rendered    com.sun.media.jai.mlib.MlibLookupRIF		com.sun.media.jai	lookup			mliblookuprif
 rendered    com.sun.media.jai.opimage.MagnitudeCRIF		com.sun.media.jai	magnitude		sunmagnituderif
 rendered    com.sun.media.jai.opimage.MagnitudeSquaredCRIF	com.sun.media.jai	magnitudesquared	sunmagnitudesquaredrif
 rendered    com.sun.media.jai.opimage.MatchCDFCRIF		com.sun.media.jai	matchcdf		sunmatchcdfrif
 rendered    com.sun.media.jai.opimage.MaxCRIF		        com.sun.media.jai	max			sunmaxrif
-rendered    com.sun.media.jai.mlib.MlibMaxRIF		        com.sun.media.jai	max			mlibmaxrif
 rendered    com.sun.media.jai.opimage.MaxFilterRIF		com.sun.media.jai	maxfilter		sunmaxfilterrif
-rendered    com.sun.media.jai.mlib.MlibMaxFilterRIF		com.sun.media.jai	maxfilter		mlibmaxfilterrif
 rendered    com.sun.media.jai.opimage.MeanRIF		        com.sun.media.jai	mean			sunmeanrif
-rendered    com.sun.media.jai.mlib.MlibMeanRIF		        com.sun.media.jai	mean			mlibmeanrif
 rendered    com.sun.media.jai.opimage.MedianFilterRIF		com.sun.media.jai	medianfilter		sunmedianfilterrif
-rendered    com.sun.media.jai.mlib.MlibMedianFilterRIF		com.sun.media.jai	medianfilter		mlibmedianfilterrif
 rendered    com.sun.media.jai.opimage.MinCRIF		        com.sun.media.jai	min			sunminrif
-rendered    com.sun.media.jai.mlib.MlibMinRIF		        com.sun.media.jai	min			mlibminrif
 rendered    com.sun.media.jai.opimage.MinFilterRIF		com.sun.media.jai	minfilter		sunminfilterrif
-rendered    com.sun.media.jai.mlib.MlibMinFilterRIF		com.sun.media.jai	minfilter		mlibminfilterrif
 rendered    com.sun.media.jai.opimage.MosaicRIF		com.sun.media.jai	mosaic		sunmosaicrif
-rendered    com.sun.media.jai.mlib.MlibMosaicRIF		com.sun.media.jai	mosaic		mlibmosaicrif
 rendered    com.sun.media.jai.opimage.MultiplyCRIF		com.sun.media.jai	multiply		sunmultiplyrif
 rendered    com.sun.media.jai.opimage.MultiplyComplexCRIF	com.sun.media.jai	multiplycomplex		sunmultiplycomplexrif
-rendered    com.sun.media.jai.mlib.MlibMultiplyRIF		com.sun.media.jai	multiply		mlibmultiplyrif
 rendered    com.sun.media.jai.opimage.MultiplyConstCRIF		com.sun.media.jai	multiplyconst		sunmultiplyconstrif
-rendered    com.sun.media.jai.mlib.MlibMultiplyConstRIF		com.sun.media.jai	multiplyconst		mlibmultiplyconstrif
 rendered    com.sun.media.jai.opimage.NotCRIF			com.sun.media.jai	not			sunnotrif
-rendered    com.sun.media.jai.mlib.MlibNotRIF			com.sun.media.jai	not			mlibnotrif
 rendered    javax.media.jai.NullCRIF			   	javax.media.jai		null			sunullrif
 rendered    com.sun.media.jai.opimage.OrConstCRIF		com.sun.media.jai	orconst			sunorconstrif
-rendered    com.sun.media.jai.mlib.MlibOrConstRIF		com.sun.media.jai	orconst			mliborconstrif
 rendered    com.sun.media.jai.opimage.OrCRIF			com.sun.media.jai	or			sunorrif
-rendered    com.sun.media.jai.mlib.MlibOrRIF			com.sun.media.jai	or			mliborrif
 rendered    com.sun.media.jai.opimage.OrderedDitherRIF		com.sun.media.jai	ordereddither		sunorderedditherrif
 rendered    com.sun.media.jai.opimage.OverlayCRIF		com.sun.media.jai	overlay			sunoverlayrif
 rendered    com.sun.media.jai.opimage.PatternRIF		com.sun.media.jai	pattern			sunpatternrif
@@ -293,40 +251,24 @@ rendered    com.sun.media.jai.opimage.PNGRIF			com.sun.media.jai	png			sunpngrif
 rendered    com.sun.media.jai.opimage.PNMRIF			com.sun.media.jai	pnm			sunpnmrif
 rendered    com.sun.media.jai.opimage.PolarToComplexCRIF	com.sun.media.jai	polartocomplex		sunpolartocomplexrif
 rendered    com.sun.media.jai.opimage.RescaleCRIF		com.sun.media.jai	rescale			sunrescalerif
-rendered    com.sun.media.jai.mlib.MlibRescaleRIF		com.sun.media.jai	rescale			mlibrescalerif
 rendered    com.sun.media.jai.opimage.RotateCRIF		com.sun.media.jai	rotate			sunrotaterif
-rendered    com.sun.media.jai.mlib.MlibRotateRIF		com.sun.media.jai	rotate			mlibrotaterif
 rendered    com.sun.media.jai.opimage.ScaleCRIF			com.sun.media.jai	scale			sunscalerif
-rendered    com.sun.media.jai.mlib.MlibScaleRIF			com.sun.media.jai	scale			mlibscalerif
 rendered    com.sun.media.jai.opimage.ShearRIF			com.sun.media.jai	shear			sunshearrif
-rendered    com.sun.media.jai.mlib.MlibShearRIF		        com.sun.media.jai	shear			mlibshearrif
 rendered    com.sun.media.jai.opimage.StreamRIF			com.sun.media.jai	stream			sunstreamrif
 rendered    com.sun.media.jai.opimage.SubsampleBinaryToGrayCRIF	com.sun.media.jai	subsamplebinarytogray	sunsubsamplebinarytograyrif
-rendered    com.sun.media.jai.mlib.MlibSubsampleBinaryToGrayRIF	com.sun.media.jai	subsamplebinarytogray	mlibsubsamplebinarytograyrif
 rendered    com.sun.media.jai.opimage.SubsampleAverageCRIF	com.sun.media.jai	subsampleaverage	sunsubsampleaveragerif
-rendered    com.sun.media.jai.mlib.MlibSubsampleAverageRIF	com.sun.media.jai	subsampleaverage	mlibsubsampleaveragerif
 rendered    com.sun.media.jai.opimage.SubtractCRIF		com.sun.media.jai	subtract		sunsubtractrif
-rendered    com.sun.media.jai.mlib.MlibSubtractRIF		com.sun.media.jai	subtract		mlibsubtractrif
 rendered    com.sun.media.jai.opimage.SubtractConstCRIF		com.sun.media.jai	subtractconst		sunsubtractconstrif
-rendered    com.sun.media.jai.mlib.MlibSubtractConstRIF		com.sun.media.jai	subtractconst		mlibsubtractconstrif
 rendered    com.sun.media.jai.opimage.SubtractFromConstCRIF	com.sun.media.jai	subtractfromconst	sunsubtractfromconstrif
-rendered    com.sun.media.jai.mlib.MlibSubtractFromConstRIF	com.sun.media.jai	subtractfromconst	mlibsubtractfromconstrif
 rendered    com.sun.media.jai.opimage.TIFFRIF			com.sun.media.jai	tiff			suntiffrif
 rendered    com.sun.media.jai.opimage.ThresholdCRIF		com.sun.media.jai	threshold		sunthresholdrif
-rendered    com.sun.media.jai.mlib.MlibThresholdRIF		com.sun.media.jai	threshold		mlibthresholdrif
 rendered    com.sun.media.jai.opimage.TranslateCRIF		com.sun.media.jai	translate		suntransrif
-rendered    com.sun.media.jai.mlib.MlibTranslateRIF		com.sun.media.jai	translate		mlibtranslaterif
 rendered    com.sun.media.jai.opimage.TransposeCRIF		com.sun.media.jai	transpose		suntransposerif
-rendered    com.sun.media.jai.mlib.MlibTransposeRIF		com.sun.media.jai	transpose		mlibtransposerif
 rendered    com.sun.media.jai.opimage.UnsharpMaskRIF		com.sun.media.jai	unsharpmask		sununsharpmaskrif
-rendered    com.sun.media.jai.mlib.MlibUnsharpMaskRIF		com.sun.media.jai	unsharpmask		mlibunsharpmaskrif
 rendered    com.sun.media.jai.opimage.URLRIF			com.sun.media.jai	url			sunurlrif
 rendered    com.sun.media.jai.opimage.WarpRIF			com.sun.media.jai	warp			sunwarprif
-rendered    com.sun.media.jai.mlib.MlibWarpRIF			com.sun.media.jai	warp			mlibwarprif
 rendered    com.sun.media.jai.opimage.XorConstCRIF		com.sun.media.jai	xorconst		sunxorconstrif
-rendered    com.sun.media.jai.mlib.MlibXorConstRIF		com.sun.media.jai	xorconst		mlibxorconstrif
 rendered    com.sun.media.jai.opimage.XorCRIF			com.sun.media.jai	xor			sunxorrif
-rendered    com.sun.media.jai.mlib.MlibXorRIF			com.sun.media.jai	xor			mlibxorrif
 
 
 #
@@ -425,62 +367,62 @@ remoterenderable    com.sun.media.jai.rmi.JAIRMICRIF             jairmi
 #
 # "rendered" factory object preferences
 #
-pref	rendered	absolute	com.sun.media.jai	mlibabsoluterif	sunabsoluterif
-pref	rendered	addconst	com.sun.media.jai	mlibaddconstrif	sunaddconstrif
-pref	rendered	add		com.sun.media.jai	mlibaddrif	sunaddrif
-pref	rendered	affine		com.sun.media.jai	mlibaffinerif	sunaffinerif
-pref	rendered	and		com.sun.media.jai	mlibandrif	sunandrif
-pref	rendered	andconst	com.sun.media.jai	mlibandconstrif	sunandconstrif
-pref	rendered	bandcombine	com.sun.media.jai	mlibbandcombinerif	sunbandcombinerif
-pref	rendered	bandselect	com.sun.media.jai	mlibbandselectrif	sunbandselectrif
-pref	rendered	binarize	com.sun.media.jai	mlibbinarizerif	sunbinarizerif
-pref	rendered	boxfilter	com.sun.media.jai	mlibboxfilterrif	sunboxfilterrif
-pref	rendered	clamp		com.sun.media.jai	mlibclamprif	sunclamprif
-pref	rendered	composite	com.sun.media.jai	mlibcompositerif	suncompositerif
-pref	rendered	convolve	com.sun.media.jai	mlibconvolverif	sunconvolverif
-pref	rendered	dct		com.sun.media.jai	mlibdctrif	sundctrif
-pref	rendered	dilate		com.sun.media.jai	mlibdilaterif	sundilaterif
-pref	rendered	idct		com.sun.media.jai	mlibidctrif	sunidctrif
-pref	rendered	dft		com.sun.media.jai	mlibdftrif	sundftrif
-pref	rendered	idft		com.sun.media.jai	mlibidftrif	sunidftrif
-pref	rendered	divide		com.sun.media.jai	mlibdividerif	sundividerif
-pref	rendered	dividebyconst	com.sun.media.jai	mlibdividebyconstrif	sundividebyconstrif
-pref	rendered	divideintoconst	com.sun.media.jai	mlibdivideintoconstrif	sundivideintoconstrif
-pref	rendered	erode		com.sun.media.jai	mliberoderif	suneroderif
-pref	rendered	exp		com.sun.media.jai	mlibexprif	sunexprif
-pref	rendered	extrema		com.sun.media.jai	mlibextremarif	sunextremarif
-pref	rendered	filteredsubsample com.sun.media.jai	mlibfilteredsubsamplerif	sunfilteredsubsamplerif
-pref	rendered	gradientmagnitude	com.sun.media.jai	mlibgradientrif sungradientrif
-pref	rendered	histogram	com.sun.media.jai	mlibhistogramrif sunhistogramrif
-pref	rendered	invert		com.sun.media.jai	mlibinvertrif	suninvertrif
-pref	rendered	log		com.sun.media.jai	mliblogrif	sunlogrif
-pref	rendered	lookup		com.sun.media.jai	mliblookuprif	sunlookuprif
-pref	rendered	max		com.sun.media.jai	mlibmaxrif	sunmaxrif
-pref	rendered	maxfilter	com.sun.media.jai	mlibmaxfilterrif	sunmaxfilterrif
-pref	rendered	mean		com.sun.media.jai	mlibmeanrif	sunmeanrif
-pref	rendered	medianfilter	com.sun.media.jai	mlibmedianfilterrif	sunmedianfilterrif
-pref	rendered	min		com.sun.media.jai	mlibminrif	sunminrif
-pref	rendered	minfilter	com.sun.media.jai	mlibminfilterrif	sunminfilterrif
-pref	rendered	mosaic	com.sun.media.jai	mlibmosaicrif	sunmosaicrif
-pref	rendered	multiply	com.sun.media.jai	mlibmultiplyrif	sunmultiplyrif
-pref	rendered	multiplyconst	com.sun.media.jai	mlibmultiplyconstrif	sunmultiplyconstrif
-pref	rendered	not		com.sun.media.jai	mlibnotrif	sunnotrif
-pref	rendered	or		com.sun.media.jai	mliborrif	sunorrif
-pref	rendered	orconst		com.sun.media.jai	mliborconstrif	sunorconstrif
-pref	rendered	rescale		com.sun.media.jai	mlibrescalerif	sunrescalerif
-pref	rendered	rotate		com.sun.media.jai	mlibrotaterif	sunrotaterif
-pref	rendered	scale		com.sun.media.jai	mlibscalerif	sunscalerif
-pref	rendered	shear		com.sun.media.jai	mlibshearrif	sunshearrif
-pref	rendered	subsampleaverage	com.sun.media.jai	mlibsubsampleaveragerif	sunsubsampleaveragerif
-pref	rendered	subsamplebinarytogray	com.sun.media.jai	mlibsubsamplebinarytograyrif	sunsubsamplebinarytograyrif
-pref	rendered	subtractconst	com.sun.media.jai	mlibsubtractconstrif	sunsubtractconstrif
-pref	rendered	subtractfromconst	com.sun.media.jai	mlibsubtractfromconstrif	sunsubtractfromconstrif
-pref	rendered	subtract	com.sun.media.jai	mlibsubtractrif	sunsubtractrif
-pref	rendered	threshold	com.sun.media.jai	mlibthresholdrif	sunthresholdrif
-pref	rendered	translate	com.sun.media.jai	mlibtranslaterif	suntransrif
-pref	rendered	transpose	com.sun.media.jai	mlibtransposerif	suntransposerif
-pref	rendered	unsharpmask	com.sun.media.jai	mlibunsharpmaskrif	sununsharpmaskrif
-pref	rendered	warp		com.sun.media.jai	mlibwarprif	sunwarprif
-pref	rendered	xor		com.sun.media.jai	mlibxorrif	sunxorrif
-pref	rendered	xorconst	com.sun.media.jai	mlibxorconstrif	sunxorconstrif
+pref	rendered	absolute	com.sun.media.jai	sunabsoluterif
+pref	rendered	addconst	com.sun.media.jai	sunaddconstrif
+pref	rendered	add		com.sun.media.jai		sunaddrif
+pref	rendered	affine		com.sun.media.jai	sunaffinerif
+pref	rendered	and		com.sun.media.jai		sunandrif
+pref	rendered	andconst	com.sun.media.jai	sunandconstrif
+pref	rendered	bandcombine	com.sun.media.jai	sunbandcombinerif
+pref	rendered	bandselect	com.sun.media.jai	sunbandselectrif
+pref	rendered	binarize	com.sun.media.jai	sunbinarizerif
+pref	rendered	boxfilter	com.sun.media.jai	sunboxfilterrif
+pref	rendered	clamp		com.sun.media.jai	sunclamprif
+pref	rendered	composite	com.sun.media.jai	suncompositerif
+pref	rendered	convolve	com.sun.media.jai	sunconvolverif
+pref	rendered	dct		com.sun.media.jai		sundctrif
+pref	rendered	dilate		com.sun.media.jai	sundilaterif
+pref	rendered	idct		com.sun.media.jai	sunidctrif
+pref	rendered	dft		com.sun.media.jai		sundftrif
+pref	rendered	idft		com.sun.media.jai	sunidftrif
+pref	rendered	divide		com.sun.media.jai	sundividerif
+pref	rendered	dividebyconst	com.sun.media.jai	sundividebyconstrif
+pref	rendered	divideintoconst	com.sun.media.jai	sundivideintoconstrif
+pref	rendered	erode		com.sun.media.jai	suneroderif
+pref	rendered	exp		com.sun.media.jai		sunexprif
+pref	rendered	extrema		com.sun.media.jai	sunextremarif
+pref	rendered	filteredsubsample com.sun.media.jai		sunfilteredsubsamplerif
+pref	rendered	gradientmagnitude	com.sun.media.jai	 sungradientrif
+pref	rendered	histogram	com.sun.media.jai	 sunhistogramrif
+pref	rendered	invert		com.sun.media.jai	suninvertrif
+pref	rendered	log		com.sun.media.jai		sunlogrif
+pref	rendered	lookup		com.sun.media.jai	sunlookuprif
+pref	rendered	max		com.sun.media.jai		sunmaxrif
+pref	rendered	maxfilter	com.sun.media.jai	sunmaxfilterrif
+pref	rendered	mean		com.sun.media.jai		sunmeanrif
+pref	rendered	medianfilter	com.sun.media.jai	sunmedianfilterrif
+pref	rendered	min		com.sun.media.jai		sunminrif
+pref	rendered	minfilter	com.sun.media.jai	sunminfilterrif
+pref	rendered	mosaic	com.sun.media.jai		sunmosaicrif
+pref	rendered	multiply	com.sun.media.jai	sunmultiplyrif
+pref	rendered	multiplyconst	com.sun.media.jai	sunmultiplyconstrif
+pref	rendered	not		com.sun.media.jai		sunnotrif
+pref	rendered	or		com.sun.media.jai		sunorrif
+pref	rendered	orconst		com.sun.media.jai	sunorconstrif
+pref	rendered	rescale		com.sun.media.jai	sunrescalerif
+pref	rendered	rotate		com.sun.media.jai	sunrotaterif
+pref	rendered	scale		com.sun.media.jai	sunscalerif
+pref	rendered	shear		com.sun.media.jai	sunshearrif
+pref	rendered	subsampleaverage	com.sun.media.jai	sunsubsampleaveragerif
+pref	rendered	subsamplebinarytogray	com.sun.media.jai	sunsubsamplebinarytograyrif
+pref	rendered	subtractconst	com.sun.media.jai	sunsubtractconstrif
+pref	rendered	subtractfromconst	com.sun.media.jai	sunsubtractfromconstrif
+pref	rendered	subtract	com.sun.media.jai	sunsubtractrif
+pref	rendered	threshold	com.sun.media.jai	sunthresholdrif
+pref	rendered	translate	com.sun.media.jai	suntransrif
+pref	rendered	transpose	com.sun.media.jai	suntransposerif
+pref	rendered	unsharpmask	com.sun.media.jai	sununsharpmaskrif
+pref	rendered	warp		com.sun.media.jai	sunwarprif
+pref	rendered	xor		com.sun.media.jai		sunxorrif
+pref	rendered	xorconst	com.sun.media.jai	sunxorconstrif
 

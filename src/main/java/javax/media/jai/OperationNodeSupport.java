@@ -20,10 +20,10 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.Hashtable;
-import java.util.Iterator;
 import java.util.Observable;
 import java.util.Observer;
 import java.util.Vector;
+
 import javax.media.jai.remote.SerializableState;
 import javax.media.jai.remote.SerializerFactory;
 

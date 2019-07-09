@@ -22,17 +22,18 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Map;
 import java.util.Vector;
+
 import javax.media.jai.BorderExtender;
 import javax.media.jai.BorderExtenderConstant;
 import javax.media.jai.ImageLayout;
-import javax.media.jai.JAI;
 import javax.media.jai.OpImage;
 import javax.media.jai.PlanarImage;
+import javax.media.jai.ROI;
 import javax.media.jai.RasterAccessor;
 import javax.media.jai.RasterFormatTag;
-import javax.media.jai.ROI;
-import javax.media.jai.operator.MosaicType;
 import javax.media.jai.operator.MosaicDescriptor;
+import javax.media.jai.operator.MosaicType;
+
 import com.sun.media.jai.util.ImageUtil;
 
 public class MosaicOpImage extends OpImage {

@@ -15,10 +15,10 @@ import java.awt.RenderingHints;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Hashtable;
-import java.util.Iterator;
 import java.util.Vector;
-import com.sun.media.jai.rmi.SerializerImpl;
+
 import com.sun.media.jai.rmi.InterfaceState;
+import com.sun.media.jai.rmi.SerializerImpl;
 
 /**
  * A utility class which provides factory methods for obtaining

@@ -12,8 +12,9 @@
 
 import java.awt.image.renderable.ParameterBlock;
 import java.awt.image.renderable.RenderContext;
-import javax.media.jai.OperationRegistry;
+
 import javax.media.jai.JAI;
+import javax.media.jai.OperationRegistry;
 import javax.media.jai.remote.RemoteCRIF;
 import javax.media.jai.remote.RemoteRenderedImage;
 

@@ -14,9 +14,10 @@ import java.awt.RenderingHints;
 import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
 import java.awt.image.renderable.RenderedImageFactory;
-import javax.media.jai.JAI;
+
 import javax.media.jai.ROI;
 import javax.media.jai.util.ImagingListener;
+
 import com.sun.media.jai.util.ImageUtil;
 
 /**

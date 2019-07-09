@@ -10,7 +10,6 @@
  * $State: Exp $
  */
 package javax.media.jai;
-import java.awt.image.renderable.ParameterBlock;
 import java.io.Serializable;
 
 /**

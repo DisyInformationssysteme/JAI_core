@@ -17,14 +17,13 @@ import java.awt.image.DataBuffer;
 import java.awt.image.MultiPixelPackedSampleModel;
 import java.awt.image.RenderedImage;
 import java.awt.image.SampleModel;
-import java.awt.image.renderable.RenderedImageFactory;
-import java.awt.image.renderable.RenderContext;
 import java.awt.image.renderable.ParameterBlock;
+import java.awt.image.renderable.RenderContext;
 import java.awt.image.renderable.RenderableImage;
-import javax.media.jai.CRIFImpl;
+
 import javax.media.jai.BorderExtender;
+import javax.media.jai.CRIFImpl;
 import javax.media.jai.ImageLayout;
-import java.util.Map;
 
 /**
  * @see SubsampleBinaryToGrayOpImage

@@ -11,9 +11,7 @@
  */
 package com.sun.media.jai.opimage;
 
-import java.awt.image.DataBuffer;
 import javax.media.jai.operator.DFTDescriptor;
-import com.sun.media.jai.util.MathJAI;
 
 /**
  * The Fast Cosine Transform (FCT) class.

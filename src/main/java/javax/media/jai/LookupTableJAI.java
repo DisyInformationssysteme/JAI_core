@@ -10,9 +10,8 @@
  * $State: Exp $
  */
 package javax.media.jai;
-import java.awt.Rectangle;
 import java.awt.Point;
-import java.awt.image.BandedSampleModel;
+import java.awt.Rectangle;
 import java.awt.image.DataBuffer;
 import java.awt.image.DataBufferByte;
 import java.awt.image.DataBufferInt;
@@ -25,8 +24,10 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
+
 import javax.media.jai.remote.SerializableState;
 import javax.media.jai.remote.SerializerFactory;
+
 import com.sun.media.jai.util.DataBufferUtils;
 
 /**

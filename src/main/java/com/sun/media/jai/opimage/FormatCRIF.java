@@ -16,12 +16,14 @@ import java.awt.image.RenderedImage;
 import java.awt.image.SampleModel;
 import java.awt.image.renderable.ParameterBlock;
 import java.util.Map;
+
 import javax.media.jai.CRIFImpl;
 import javax.media.jai.ImageLayout;
 import javax.media.jai.JAI;
-import javax.media.jai.OpImage;
 import javax.media.jai.NullOpImage;
+import javax.media.jai.OpImage;
 import javax.media.jai.RasterFactory;
+
 import com.sun.media.jai.util.JDKWorkarounds;
 
 /**

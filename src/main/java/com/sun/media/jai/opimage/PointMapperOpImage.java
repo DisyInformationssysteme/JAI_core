@@ -16,8 +16,8 @@ import java.awt.geom.AffineTransform;
 import java.awt.geom.NoninvertibleTransformException;
 import java.awt.geom.Point2D;
 import java.util.Map;
+
 import javax.media.jai.NullOpImage;
-import javax.media.jai.OpImage;
 import javax.media.jai.PlanarImage;
 
 /**

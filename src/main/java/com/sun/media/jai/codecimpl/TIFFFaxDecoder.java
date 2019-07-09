@@ -10,7 +10,6 @@
  * $State: Exp $
  */
 package com.sun.media.jai.codecimpl;
-import java.awt.image.WritableRaster;
 
 class TIFFFaxDecoder {
 

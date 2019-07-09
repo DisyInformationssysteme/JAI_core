@@ -13,17 +13,18 @@ package com.sun.media.jai.opimage;
 import java.awt.RenderingHints;
 import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
-import java.awt.image.renderable.RenderedImageFactory;
 import java.io.IOException;
+
 import javax.media.jai.ImageLayout;
 import javax.media.jai.JAI;
 import javax.media.jai.OpImage;
 import javax.media.jai.TileCache;
 import javax.media.jai.util.ImagingException;
 import javax.media.jai.util.ImagingListener;
+
 import com.sun.media.jai.codec.ImageCodec;
-import com.sun.media.jai.codec.ImageDecoder;
 import com.sun.media.jai.codec.ImageDecodeParam;
+import com.sun.media.jai.codec.ImageDecoder;
 import com.sun.media.jai.codec.SeekableStream;
 import com.sun.media.jai.util.DisposableNullOpImage;
 import com.sun.media.jai.util.ImageUtil;

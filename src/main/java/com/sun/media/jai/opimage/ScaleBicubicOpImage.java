@@ -15,19 +15,16 @@ import java.awt.image.DataBuffer;
 import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
 import java.awt.image.WritableRaster;
-import java.awt.image.renderable.ParameterBlock;
+import java.util.Map;
+
 import javax.media.jai.BorderExtender;
 import javax.media.jai.ImageLayout;
 import javax.media.jai.Interpolation;
-import javax.media.jai.InterpolationBicubic;
-import javax.media.jai.InterpolationBicubic2;
 import javax.media.jai.InterpolationTable;
-import javax.media.jai.OpImage;
-import javax.media.jai.PlanarImage;
 import javax.media.jai.RasterAccessor;
 import javax.media.jai.RasterFormatTag;
 import javax.media.jai.ScaleOpImage;
-import java.util.Map;
+
 import com.sun.media.jai.util.Rational;
 // import com.sun.media.jai.test.OpImageTester;
 

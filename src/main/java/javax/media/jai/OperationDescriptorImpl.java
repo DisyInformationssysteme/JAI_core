@@ -12,17 +12,16 @@
  */
 package javax.media.jai;
 
-import com.sun.media.jai.util.CaselessStringArrayTable;
 import java.awt.RenderingHints;
-import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
-import java.util.Collection;
-import java.util.Hashtable;
-import java.util.Iterator;
 import java.util.ListResourceBundle;
 import java.util.Locale;
+import java.util.MissingResourceException;
 import java.util.ResourceBundle;
+
 import javax.media.jai.util.Range;
+
+import com.sun.media.jai.util.CaselessStringArrayTable;
 
 /**
  * This class provides an abstract implementation of the

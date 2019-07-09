@@ -14,14 +14,16 @@ import java.awt.RenderingHints;
 import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
 import java.awt.image.renderable.RenderedImageFactory;
-import java.io.InputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.URL;
+
 import javax.media.jai.JAI;
-import javax.media.jai.OperationRegistry;
 import javax.media.jai.OpImage;
+import javax.media.jai.OperationRegistry;
 import javax.media.jai.registry.RIFRegistry;
 import javax.media.jai.util.ImagingListener;
+
 import com.sun.media.jai.codec.ImageDecodeParam;
 import com.sun.media.jai.codec.SeekableStream;
 import com.sun.media.jai.util.ImageUtil;

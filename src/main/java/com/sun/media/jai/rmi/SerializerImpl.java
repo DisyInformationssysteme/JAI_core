@@ -14,12 +14,14 @@ package com.sun.media.jai.rmi;
 import java.awt.RenderingHints;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
+
 import javax.media.jai.remote.RemoteImagingException;
 import javax.media.jai.remote.SerializableState;
 import javax.media.jai.remote.Serializer;
 import javax.media.jai.remote.SerializerFactory;
 import javax.media.jai.util.ImagingException;
 import javax.media.jai.util.ImagingListener;
+
 import com.sun.media.jai.util.ImageUtil;
 
 /**

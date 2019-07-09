@@ -11,9 +11,8 @@
  */
 package com.sun.media.jai.codec;
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.InputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.RandomAccessFile;
 import java.lang.reflect.Method;
 import java.util.HashSet;

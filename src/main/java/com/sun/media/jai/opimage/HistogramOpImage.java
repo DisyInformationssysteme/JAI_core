@@ -10,17 +10,12 @@
  * $State: Exp $
  */
 package com.sun.media.jai.opimage;
-import java.awt.Rectangle;
-import java.awt.image.DataBuffer;
 import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
-import java.util.LinkedList;
-import java.util.ListIterator;
+
 import javax.media.jai.Histogram;
-import javax.media.jai.PixelAccessor;
 import javax.media.jai.ROI;
 import javax.media.jai.StatisticsOpImage;
-import javax.media.jai.UnpackedImageData;
 
 /**
  * An <code>OpImage</code> implementing the "Histogram" operation as

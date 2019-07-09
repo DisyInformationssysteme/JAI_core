@@ -19,43 +19,35 @@ import java.awt.Graphics2D;
 import java.awt.GraphicsConfiguration;
 import java.awt.Image;
 import java.awt.Paint;
-import java.awt.PaintContext;
 import java.awt.Point;
 import java.awt.Rectangle;
 import java.awt.RenderingHints;
-import java.awt.RenderingHints.Key;
 import java.awt.Shape;
 import java.awt.Stroke;
-import java.awt.Toolkit;
-import java.awt.color.ColorSpace;
 import java.awt.font.FontRenderContext;
 import java.awt.font.GlyphVector;
-import java.awt.font.TextLayout;
 import java.awt.geom.AffineTransform;
 import java.awt.geom.Area;
 import java.awt.geom.Rectangle2D;
 import java.awt.image.BufferedImage;
 import java.awt.image.BufferedImageOp;
 import java.awt.image.ColorModel;
-import java.awt.image.ComponentColorModel;
 import java.awt.image.DataBuffer;
-import java.awt.image.ImageConsumer;
 import java.awt.image.ImageObserver;
-import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
 import java.awt.image.SampleModel;
-import java.awt.image.WritableRaster;
-import java.awt.image.WritableRenderedImage;
-import java.awt.image.renderable.RenderableImage;
 import java.awt.image.renderable.RenderContext;
+import java.awt.image.renderable.RenderableImage;
 import java.lang.reflect.Method;
 import java.text.AttributedCharacterIterator;
 import java.util.LinkedList;
 import java.util.ListIterator;
 import java.util.Map;
 import java.util.Vector;
+
 import javax.media.jai.util.ImagingException;
 import javax.media.jai.util.ImagingListener;
+
 import com.sun.media.jai.util.JDKWorkarounds;
 
 /**

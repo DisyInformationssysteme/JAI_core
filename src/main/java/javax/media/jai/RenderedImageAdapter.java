@@ -14,9 +14,9 @@ import java.awt.Rectangle;
 import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
 import java.awt.image.WritableRaster;
-import java.util.Hashtable;
 import java.util.HashSet;
 import java.util.Set;
+
 import javax.media.jai.util.CaselessStringKey;
 
 /**

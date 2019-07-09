@@ -14,17 +14,19 @@ import java.awt.Image;
 import java.awt.RenderingHints;
 import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
-import java.awt.image.renderable.RenderableImage;
 import java.awt.image.renderable.RenderContext;
+import java.awt.image.renderable.RenderableImage;
 import java.net.InetAddress;
 import java.rmi.Naming;
 import java.rmi.RemoteException;
 import java.util.Vector;
+
 import javax.media.jai.remote.JAIRMIDescriptor;
 import javax.media.jai.remote.RemoteImagingException;
-import javax.media.jai.remote.SerializerFactory;
 import javax.media.jai.remote.SerializableState;
+import javax.media.jai.remote.SerializerFactory;
 import javax.media.jai.util.ImagingListener;
+
 import com.sun.media.jai.util.ImageUtil;
 
 /**

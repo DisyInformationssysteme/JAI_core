@@ -11,7 +11,6 @@
  */package javax.media.jai.remote;
 
 import java.awt.image.RenderedImage;
-import javax.media.jai.remote.NegotiableCapabilitySet;
 
 /**
  * <code>RemoteRenderedImage</code> is an interface commonly used to 

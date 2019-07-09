@@ -11,8 +11,6 @@
  */
 package javax.media.jai;
 
-import com.sun.media.jai.util.PropertyUtil;
-import com.sun.media.jai.util.Service;
 import java.awt.RenderingHints;
 import java.awt.image.renderable.ContextualRenderedImageFactory;
 import java.awt.image.renderable.ParameterBlock;
@@ -21,8 +19,6 @@ import java.io.BufferedWriter;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.Externalizable;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.ObjectInput;
@@ -30,25 +26,26 @@ import java.io.ObjectOutput;
 import java.io.OutputStream;
 import java.io.StringWriter;
 import java.net.URL;
-import java.text.MessageFormat;
 import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.HashSet;
 import java.util.Hashtable;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Locale;
 import java.util.Vector;
+
 import javax.media.jai.registry.CIFRegistry;
 import javax.media.jai.registry.CRIFRegistry;
-import javax.media.jai.registry.RIFRegistry;
 import javax.media.jai.registry.CollectionRegistryMode;
+import javax.media.jai.registry.RIFRegistry;
 import javax.media.jai.registry.RenderableRegistryMode;
 import javax.media.jai.registry.RenderedRegistryMode;
 import javax.media.jai.util.CaselessStringKey;
 import javax.media.jai.util.ImagingException;
 import javax.media.jai.util.ImagingListener;
-import com.sun.media.jai.util.ImageUtil;
+
+import com.sun.media.jai.util.PropertyUtil;
+import com.sun.media.jai.util.Service;
 /**
  * A class responsible for maintaining a registry of various types of
  * factory objects and preferences among them. The operation registry

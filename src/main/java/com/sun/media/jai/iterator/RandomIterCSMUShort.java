@@ -12,7 +12,6 @@
 package com.sun.media.jai.iterator;
 import java.awt.Rectangle;
 import java.awt.image.RenderedImage;
-import javax.media.jai.iterator.RandomIter;
 
 /**
  * @since EA2

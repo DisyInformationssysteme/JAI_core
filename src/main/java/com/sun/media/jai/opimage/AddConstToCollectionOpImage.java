@@ -11,14 +11,13 @@
  */
 package com.sun.media.jai.opimage;
 import java.awt.RenderingHints;
-import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.Vector;
-import javax.media.jai.ImageLayout;
-import javax.media.jai.JAI;
+
 import javax.media.jai.CollectionImage;
+import javax.media.jai.JAI;
 
 /**
  * An <code>OpImage</code> implementing the "AddConstToCollection" operation.

@@ -17,7 +17,7 @@ import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
 import java.awt.image.WritableRaster;
 import java.util.Map;
-import javax.media.jai.util.CaselessStringKey;
+
 import com.sun.media.jai.util.ImageUtil;
 
 /**

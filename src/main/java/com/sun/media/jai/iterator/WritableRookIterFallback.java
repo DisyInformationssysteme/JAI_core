@@ -11,9 +11,8 @@
  */
 package com.sun.media.jai.iterator;
 import java.awt.Rectangle;
-import java.awt.image.DataBuffer;
-import java.awt.image.SampleModel;
 import java.awt.image.WritableRenderedImage;
+
 import javax.media.jai.iterator.WritableRookIter;
 
 /**

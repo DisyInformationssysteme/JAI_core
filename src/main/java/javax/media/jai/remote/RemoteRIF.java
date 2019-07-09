@@ -11,9 +11,8 @@
  */package javax.media.jai.remote;
 
 import java.awt.RenderingHints;
-import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
-import javax.media.jai.OperationDescriptor;
+
 import javax.media.jai.OperationNode;
 import javax.media.jai.PropertyChangeEventJAI;
 

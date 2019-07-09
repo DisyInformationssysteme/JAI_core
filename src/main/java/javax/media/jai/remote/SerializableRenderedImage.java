@@ -28,41 +28,40 @@ import java.awt.image.SampleModel;
 import java.awt.image.WritableRaster;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.InterruptedIOException;
-import java.io.IOException;
 import java.io.NotSerializableException;
-import java.io.OutputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.io.OutputStream;
 import java.io.Serializable;
 import java.net.InetAddress;
+import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.SocketException;
-import java.net.ServerSocket;
 import java.net.UnknownHostException;
 import java.util.Enumeration;
 import java.util.Hashtable;
 import java.util.Vector;
+
 import javax.media.jai.JAI;
 import javax.media.jai.OperationRegistry;
-import javax.media.jai.PlanarImage;
 import javax.media.jai.ParameterListDescriptor;
+import javax.media.jai.PlanarImage;
 import javax.media.jai.RasterAccessor;
 import javax.media.jai.RasterFormatTag;
 import javax.media.jai.RemoteImage;
 import javax.media.jai.TileCache;
-import javax.media.jai.remote.SerializableState;
-import javax.media.jai.remote.SerializerFactory;
 import javax.media.jai.tilecodec.TileCodecDescriptor;
 import javax.media.jai.tilecodec.TileCodecParameterList;
 import javax.media.jai.tilecodec.TileDecoder;
 import javax.media.jai.tilecodec.TileDecoderFactory;
 import javax.media.jai.tilecodec.TileEncoder;
 import javax.media.jai.tilecodec.TileEncoderFactory;
-import javax.media.jai.util.CaselessStringKey;
 import javax.media.jai.util.ImagingException;
 import javax.media.jai.util.ImagingListener;
+
 import com.sun.media.jai.util.ImageUtil;
 
 /**

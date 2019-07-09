@@ -10,17 +10,14 @@
  * $State: Exp $
  */ 
 package javax.media.jai;
-import java.awt.Point;
-import java.awt.Rectangle;
 import java.awt.image.ComponentSampleModel;
 import java.awt.image.DataBuffer;
 import java.awt.image.DataBufferByte;
-import java.awt.image.DataBufferShort;
 import java.awt.image.DataBufferInt;
+import java.awt.image.DataBufferShort;
 import java.awt.image.DataBufferUShort;
-import java.awt.image.Raster;
 import java.awt.image.SampleModel;
-import java.awt.image.WritableRaster;
+
 import com.sun.media.jai.util.DataBufferUtils;
 
 /**

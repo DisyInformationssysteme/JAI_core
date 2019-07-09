@@ -13,9 +13,9 @@ package javax.media.jai;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
-import java.util.HashSet;
 
 /**
  * Class representing a CollectionImage wherein all image elements are

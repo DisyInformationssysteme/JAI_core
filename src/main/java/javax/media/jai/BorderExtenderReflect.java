@@ -14,6 +14,7 @@ import java.awt.Rectangle;
 import java.awt.image.DataBuffer;
 import java.awt.image.Raster;
 import java.awt.image.WritableRaster;
+
 import com.sun.media.jai.util.JDKWorkarounds;
 
 /**

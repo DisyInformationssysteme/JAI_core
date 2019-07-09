@@ -14,30 +14,26 @@ package com.sun.media.jai.rmi;
 
 import java.awt.Rectangle;
 import java.awt.RenderingHints;
-import java.awt.geom.Rectangle2D;
-import java.awt.image.ColorModel;
-import java.awt.image.SampleModel;
-import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
-import java.awt.image.WritableRaster;
 import java.awt.image.renderable.RenderContext;
 import java.io.Serializable;
 import java.net.InetAddress;
 import java.rmi.Naming;
-import java.rmi.Remote;
-import java.rmi.RemoteException;
 import java.rmi.RMISecurityManager;
+import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.Hashtable;
 import java.util.Vector;
+
 import javax.media.jai.PlanarImage;
 import javax.media.jai.PropertySource;
+import javax.media.jai.RemoteImage;
 import javax.media.jai.RenderableOp;
 import javax.media.jai.RenderedOp;
-import javax.media.jai.remote.SerializableRenderedImage;
 import javax.media.jai.remote.RemoteImagingException;
-import javax.media.jai.util.ImagingException;
+import javax.media.jai.remote.SerializableRenderedImage;
 import javax.media.jai.util.ImagingListener;
+
 import com.sun.media.jai.util.ImageUtil;
 
 /* A singleton class representing the serializable version of a null

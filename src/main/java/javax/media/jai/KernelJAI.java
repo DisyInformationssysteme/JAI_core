@@ -12,7 +12,6 @@
 package javax.media.jai;
 import java.awt.image.Kernel;
 import java.io.Serializable;
-import javax.media.jai.JaiI18N;
  
 /**
  * A kernel representing a matrix with a key position,

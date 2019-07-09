@@ -15,32 +15,27 @@ import java.awt.RenderingHints;
 import java.awt.image.Raster;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
-import java.lang.ref.WeakReference;
-import java.lang.reflect.Method;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Hashtable;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.ListIterator;
 import java.util.Map;
 import java.util.Set;
 import java.util.Vector;
+
 import javax.media.jai.OpImage;
 import javax.media.jai.PlanarImage;
 import javax.media.jai.TileCache;
 import javax.media.jai.TileComputationListener;
 import javax.media.jai.TileRequest;
 import javax.media.jai.TileScheduler;
-import javax.media.jai.remote.SerializableRenderedImage;
 import javax.media.jai.util.ImagingException;
 import javax.media.jai.util.ImagingListener;
-import com.sun.media.jai.util.ImageUtil;
 
 /**
  * A class representing a request for non-prefetch background computation

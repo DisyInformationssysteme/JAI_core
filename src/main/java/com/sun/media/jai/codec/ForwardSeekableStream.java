@@ -10,8 +10,8 @@
  * $State: Exp $
  */
 package com.sun.media.jai.codec;
-import java.io.InputStream;
 import java.io.IOException;
+import java.io.InputStream;
 
 /**
  * A subclass of <code>SeekableStream</code> that may be used

@@ -10,26 +10,24 @@
  * $State: Exp $
  */
 package com.sun.media.jai.codecimpl;
-import java.io.OutputStream;
-import java.io.IOException;
-import java.awt.image.Raster;
+import java.awt.Rectangle;
+import java.awt.image.ColorModel;
 import java.awt.image.DataBuffer;
-import java.awt.image.DataBufferByte;
+import java.awt.image.DataBufferInt;
 import java.awt.image.DataBufferShort;
 import java.awt.image.DataBufferUShort;
-import java.awt.image.DataBufferInt;
-import java.awt.image.RenderedImage;
-import java.awt.image.SampleModel;
-import java.awt.Rectangle;
-import java.awt.image.PixelInterleavedSampleModel;
-import java.awt.image.SinglePixelPackedSampleModel;
-import java.awt.image.MultiPixelPackedSampleModel;
-import java.awt.image.ColorModel;
 import java.awt.image.DirectColorModel;
 import java.awt.image.IndexColorModel;
-import com.sun.media.jai.codec.ImageEncoderImpl;
-import com.sun.media.jai.codec.ImageEncodeParam;
+import java.awt.image.Raster;
+import java.awt.image.RenderedImage;
+import java.awt.image.SampleModel;
+import java.awt.image.SinglePixelPackedSampleModel;
+import java.io.IOException;
+import java.io.OutputStream;
+
 import com.sun.media.jai.codec.BMPEncodeParam;
+import com.sun.media.jai.codec.ImageEncodeParam;
+import com.sun.media.jai.codec.ImageEncoderImpl;
 import com.sun.media.jai.codec.SeekableOutputStream;
 /**
  * An ImageEncoder for the various versions of the BMP image file format.

@@ -13,42 +13,25 @@
 
 import java.awt.RenderingHints;
 import java.awt.geom.Rectangle2D;
-import java.awt.geom.AffineTransform;
-import java.awt.image.ImageConsumer;
-import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
-import java.awt.image.renderable.ContextualRenderedImageFactory;
 import java.awt.image.renderable.ParameterBlock;
 import java.awt.image.renderable.RenderContext;
 import java.awt.image.renderable.RenderableImage;
-import java.awt.image.renderable.RenderableImageOp;
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
-import java.io.Serializable;
 import java.text.MessageFormat;
-import java.util.Enumeration;
-import java.util.Hashtable;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Vector;
+
 import javax.media.jai.JAI;
 import javax.media.jai.OperationRegistry;
-import javax.media.jai.PlanarImage;
 import javax.media.jai.PropertyChangeEventJAI;
-import javax.media.jai.PropertyGenerator;
-import javax.media.jai.PropertySource;
-import javax.media.jai.RenderedOp;
-import javax.media.jai.RenderableOp;
 import javax.media.jai.RegistryMode;
+import javax.media.jai.RenderableOp;
+import javax.media.jai.RenderedOp;
 import javax.media.jai.WritablePropertySource;
-import javax.media.jai.remote.SerializableRenderedImage;
 import javax.media.jai.registry.RemoteCRIFRegistry;
 import javax.media.jai.util.ImagingException;
 import javax.media.jai.util.ImagingListener;
-import com.sun.media.jai.util.PropertyUtil;
-import com.sun.media.jai.rmi.RasterProxy;
-import com.sun.media.jai.util.ImageUtil;
 
 /**
  * A subclass of <code>RenderableOp</code> for remote operations. This

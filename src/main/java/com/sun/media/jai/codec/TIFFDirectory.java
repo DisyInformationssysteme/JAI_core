@@ -11,8 +11,8 @@
  * $State: Exp $
  */
 package com.sun.media.jai.codec;
-import java.io.IOException;
 import java.io.EOFException;
+import java.io.IOException;
 import java.io.Serializable;
 import java.util.Enumeration;
 import java.util.Hashtable;

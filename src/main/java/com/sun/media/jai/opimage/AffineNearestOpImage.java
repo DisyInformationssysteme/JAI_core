@@ -12,24 +12,22 @@
 package com.sun.media.jai.opimage;
 import java.awt.Point;
 import java.awt.Rectangle;
+import java.awt.geom.AffineTransform;
+import java.awt.geom.Point2D;
 import java.awt.image.ColorModel;
 import java.awt.image.DataBuffer;
 import java.awt.image.IndexColorModel;
 import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
 import java.awt.image.WritableRaster;
-import java.awt.image.renderable.ParameterBlock;
-import java.awt.geom.AffineTransform;
-import java.awt.geom.Point2D;
+import java.util.Map;
+
+import javax.media.jai.BorderExtender;
 import javax.media.jai.ImageLayout;
 import javax.media.jai.Interpolation;
-import javax.media.jai.InterpolationNearest;
-import javax.media.jai.OpImage;
 import javax.media.jai.RasterAccessor;
 import javax.media.jai.RasterFormatTag;
 import javax.media.jai.util.Range;
-import java.util.Map;
-import javax.media.jai.BorderExtender;
 
 /**
  * An OpImage subclass that performs nearest-neighbour Affine mapping

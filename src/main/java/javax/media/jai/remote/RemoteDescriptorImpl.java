@@ -13,9 +13,10 @@
 import java.awt.RenderingHints;
 import java.awt.image.renderable.ParameterBlock;
 import java.net.URL;
-import javax.media.jai.PropertyGenerator;
-import javax.media.jai.ParameterListDescriptor;
+
 import javax.media.jai.OperationNode;
+import javax.media.jai.ParameterListDescriptor;
+import javax.media.jai.PropertyGenerator;
 
 /**
  * This abstract class provides a partial implementation of the

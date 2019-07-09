@@ -14,7 +14,6 @@ package com.sun.media.jai.codecimpl;
 import java.awt.Point;
 import java.awt.Rectangle;
 import java.awt.color.ColorSpace;
-import java.awt.image.BufferedImage;
 import java.awt.image.ColorModel;
 import java.awt.image.ComponentSampleModel;
 import java.awt.image.DataBuffer;

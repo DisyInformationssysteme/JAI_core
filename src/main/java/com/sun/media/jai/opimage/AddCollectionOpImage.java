@@ -13,19 +13,17 @@ package com.sun.media.jai.opimage;
 import java.awt.Rectangle;
 import java.awt.image.DataBuffer;
 import java.awt.image.Raster;
-import java.awt.image.RenderedImage;
-import java.awt.image.SampleModel;
 import java.awt.image.WritableRaster;
 import java.util.Collection;
 import java.util.Iterator;
+import java.util.Map;
 import java.util.Vector;
+
 import javax.media.jai.ImageLayout;
-import javax.media.jai.OpImage;
 import javax.media.jai.PointOpImage;
 import javax.media.jai.RasterAccessor;
 import javax.media.jai.RasterFormatTag;
-import javax.media.jai.RenderedOp;
-import java.util.Map;
+
 import com.sun.media.jai.util.ImageUtil;
 
 /**

@@ -10,9 +10,8 @@
  * $State: Exp $
  */
 package javax.media.jai;
-import java.awt.image.SampleModel;
 import java.awt.image.ComponentSampleModel;
-import java.awt.Rectangle;
+import java.awt.image.SampleModel;
 
 
 /**

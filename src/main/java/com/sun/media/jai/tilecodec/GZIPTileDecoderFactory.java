@@ -11,13 +11,13 @@
  */package com.sun.media.jai.tilecodec ;
 
 import java.io.InputStream;
-import java.util.Vector; 
-import java.util.zip.GZIPInputStream; 
+import java.util.Vector;
+
 import javax.media.jai.ParameterListDescriptorImpl;
 import javax.media.jai.remote.NegotiableCapability;
+import javax.media.jai.tilecodec.TileCodecParameterList ;
 import javax.media.jai.tilecodec.TileDecoder ;
 import javax.media.jai.tilecodec.TileDecoderFactory ;
-import javax.media.jai.tilecodec.TileCodecParameterList ;
 
 /**
  * A factory for creating <code>GZIPTileDecoder</code>s.

@@ -10,7 +10,6 @@
  * $State: Exp $
  */
 package com.sun.media.jai.opimage;
-import java.awt.Point;
 import java.awt.Rectangle;
 import java.awt.RenderingHints;
 import java.awt.image.ColorModel;
@@ -18,23 +17,16 @@ import java.awt.image.DataBuffer;
 import java.awt.image.DataBufferByte;
 import java.awt.image.DataBufferInt;
 import java.awt.image.DataBufferUShort;
-import java.awt.image.IndexColorModel;
 import java.awt.image.MultiPixelPackedSampleModel;
 import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
 import java.awt.image.SampleModel;
 import java.awt.image.WritableRaster;
-import java.awt.image.renderable.ParameterBlock;
-import javax.media.jai.ImageLayout;
-import javax.media.jai.OpImage;
-import javax.media.jai.PlanarImage;
-import javax.media.jai.RasterAccessor;
-import javax.media.jai.RasterFormatTag;
-import javax.media.jai.RasterFactory;
 import java.util.Map;
+
+import javax.media.jai.ImageLayout;
 import javax.media.jai.JAI;
-import javax.media.jai.WarpAffine;
-import javax.media.jai.WarpOpImage;
+import javax.media.jai.PlanarImage;
 
 /**
  * An OpImage class to perform a transpose (flip) of an image with a

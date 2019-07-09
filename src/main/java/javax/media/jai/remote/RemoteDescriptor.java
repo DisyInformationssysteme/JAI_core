@@ -13,9 +13,10 @@
 import java.awt.RenderingHints;
 import java.awt.image.renderable.ParameterBlock;
 import java.net.URL;
-import javax.media.jai.RegistryElementDescriptor;
+
 import javax.media.jai.OperationDescriptor;
 import javax.media.jai.OperationNode;
+import javax.media.jai.RegistryElementDescriptor;
 
 /**
  * This interface provides a description of a specific remote imaging

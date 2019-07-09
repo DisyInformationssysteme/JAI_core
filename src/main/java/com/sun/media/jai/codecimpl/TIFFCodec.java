@@ -12,18 +12,14 @@
 
 package com.sun.media.jai.codecimpl;
 import java.awt.image.RenderedImage;
-import java.io.File;
-import java.io.InputStream;
-import java.io.IOException;
 import java.io.OutputStream;
+
 import com.sun.media.jai.codec.ImageCodec;
-import com.sun.media.jai.codec.ImageDecoder;
 import com.sun.media.jai.codec.ImageDecodeParam;
-import com.sun.media.jai.codec.ImageEncoder;
+import com.sun.media.jai.codec.ImageDecoder;
 import com.sun.media.jai.codec.ImageEncodeParam;
-import com.sun.media.jai.codec.FileSeekableStream;
+import com.sun.media.jai.codec.ImageEncoder;
 import com.sun.media.jai.codec.SeekableStream;
-import com.sun.media.jai.codec.TIFFEncodeParam;
 
 /**
  * @since EA3

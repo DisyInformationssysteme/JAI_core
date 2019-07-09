@@ -25,11 +25,11 @@ import java.awt.image.SinglePixelPackedSampleModel;
 import java.awt.image.WritableRaster;
 import java.awt.image.WritableRenderedImage;
 import java.lang.reflect.Method;
-import java.util.Map;
-import java.util.Vector;
 import java.security.AccessController;
 import java.security.PrivilegedAction;
-import javax.media.jai.util.CaselessStringKey;
+import java.util.Map;
+import java.util.Vector;
+
 import com.sun.media.jai.util.ImageUtil;
 import com.sun.media.jai.util.JDKWorkarounds;
 

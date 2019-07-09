@@ -10,7 +10,6 @@
  * $State: Exp $
  */
 package javax.media.jai;
-import java.awt.Rectangle;
 import java.awt.geom.Point2D;
 
 

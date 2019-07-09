@@ -11,20 +11,19 @@
  */
 package com.sun.media.jai.opimage;
 import java.awt.Rectangle;
-import java.awt.geom.Point2D;
 import java.awt.geom.AffineTransform;
+import java.awt.geom.Point2D;
 import java.awt.image.DataBuffer;
 import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
 import java.awt.image.WritableRaster;
-import java.awt.image.renderable.ParameterBlock;
+import java.util.Map;
+
 import javax.media.jai.BorderExtender;
 import javax.media.jai.ImageLayout;
 import javax.media.jai.Interpolation;
-import javax.media.jai.OpImage;
 import javax.media.jai.RasterAccessor;
 import javax.media.jai.RasterFormatTag;
-import java.util.Map;
 
 /**
  * An OpImage subclass that performs general Affine mapping

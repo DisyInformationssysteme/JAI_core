@@ -11,23 +11,25 @@
  */
 package com.sun.media.jai.opimage;
 
-import com.sun.media.jai.codec.ImageEncodeParam;
 import java.awt.RenderingHints;
 import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
 import java.awt.image.renderable.RenderedImageFactory;
 import java.io.BufferedOutputStream;
-import java.io.FileOutputStream;
 import java.io.FileNotFoundException;
-import java.io.RandomAccessFile;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.io.RandomAccessFile;
+
 import javax.media.jai.JAI;
 import javax.media.jai.OperationRegistry;
 import javax.media.jai.PlanarImage;
 import javax.media.jai.RenderedImageAdapter;
 import javax.media.jai.registry.RIFRegistry;
 import javax.media.jai.util.ImagingListener;
+
+import com.sun.media.jai.codec.ImageEncodeParam;
 import com.sun.media.jai.codec.SeekableOutputStream;
 import com.sun.media.jai.util.ImageUtil;
 

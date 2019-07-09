@@ -23,12 +23,13 @@ import java.awt.image.Raster;
 import java.awt.image.SinglePixelPackedSampleModel;
 import java.awt.image.WritableRaster;
 import java.util.Map;
+
 import javax.media.jai.ImageLayout;
 import javax.media.jai.PlanarImage;
 import javax.media.jai.RasterAccessor;
 import javax.media.jai.RasterFactory;
-import javax.media.jai.SourcelessOpImage;
 import javax.media.jai.RasterFormatTag;
+import javax.media.jai.SourcelessOpImage;
 
 /**
  * An <code>OpImage</code> implementing the "AWTImage" operation as

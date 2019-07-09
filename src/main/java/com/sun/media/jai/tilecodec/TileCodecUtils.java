@@ -13,10 +13,11 @@
 import java.awt.image.Raster;
 import java.awt.image.SampleModel;
 import java.text.MessageFormat;
+
 import javax.media.jai.JAI;
-import javax.media.jai.tilecodec.TileCodecDescriptor;
 import javax.media.jai.remote.SerializableState;
 import javax.media.jai.remote.SerializerFactory;
+import javax.media.jai.tilecodec.TileCodecDescriptor;
 
 /**
  * A class containing methods of utility to all TileCodec implementations.

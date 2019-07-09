@@ -11,17 +11,15 @@
  */
 package javax.media.jai;
 
-import com.sun.media.jai.util.CaselessStringArrayTable;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 import java.util.HashSet;
-import java.util.Hashtable;
-import java.util.Iterator;
-import java.util.Locale;
-import java.util.Map;
 import java.util.Set;
 import java.util.Vector;
+
 import javax.media.jai.util.Range;
+
+import com.sun.media.jai.util.CaselessStringArrayTable;
 
 /**
  * A concrete implementation of the <code>ParameterListDescriptor</code>

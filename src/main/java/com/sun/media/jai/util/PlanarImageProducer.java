@@ -16,6 +16,7 @@ import java.awt.image.ImageConsumer;
 import java.awt.image.ImageProducer;
 import java.awt.image.Raster;
 import java.util.Vector;
+
 import javax.media.jai.PlanarImage;
 
 public class PlanarImageProducer implements ImageProducer {

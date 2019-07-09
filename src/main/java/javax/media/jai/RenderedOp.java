@@ -11,18 +11,14 @@
  */
 package javax.media.jai;
 
-import com.sun.media.jai.util.ImageUtil;
-import com.sun.media.jai.util.PropertyUtil;
 import java.awt.Point;
 import java.awt.Rectangle;
 import java.awt.RenderingHints;
 import java.awt.Shape;
 import java.awt.geom.Area;
 import java.awt.geom.GeneralPath;
-import java.awt.geom.PathIterator;
 import java.awt.geom.Point2D;
 import java.awt.image.ColorModel;
-import java.awt.image.ImageProducer;
 import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
 import java.awt.image.SampleModel;
@@ -34,11 +30,9 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
-import java.lang.ref.WeakReference;
-import java.util.Arrays;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
-import java.util.Enumeration;
 import java.util.HashSet;
 import java.util.Hashtable;
 import java.util.Iterator;
@@ -46,12 +40,15 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Set;
 import java.util.Vector;
+
 import javax.media.jai.registry.RIFRegistry;
 import javax.media.jai.registry.RenderedRegistryMode;
 import javax.media.jai.remote.PlanarImageServerProxy;
-import javax.media.jai.remote.SerializableRenderedImage;
 import javax.media.jai.util.CaselessStringKey;
 import javax.media.jai.util.ImagingListener;
+
+import com.sun.media.jai.util.ImageUtil;
+import com.sun.media.jai.util.PropertyUtil;
 
 /**
  * A node in a rendered imaging chain.  A <code>RenderedOp</code> stores

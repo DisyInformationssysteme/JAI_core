@@ -15,10 +15,6 @@ import java.awt.image.ColorModel;
 import java.awt.image.IndexColorModel;
 import java.awt.image.RenderedImage;
 import java.util.Map;
-import javax.media.jai.ImageLayout;
-import javax.media.jai.PointOpImage;
-import javax.media.jai.TileCache;
-import javax.media.jai.util.CaselessStringKey;
 
 /**
  * A class to be used to implement an operation which may conditionally

@@ -11,9 +11,7 @@
  * $State: Exp $
  */
 package com.sun.media.jai.codecimpl.fpx;
-import java.io.IOException;
 import java.text.DecimalFormat;
-import com.sun.media.jai.codec.SeekableStream;
 
 public class FPXUtils {
 

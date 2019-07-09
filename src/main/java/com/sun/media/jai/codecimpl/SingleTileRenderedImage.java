@@ -10,9 +10,8 @@
  * $State: Exp $
  */
 package com.sun.media.jai.codecimpl;
-import java.awt.image.Raster;
 import java.awt.image.ColorModel;
-import java.awt.image.SampleModel;
+import java.awt.image.Raster;
 
 /**
  * A simple class that provides RenderedImage functionality

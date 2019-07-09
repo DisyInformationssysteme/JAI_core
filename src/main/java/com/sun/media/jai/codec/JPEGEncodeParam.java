@@ -10,7 +10,6 @@
  * $State: Exp $
  */
 package com.sun.media.jai.codec;
-import java.awt.image.RenderedImage;
 
 /**
  * A class which encapsulates the most common functionality required for 

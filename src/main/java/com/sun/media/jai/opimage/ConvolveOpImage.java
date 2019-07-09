@@ -12,21 +12,18 @@
 package com.sun.media.jai.opimage;
 import java.awt.Rectangle;
 import java.awt.image.DataBuffer;
-import java.awt.image.SampleModel;
 import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
 import java.awt.image.WritableRaster;
-import java.awt.image.renderable.ParameterBlock;
-import java.awt.image.renderable.RenderedImageFactory;
+import java.util.Map;
+// import com.sun.media.jai.test.OpImageTester;
+
 import javax.media.jai.AreaOpImage;
 import javax.media.jai.BorderExtender;
 import javax.media.jai.ImageLayout;
 import javax.media.jai.KernelJAI;
-import javax.media.jai.OpImage;
 import javax.media.jai.RasterAccessor;
 import javax.media.jai.RasterFormatTag;
-import java.util.Map;
-// import com.sun.media.jai.test.OpImageTester;
 
 /**
  * An OpImage class to perform convolution on a source image.

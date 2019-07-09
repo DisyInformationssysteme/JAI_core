@@ -10,7 +10,6 @@
  * $State: Exp $
  */
 package com.sun.media.jai.codec;
-import java.io.InputStream;
 import java.io.IOException;
 
 /**

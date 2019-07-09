@@ -14,10 +14,11 @@ import java.awt.RenderingHints;
 import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
 import java.awt.image.renderable.RenderedImageFactory;
-import java.io.OutputStream;
 import java.io.IOException;
-import javax.media.jai.RenderedOp;
+import java.io.OutputStream;
+
 import javax.media.jai.util.ImagingListener;
+
 import com.sun.media.jai.codec.ImageCodec;
 import com.sun.media.jai.codec.ImageEncodeParam;
 import com.sun.media.jai.codec.ImageEncoder;

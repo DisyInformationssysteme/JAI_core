@@ -13,6 +13,7 @@ package javax.media.jai.registry;
 
 import java.awt.image.renderable.RenderableImage;
 import java.lang.reflect.Method;
+
 import javax.media.jai.JAI;
 import javax.media.jai.RegistryMode;
 import javax.media.jai.util.ImagingListener;

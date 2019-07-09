@@ -16,24 +16,21 @@ import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
 import java.awt.image.renderable.RenderableImage;
 import java.text.MessageFormat;
-import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Vector;
+
 import javax.media.jai.JAI;
-import javax.media.jai.OperationRegistry;
 import javax.media.jai.OperationDescriptor;
+import javax.media.jai.OperationRegistry;
 import javax.media.jai.PlanarImage;
-import javax.media.jai.RenderedOp;
-import javax.media.jai.RenderableOp;
 import javax.media.jai.TileCache;
 import javax.media.jai.util.CaselessStringKey;
 import javax.media.jai.util.ImagingException;
 import javax.media.jai.util.ImagingListener;
-import com.sun.media.jai.util.ImageUtil;
 
 /**
  * A convenience class for instantiating operations on remote machines.

@@ -16,11 +16,10 @@ import java.awt.geom.AffineTransform;
 import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
 import java.awt.image.renderable.RenderableImage;
+
 import javax.media.jai.GeometricOpImage;
 import javax.media.jai.Interpolation;
-import javax.media.jai.InterpolationNearest;
 import javax.media.jai.JAI;
-import javax.media.jai.OpImage;
 import javax.media.jai.OperationDescriptorImpl;
 import javax.media.jai.ParameterBlockJAI;
 import javax.media.jai.PlanarImage;

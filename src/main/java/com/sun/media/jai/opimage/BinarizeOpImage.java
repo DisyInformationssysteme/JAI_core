@@ -11,25 +11,23 @@
  */
 package com.sun.media.jai.opimage;
 import java.awt.Rectangle;
-import java.awt.color.ColorSpace;
+import java.awt.image.ColorModel;
 import java.awt.image.DataBuffer;
+import java.awt.image.MultiPixelPackedSampleModel;
 import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
 import java.awt.image.SampleModel;
-import java.awt.image.MultiPixelPackedSampleModel;
-import java.awt.image.ColorModel;
-import java.awt.image.PackedColorModel;
 import java.awt.image.WritableRaster;
 import java.util.Map;
+
 import javax.media.jai.ImageLayout;
-import javax.media.jai.OpImage;
-import javax.media.jai.PlanarImage;
-import javax.media.jai.PointOpImage;
-import javax.media.jai.PixelAccessor;
 import javax.media.jai.PackedImageData;
+import javax.media.jai.PixelAccessor;
+import javax.media.jai.PointOpImage;
 import javax.media.jai.UnpackedImageData;
-import com.sun.media.jai.util.JDKWorkarounds;
+
 import com.sun.media.jai.util.ImageUtil;
+import com.sun.media.jai.util.JDKWorkarounds;
 
 /**
  * An <code>OpImage</code> implementing the "Binarize" operation as

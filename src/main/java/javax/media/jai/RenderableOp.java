@@ -11,31 +11,25 @@
  */
 package javax.media.jai;
 
-import com.sun.media.jai.util.ImageUtil;
-import com.sun.media.jai.util.PropertyUtil;
 import java.awt.Dimension;
 import java.awt.RenderingHints;
 import java.awt.geom.AffineTransform;
 import java.awt.geom.Rectangle2D;
-import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ContextualRenderedImageFactory;
 import java.awt.image.renderable.ParameterBlock;
 import java.awt.image.renderable.RenderContext;
 import java.awt.image.renderable.RenderableImage;
-import java.awt.image.renderable.RenderableImageOp;
 import java.beans.PropertyChangeListener;
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
 import java.io.Serializable;
-import java.util.Enumeration;
-import java.util.Hashtable;
 import java.util.HashSet;
 import java.util.Vector;
-import javax.media.jai.util.CaselessStringKey;
+
 import javax.media.jai.registry.CRIFRegistry;
-import javax.media.jai.remote.SerializableRenderedImage;
+import javax.media.jai.util.CaselessStringKey;
+
+import com.sun.media.jai.util.ImageUtil;
+import com.sun.media.jai.util.PropertyUtil;
 
 /**
  * A node in a renderable imaging chain.  This is the Java Advanced

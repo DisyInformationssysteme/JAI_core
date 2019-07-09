@@ -14,9 +14,9 @@ import java.awt.RenderingHints;
 import java.awt.image.ColorModel;
 import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
+
 import javax.media.jai.CRIFImpl;
 import javax.media.jai.ImageLayout;
-import java.util.Map;
 
 /**
  * A <code>CRIF</code> supporting the "ColorConvert" operation in the rendered

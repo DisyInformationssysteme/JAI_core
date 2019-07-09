@@ -12,7 +12,6 @@
  */
 package com.sun.media.jai.codecimpl.util;
 
-import com.sun.media.jai.codecimpl.util.PropertyUtil;
 import java.text.MessageFormat;
 import java.util.Locale;
 

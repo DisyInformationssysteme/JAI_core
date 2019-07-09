@@ -10,13 +10,13 @@
  * $State: Exp $
  */
 package com.sun.media.jai.codec;
+import java.awt.color.ICC_Profile;
+import java.awt.color.ICC_ProfileGray;
+import java.awt.color.ICC_ProfileRGB;
 import java.awt.image.ColorModel;
 import java.awt.image.IndexColorModel;
 import java.awt.image.RenderedImage;
 import java.awt.image.SampleModel;
-import java.awt.color.ICC_Profile;
-import java.awt.color.ICC_ProfileGray;
-import java.awt.color.ICC_ProfileRGB;
 import java.util.Date;
 import java.util.Vector;
 

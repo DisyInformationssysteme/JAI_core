@@ -11,7 +11,6 @@
  */
 package javax.media.jai;
 
-import java.awt.Point;
 import java.awt.image.Raster;
 import java.util.EventListener;
 

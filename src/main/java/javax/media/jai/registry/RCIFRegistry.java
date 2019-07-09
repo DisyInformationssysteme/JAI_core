@@ -12,7 +12,7 @@
 package javax.media.jai.registry;
 
 import java.awt.image.renderable.ParameterBlock;
-import java.util.Vector;
+
 import javax.media.jai.CollectionImage;
 import javax.media.jai.CollectionOp;
 import javax.media.jai.JAI;

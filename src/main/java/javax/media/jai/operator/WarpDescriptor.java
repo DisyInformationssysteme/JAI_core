@@ -10,13 +10,12 @@
  * $State: Exp $
  */
 package javax.media.jai.operator;
-import com.sun.media.jai.util.PropertyGeneratorImpl;
 import java.awt.Rectangle;
 import java.awt.RenderingHints;
-import java.awt.geom.AffineTransform;
 import java.awt.geom.Point2D;
 import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
+
 import javax.media.jai.GeometricOpImage;
 import javax.media.jai.ImageLayout;
 import javax.media.jai.Interpolation;
@@ -28,10 +27,11 @@ import javax.media.jai.PlanarImage;
 import javax.media.jai.PropertyGenerator;
 import javax.media.jai.ROI;
 import javax.media.jai.ROIShape;
-import javax.media.jai.RenderableOp;
 import javax.media.jai.RenderedOp;
 import javax.media.jai.Warp;
 import javax.media.jai.registry.RenderedRegistryMode;
+
+import com.sun.media.jai.util.PropertyGeneratorImpl;
 
 /**
  * This property generator computes the properties for the operation

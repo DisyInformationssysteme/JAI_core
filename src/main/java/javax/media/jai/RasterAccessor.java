@@ -10,21 +10,22 @@
  * $State: Exp $
  */
 package javax.media.jai;
-import java.awt.image.SampleModel;
+import java.awt.Rectangle;
+import java.awt.image.ColorModel;
+import java.awt.image.ComponentColorModel;
 import java.awt.image.ComponentSampleModel;
 import java.awt.image.DataBuffer;
 import java.awt.image.DataBufferByte;
-import java.awt.image.DataBufferUShort;
-import java.awt.image.DataBufferShort;
 import java.awt.image.DataBufferInt;
-import java.awt.image.MultiPixelPackedSampleModel;
-import java.awt.image.Raster;
-import java.awt.image.WritableRaster;
-import java.awt.Rectangle;
-import java.awt.image.RenderedImage;
-import java.awt.image.ColorModel;
+import java.awt.image.DataBufferShort;
+import java.awt.image.DataBufferUShort;
 import java.awt.image.IndexColorModel;
-import java.awt.image.ComponentColorModel;
+import java.awt.image.Raster;
+import java.awt.image.RenderedImage;
+import java.awt.image.SampleModel;
+import java.awt.image.WritableRaster;
+import java.util.Objects;
+
 import com.sun.media.jai.util.DataBufferUtils;
 import com.sun.media.jai.util.ImageUtil;
 
@@ -799,7 +800,7 @@ public class RasterAccessor {
 
                 // Workaround for bug in BytePackedRaster
                 byte[] bdata = null;
-                if (raster instanceof sun.awt.image.BytePackedRaster) {
+                if (Objects.equals(raster.getClass().getName(), "sun.awt.image.BytePackedRaster")) {
                     bdata = (byte[])odata;
                 }
 

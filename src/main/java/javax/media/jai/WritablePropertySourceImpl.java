@@ -12,12 +12,9 @@
 package javax.media.jai;
 
 import java.beans.PropertyChangeListener;
-import java.util.Collections;
-import java.util.Hashtable;
-import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Map;
-import java.util.Set;
+
 import javax.media.jai.util.CaselessStringKey;
 
 /**

@@ -11,17 +11,14 @@
  */
 package javax.media.jai;
 
-import com.sun.media.jai.util.SunTileCache;
-import com.sun.media.jai.util.SunTileScheduler;
 import java.awt.Dimension;
 import java.awt.RenderingHints;
 import java.awt.image.RenderedImage;
+import java.awt.image.SampleModel;
 import java.awt.image.renderable.ParameterBlock;
 import java.awt.image.renderable.RenderableImage;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
-import java.io.File;
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.StringWriter;
@@ -30,11 +27,15 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Vector;
+
 import javax.media.jai.remote.NegotiableCapabilitySet;
 import javax.media.jai.tilecodec.TileCodecParameterList;
 import javax.media.jai.util.ImagingListener;
+
 import com.sun.media.jai.util.ImagingListenerImpl;
 import com.sun.media.jai.util.PropertyUtil;
+import com.sun.media.jai.util.SunTileCache;
+import com.sun.media.jai.util.SunTileScheduler;
 
 /**
  * A convenience class for instantiating operations.

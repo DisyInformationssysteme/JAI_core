@@ -10,16 +10,11 @@
  * $State: Exp $
  */ 
 package com.sun.media.jai.opimage;
-import java.awt.Rectangle;
 import java.awt.image.ColorModel;
 import java.awt.image.Raster;
-import java.awt.image.RenderedImage;
-import java.awt.Point;
-import java.awt.image.SampleModel;
-import java.awt.image.WritableRaster;
+
 import javax.media.jai.ImageLayout;
 import javax.media.jai.SourcelessOpImage;
-import javax.media.jai.RasterFactory;
 
 /**
  * An OpImage class to generate a repeating pattern of pixels.

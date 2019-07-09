@@ -12,11 +12,11 @@
 
 import java.awt.Point;
 import java.awt.image.Raster;
-import java.awt.image.SampleModel;
-import java.io.InputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.Iterator;
 import java.util.List;
+
 import javax.media.jai.JAI;
 import javax.media.jai.OperationRegistry;
 import javax.media.jai.tilecodec.TileCodecParameterList;

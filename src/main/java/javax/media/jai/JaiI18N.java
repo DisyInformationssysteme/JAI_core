@@ -12,9 +12,10 @@
  */
 package javax.media.jai;
 
-import com.sun.media.jai.util.PropertyUtil;
 import java.text.MessageFormat;
 import java.util.Locale;
+
+import com.sun.media.jai.util.PropertyUtil;
 
 class JaiI18N {
     static String packageName = "javax.media.jai";

@@ -13,6 +13,7 @@ package com.sun.media.jai.iterator;
 import java.awt.Rectangle;
 import java.awt.image.Raster;
 import java.awt.image.WritableRenderedImage;
+
 import javax.media.jai.iterator.WritableRandomIter;
 
 /**

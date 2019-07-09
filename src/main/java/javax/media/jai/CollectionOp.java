@@ -28,10 +28,12 @@ import java.util.Set;
 import java.util.SortedSet;
 import java.util.TreeSet;
 import java.util.Vector;
+
 import javax.media.jai.registry.CIFRegistry;
-import javax.media.jai.registry.RCIFRegistry;
 import javax.media.jai.registry.CollectionRegistryMode;
+import javax.media.jai.registry.RCIFRegistry;
 import javax.media.jai.registry.RenderableCollectionRegistryMode;
+
 import com.sun.media.jai.util.ImageUtil;
 import com.sun.media.jai.util.PropertyUtil;
 

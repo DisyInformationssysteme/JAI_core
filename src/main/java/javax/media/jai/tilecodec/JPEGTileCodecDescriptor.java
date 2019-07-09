@@ -11,12 +11,7 @@
  */package javax.media.jai.tilecodec ;
 
 import java.awt.image.SampleModel ;
-/*
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.Set;
-*/
-import javax.media.jai.PropertyGenerator;
+
 import javax.media.jai.ParameterListDescriptor;
 import javax.media.jai.ParameterListDescriptorImpl;
 import javax.media.jai.util.Range ;

@@ -11,16 +11,8 @@
  */
 package javax.media.jai;
 import java.awt.RenderingHints;
-import java.awt.geom.Rectangle2D;
-import java.awt.geom.Rectangle2D.Float;
 import java.awt.image.RenderedImage;
-import java.awt.image.renderable.ContextualRenderedImageFactory;
 import java.awt.image.renderable.ParameterBlock;
-import java.awt.image.renderable.RenderableImage;
-import java.awt.image.renderable.RenderContext;
-import javax.media.jai.ImageLayout;
-import javax.media.jai.JAI;
-import javax.media.jai.RenderedOp;
 
 /**
  * A <code>ContextualRenderedImageFactory</code> representing an operation

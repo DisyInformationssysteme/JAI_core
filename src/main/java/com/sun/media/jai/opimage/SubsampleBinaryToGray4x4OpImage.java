@@ -12,27 +12,19 @@
 package com.sun.media.jai.opimage;
 import java.awt.Rectangle;
 import java.awt.geom.Point2D;
+import java.awt.image.DataBuffer;
+import java.awt.image.DataBufferByte;
+import java.awt.image.PixelInterleavedSampleModel;
 import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
 import java.awt.image.WritableRaster;
-import java.awt.Point;
-import java.util.Hashtable;
-import java.awt.Rectangle;
-import java.awt.image.DataBuffer;
-import java.awt.image.DataBufferByte;
-import java.awt.image.DataBufferInt;
-import java.awt.image.DataBufferUShort;
-import java.awt.image.IndexColorModel;
-import java.awt.image.MultiPixelPackedSampleModel;
-import java.awt.image.PixelInterleavedSampleModel;
-import java.awt.image.SinglePixelPackedSampleModel;
-import java.awt.image.SampleModel;
-import java.awt.image.renderable.ParameterBlock;
-import javax.media.jai.ImageLayout;
 import java.util.Map;
+
 import javax.media.jai.GeometricOpImage;
+import javax.media.jai.ImageLayout;
 import javax.media.jai.PackedImageData;
 import javax.media.jai.PixelAccessor;
+import javax.media.jai.ScaleOpImage;
 
 /**
  * A class extending <code>GeometricOpImage</code> to

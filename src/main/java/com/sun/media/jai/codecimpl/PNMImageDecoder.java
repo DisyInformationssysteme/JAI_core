@@ -22,6 +22,7 @@ import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
 import java.awt.image.WritableRaster;
 import java.io.IOException;
+import java.security.PrivilegedAction;
 
 import javax.media.jai.RasterFactory;
 import javax.media.jai.util.ImagingException;
@@ -90,9 +91,9 @@ class PNMImage extends SimpleRenderedImage {
     this.theTile = null;
 
     this.input = input;
-
+    
     final String ls = java.security.AccessController
-        .doPrivileged(new sun.security.action.GetPropertyAction("line.separator"));
+        .doPrivileged((PrivilegedAction<String>) () -> System.getProperty("line.separator"));
     this.lineSeparator = ls.getBytes();
 
     // Read file header.

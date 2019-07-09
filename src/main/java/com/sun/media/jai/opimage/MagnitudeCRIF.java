@@ -13,11 +13,9 @@ package com.sun.media.jai.opimage;
 import java.awt.RenderingHints;
 import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
-import java.awt.image.renderable.RenderedImageFactory;
+
 import javax.media.jai.CRIFImpl;
 import javax.media.jai.ImageLayout;
-import java.util.Map;
-import com.sun.media.jai.opimage.MagnitudePhaseOpImage;
 
 /**
  * A <code>CRIF</code> supporting the "Magnitude" operation in the rendered

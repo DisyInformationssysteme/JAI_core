@@ -11,14 +11,15 @@
  */
 package javax.media.jai;
 
-import com.sun.media.jai.util.CaselessStringKeyHashtable;
-import com.sun.media.jai.util.PropertyUtil;
-import java.awt.Rectangle;
 import java.util.Enumeration;
 import java.util.Hashtable;
 import java.util.Iterator;
 import java.util.Vector;
+
 import javax.media.jai.util.CaselessStringKey;
+
+import com.sun.media.jai.util.CaselessStringKeyHashtable;
+import com.sun.media.jai.util.PropertyUtil;
 
 /**
  * A class that implements the <code>PropertySource</code> interface.

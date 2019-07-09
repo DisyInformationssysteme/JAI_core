@@ -27,23 +27,24 @@ import java.awt.image.SinglePixelPackedSampleModel;
 import java.awt.image.WritableRaster;
 import java.awt.image.renderable.ParameterBlock;
 import java.awt.image.renderable.RenderContext;
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.math.BigInteger;
 import java.util.Arrays;
 import java.util.Map;
 import java.util.Vector;
+
 import javax.media.jai.DeferredData;
 import javax.media.jai.JAI;
 import javax.media.jai.KernelJAI;
 import javax.media.jai.PixelAccessor;
-import javax.media.jai.RasterAccessor;
 import javax.media.jai.PlanarImage;
+import javax.media.jai.RasterAccessor;
 import javax.media.jai.UnpackedImageData;
 import javax.media.jai.util.ImagingException;
 import javax.media.jai.util.ImagingListener;
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
 
 public final class ImageUtil {
 

@@ -14,6 +14,7 @@ package com.sun.media.jai.rmi;
 import java.awt.RenderingHints;
 import java.io.Serializable;
 import java.lang.reflect.Method;
+
 import javax.media.jai.remote.SerializableState;
 import javax.media.jai.remote.SerializerFactory;
 

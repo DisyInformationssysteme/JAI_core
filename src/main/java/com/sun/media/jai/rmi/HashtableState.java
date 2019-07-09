@@ -15,14 +15,10 @@ import java.awt.RenderingHints;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.io.Serializable;
 import java.util.Enumeration;
 import java.util.Hashtable;
 import java.util.Iterator;
 import java.util.Set;
-import javax.media.jai.JAI;
-import javax.media.jai.remote.SerializerFactory;
-import javax.media.jai.remote.SerializableState;
 
 /**
  * This class is a serializable proxy for a Hashtable object.

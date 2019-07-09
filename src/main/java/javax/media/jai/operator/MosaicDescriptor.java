@@ -14,6 +14,7 @@ import java.awt.RenderingHints;
 import java.awt.Transparency;
 import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
+
 import javax.media.jai.ImageLayout;
 import javax.media.jai.JAI;
 import javax.media.jai.OperationDescriptorImpl;

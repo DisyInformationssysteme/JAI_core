@@ -14,11 +14,12 @@ import java.awt.RenderingHints;
 import java.awt.geom.AffineTransform;
 import java.awt.geom.Rectangle2D;
 import java.awt.image.RenderedImage;
-import java.awt.image.renderable.RenderContext;
 import java.awt.image.renderable.ParameterBlock;
+import java.awt.image.renderable.RenderContext;
 import java.awt.image.renderable.RenderableImage;
-import javax.media.jai.ImageLayout;
+
 import javax.media.jai.CRIFImpl;
+import javax.media.jai.ImageLayout;
 
 /**
  * @see SubsampleAverageOpImage

@@ -11,12 +11,10 @@
  * $State: Exp $
  */
 package com.sun.media.jai.codecimpl.fpx;
-import java.awt.RenderingHints;
-import java.io.ByteArrayInputStream;
-import java.io.InputStream;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.util.StringTokenizer;
+
 import com.sun.media.jai.codec.ByteArraySeekableStream;
 import com.sun.media.jai.codec.FileSeekableStream;
 import com.sun.media.jai.codec.SeekableStream;

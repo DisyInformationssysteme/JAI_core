@@ -14,19 +14,17 @@ package com.sun.media.jai.util;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.InputStream;
 import java.io.IOException;
-import java.util.Hashtable;
-import java.util.Iterator;
-import java.util.Vector;
-import java.util.PropertyResourceBundle;
-import java.util.ResourceBundle;
-import java.util.StringTokenizer;
-import java.util.jar.JarEntry;
-import java.util.jar.JarFile;
-import java.net.URL;
+import java.io.InputStream;
 import java.security.AccessController;
 import java.security.PrivilegedAction;
+import java.util.Hashtable;
+import java.util.Iterator;
+import java.util.PropertyResourceBundle;
+import java.util.ResourceBundle;
+import java.util.Vector;
+import java.util.jar.JarEntry;
+import java.util.jar.JarFile;
 
 public class PropertyUtil {
 
@@ -156,6 +154,9 @@ public class PropertyUtil {
         ResourceBundle b = (ResourceBundle)bundles.get(packageName);
         if (b == null) {
             b = getBundle(packageName);
+        }
+        if (b == null) {
+        	return "Could'nt resovle message for package '" + packageName + "' message key '" + key +"'";
         }
         return b.getString(key);
     }

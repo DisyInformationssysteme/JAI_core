@@ -11,6 +11,7 @@
  */
 package javax.media.jai;
 import java.util.Vector;
+
 import com.sun.media.jai.util.PropertyGeneratorImpl;
 
 /**

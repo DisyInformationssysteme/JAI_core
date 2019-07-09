@@ -14,25 +14,14 @@ import java.awt.Rectangle;
 import java.awt.image.ComponentSampleModel;
 import java.awt.image.DataBuffer;
 import java.awt.image.Raster;
-import java.awt.image.WritableRaster;
 import java.awt.image.RenderedImage;
 import java.awt.image.SampleModel;
+import java.awt.image.WritableRaster;
 import java.awt.image.WritableRenderedImage;
-import com.sun.media.jai.iterator.RandomIterCSMByte;
-import com.sun.media.jai.iterator.RandomIterCSMShort;
-import com.sun.media.jai.iterator.RandomIterCSMUShort;
-import com.sun.media.jai.iterator.RandomIterCSMInt;
-import com.sun.media.jai.iterator.RandomIterCSMFloat;
-import com.sun.media.jai.iterator.RandomIterCSMDouble;
+
 import com.sun.media.jai.iterator.RandomIterFallback;
 import com.sun.media.jai.iterator.WrapperRI;
 import com.sun.media.jai.iterator.WrapperWRI;
-import com.sun.media.jai.iterator.WritableRandomIterCSMByte;
-import com.sun.media.jai.iterator.WritableRandomIterCSMShort;
-import com.sun.media.jai.iterator.WritableRandomIterCSMUShort;
-import com.sun.media.jai.iterator.WritableRandomIterCSMInt;
-import com.sun.media.jai.iterator.WritableRandomIterCSMFloat;
-import com.sun.media.jai.iterator.WritableRandomIterCSMDouble;
 import com.sun.media.jai.iterator.WritableRandomIterFallback;
 
 /**

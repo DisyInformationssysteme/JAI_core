@@ -19,13 +19,14 @@ import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
 import java.awt.image.SampleModel;
 import java.awt.image.WritableRaster;
-import java.util.Arrays;
 import java.util.Map;
+
 import javax.media.jai.ImageLayout;
 import javax.media.jai.RasterAccessor;
-import javax.media.jai.RasterFormatTag;
 import javax.media.jai.RasterFactory;
+import javax.media.jai.RasterFormatTag;
 import javax.media.jai.UntiledOpImage;
+
 import com.sun.media.jai.util.JDKWorkarounds;
 import com.sun.media.jai.util.MathJAI;
 

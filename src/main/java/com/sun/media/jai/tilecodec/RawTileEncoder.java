@@ -12,10 +12,9 @@
 
 import java.awt.image.Raster;
 import java.io.IOException;
-import java.io.OutputStream;
 import java.io.ObjectOutputStream;
-import javax.media.jai.JAI ;
-import javax.media.jai.ParameterListDescriptor ;
+import java.io.OutputStream;
+
 import javax.media.jai.tilecodec.TileCodecParameterList ;
 import javax.media.jai.tilecodec.TileEncoderImpl ;
 

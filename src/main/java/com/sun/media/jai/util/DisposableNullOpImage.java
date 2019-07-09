@@ -16,6 +16,7 @@ import java.awt.image.RenderedImage;
 import java.lang.reflect.AccessibleObject;
 import java.lang.reflect.Method;
 import java.util.Map;
+
 import javax.media.jai.ImageLayout;
 import javax.media.jai.NullOpImage;
 import javax.media.jai.PlanarImage;

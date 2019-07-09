@@ -11,10 +11,9 @@
  */package javax.media.jai.remote;
 
 import java.awt.geom.Rectangle2D;
-import java.awt.image.RenderedImage;
+import java.awt.image.renderable.ParameterBlock;
 import java.awt.image.renderable.RenderContext;
 import java.awt.image.renderable.RenderableImage;
-import java.awt.image.renderable.ParameterBlock;
 
 /**
  * The <code>RemoteCRIF</code> interface is equivalent to the 

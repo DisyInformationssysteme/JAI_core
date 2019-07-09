@@ -11,19 +11,15 @@
  */ 
 package com.sun.media.jai.opimage;
 import java.awt.Point;
-import java.awt.Rectangle;
 import java.awt.image.ColorModel;
 import java.awt.image.DataBuffer;
 import java.awt.image.Raster;
-import java.awt.image.RenderedImage;
-import java.awt.image.Raster;
-import java.awt.image.WritableRaster;
 import java.awt.image.SampleModel;
-import java.awt.image.renderable.ParameterBlock;
-import javax.media.jai.ImageLayout;
-import javax.media.jai.OpImage;
+import java.awt.image.WritableRaster;
+
 import javax.media.jai.PlanarImage;
 import javax.media.jai.RasterFactory;
+
 import com.sun.media.jai.util.ImageUtil;
 
 /**

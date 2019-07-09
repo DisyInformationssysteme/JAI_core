@@ -11,9 +11,6 @@
  */
 package com.sun.media.jai.opimage;
 
-import com.sun.media.jai.util.ImageUtil;
-import com.sun.media.jai.util.JDKWorkarounds;
-import java.awt.Point;
 import java.awt.Rectangle;
 import java.awt.image.DataBuffer;
 import java.awt.image.Raster;
@@ -22,12 +19,15 @@ import java.awt.image.SampleModel;
 import java.awt.image.WritableRaster;
 import java.util.Map;
 import java.util.Vector;
+
 import javax.media.jai.ImageLayout;
 import javax.media.jai.PlanarImage;
 import javax.media.jai.PointOpImage;
 import javax.media.jai.RasterAccessor;
-import javax.media.jai.RasterFactory;
 import javax.media.jai.RasterFormatTag;
+
+import com.sun.media.jai.util.ImageUtil;
+import com.sun.media.jai.util.JDKWorkarounds;
 
 /**
  * An <code>OpImage</code> implementing the "Overlay" operation.

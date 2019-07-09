@@ -13,6 +13,7 @@ package com.sun.media.jai.util;
 
 import java.util.Hashtable;
 import java.util.Map;
+
 import javax.media.jai.util.CaselessStringKey;
 
 /**

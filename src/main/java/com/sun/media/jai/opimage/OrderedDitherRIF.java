@@ -14,10 +14,10 @@ import java.awt.RenderingHints;
 import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
 import java.awt.image.renderable.RenderedImageFactory;
+
 import javax.media.jai.ColorCube;
 import javax.media.jai.ImageLayout;
 import javax.media.jai.KernelJAI;
-import java.util.Map;
 
 /**
  * A <code>RIF</code> supporting the "OrderedDither" operation in the rendered

@@ -12,21 +12,15 @@
 package com.sun.media.jai.rmi;
 
 import java.awt.Point;
-import java.awt.Rectangle;
-import java.awt.image.BandedSampleModel;
 import java.awt.image.DataBuffer;
-import java.awt.image.ComponentSampleModel;
-import java.awt.image.MultiPixelPackedSampleModel;
-import java.awt.image.PixelInterleavedSampleModel;
 import java.awt.image.Raster;
 import java.awt.image.SampleModel;
-import java.awt.image.SinglePixelPackedSampleModel;
 import java.awt.image.WritableRaster;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
-import javax.media.jai.RasterFactory;
+
 import javax.media.jai.remote.SerializableState;
 import javax.media.jai.remote.SerializerFactory;
 

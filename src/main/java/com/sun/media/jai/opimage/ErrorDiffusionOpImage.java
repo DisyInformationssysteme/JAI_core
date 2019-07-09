@@ -10,7 +10,6 @@
  * $State: Exp $
  */
 package com.sun.media.jai.opimage;
-import java.awt.Point;
 import java.awt.Rectangle;
 import java.awt.image.ColorModel;
 import java.awt.image.DataBuffer;
@@ -21,17 +20,16 @@ import java.awt.image.RenderedImage;
 import java.awt.image.SampleModel;
 import java.awt.image.WritableRaster;
 import java.util.Map;
-import javax.media.jai.AreaOpImage;
+
 import javax.media.jai.ColorCube;
 import javax.media.jai.ImageLayout;
 import javax.media.jai.KernelJAI;
 import javax.media.jai.LookupTableJAI;
-import javax.media.jai.OpImage;
 import javax.media.jai.RasterAccessor;
-import javax.media.jai.RasterFormatTag;
 import javax.media.jai.RasterFactory;
 import javax.media.jai.RasterFormatTag;
 import javax.media.jai.UntiledOpImage;
+
 import com.sun.media.jai.util.ImageUtil;
 import com.sun.media.jai.util.JDKWorkarounds;
 

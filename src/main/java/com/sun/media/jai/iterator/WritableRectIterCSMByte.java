@@ -11,8 +11,8 @@
  */
 package com.sun.media.jai.iterator;
 import java.awt.Rectangle;
-import java.awt.image.DataBufferByte;
 import java.awt.image.RenderedImage;
+
 import javax.media.jai.iterator.WritableRectIter;
 
 /**

@@ -11,7 +11,6 @@
  */
 package com.sun.media.jai.opimage;
 
-import java.awt.Image;
 import java.awt.Rectangle;
 import java.awt.geom.Point2D;
 import java.awt.image.ColorModel;
@@ -20,17 +19,16 @@ import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
 import java.awt.image.SampleModel;
 import java.awt.image.WritableRaster;
-import java.text.NumberFormat;
-import java.util.Arrays;
-import java.util.Locale;
 import java.util.Map;
+
 import javax.media.jai.EnumeratedParameter;
 import javax.media.jai.ImageLayout;
 import javax.media.jai.RasterAccessor;
-import javax.media.jai.RasterFormatTag;
 import javax.media.jai.RasterFactory;
+import javax.media.jai.RasterFormatTag;
 import javax.media.jai.UntiledOpImage;
 import javax.media.jai.operator.DFTDescriptor;
+
 import com.sun.media.jai.util.JDKWorkarounds;
 import com.sun.media.jai.util.MathJAI;
 

@@ -16,10 +16,11 @@ import java.awt.Rectangle;
 import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
 import java.awt.image.WritableRaster;
+import java.util.Map;
+
 import javax.media.jai.ImageLayout;
 import javax.media.jai.OpImage;
-import javax.media.jai.RasterFactory;
-import java.util.Map;
+
 import com.sun.media.jai.util.JDKWorkarounds;
 
 /**

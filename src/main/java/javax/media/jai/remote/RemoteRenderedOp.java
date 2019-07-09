@@ -22,13 +22,14 @@ import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
+import java.text.MessageFormat;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Locale;
 import java.util.Set;
 import java.util.Vector;
-import java.text.MessageFormat;
+
 import javax.media.jai.CollectionChangeEvent;
 import javax.media.jai.CollectionOp;
 import javax.media.jai.JAI;
@@ -43,6 +44,7 @@ import javax.media.jai.TileCache;
 import javax.media.jai.registry.RemoteRIFRegistry;
 import javax.media.jai.util.ImagingException;
 import javax.media.jai.util.ImagingListener;
+
 import com.sun.media.jai.util.ImageUtil;
 
 /**

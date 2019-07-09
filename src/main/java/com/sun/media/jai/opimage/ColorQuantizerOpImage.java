@@ -10,7 +10,6 @@
  * $State: Exp $
  */
 package com.sun.media.jai.opimage;
-import java.awt.Point;
 import java.awt.Rectangle;
 import java.awt.image.ColorModel;
 import java.awt.image.DataBuffer;
@@ -20,9 +19,9 @@ import java.awt.image.RenderedImage;
 import java.awt.image.SampleModel;
 import java.awt.image.WritableRaster;
 import java.util.Map;
+
 import javax.media.jai.ImageLayout;
 import javax.media.jai.LookupTableJAI;
-import javax.media.jai.OpImage;
 import javax.media.jai.PixelAccessor;
 import javax.media.jai.PointOpImage;
 import javax.media.jai.ROI;

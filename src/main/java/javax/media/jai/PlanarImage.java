@@ -12,22 +12,20 @@
  */
 package javax.media.jai;
 import java.awt.Graphics;
-import java.awt.Image;
 import java.awt.Point;
 import java.awt.Rectangle;
 import java.awt.Transparency;
 import java.awt.color.ColorSpace;
 import java.awt.image.BufferedImage;
-import java.awt.image.ComponentSampleModel;
 import java.awt.image.ColorModel;
+import java.awt.image.ComponentSampleModel;
 import java.awt.image.DataBuffer;
 import java.awt.image.DataBufferByte;
+import java.awt.image.DataBufferInt;
 import java.awt.image.DataBufferShort;
 import java.awt.image.DataBufferUShort;
-import java.awt.image.DataBufferInt;
 import java.awt.image.DirectColorModel;
 import java.awt.image.IndexColorModel;
-import java.awt.image.MultiPixelPackedSampleModel;
 import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
 import java.awt.image.SampleModel;
@@ -37,20 +35,18 @@ import java.awt.image.WritableRenderedImage;
 import java.beans.PropertyChangeListener;
 import java.lang.ref.WeakReference;
 import java.util.Collections;
-import java.util.Enumeration;
-import java.util.Hashtable;
 import java.util.HashSet;
+import java.util.Hashtable;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.Vector;
-import javax.media.jai.RasterFactory;
+
 import com.sun.media.jai.util.DataBufferUtils;
 import com.sun.media.jai.util.ImageUtil;
 import com.sun.media.jai.util.JDKWorkarounds;
 import com.sun.media.jai.util.PropertyUtil;
-import javax.media.jai.util.CaselessStringKey;
 
 /**
  * A <code>RenderedImage</code> is expressed as a collection of pixels.

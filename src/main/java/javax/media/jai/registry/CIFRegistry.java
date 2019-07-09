@@ -15,7 +15,7 @@ import java.awt.RenderingHints;
 import java.awt.image.renderable.ParameterBlock;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Vector;
+
 import javax.media.jai.CollectionImage;
 import javax.media.jai.CollectionImageFactory;
 import javax.media.jai.CollectionOp;

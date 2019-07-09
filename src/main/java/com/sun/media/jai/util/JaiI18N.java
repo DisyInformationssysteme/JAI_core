@@ -10,7 +10,6 @@
  * $State: Exp $
  */
 package com.sun.media.jai.util;
-import com.sun.media.jai.util.PropertyUtil;
 
 class JaiI18N {
     static String packageName = "com.sun.media.jai.util";

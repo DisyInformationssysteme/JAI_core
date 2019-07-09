@@ -19,11 +19,12 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.Hashtable;
 import java.util.Iterator;
-import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import com.sun.media.jai.util.PropertyUtil;
+
 import javax.media.jai.util.CaselessStringKey;
+
+import com.sun.media.jai.util.PropertyUtil;
 
 /**
  * A utility implementation of the <code>PropertySource</code> interface.

@@ -13,15 +13,15 @@
 import java.awt.Point;
 import java.awt.RenderingHints;
 import java.awt.image.Raster;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.ObjectInputStream;
-import java.io.IOException;
 import java.util.zip.GZIPInputStream;
-import javax.media.jai.JAI;
-import javax.media.jai.ParameterListDescriptor;
-import javax.media.jai.tilecodec.TileDecoderImpl;
+
 import javax.media.jai.tilecodec.TileCodecParameterList;
+import javax.media.jai.tilecodec.TileDecoderImpl;
 import javax.media.jai.util.ImagingListener;
+
 import com.sun.media.jai.util.ImageUtil;
 
 /**

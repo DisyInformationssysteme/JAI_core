@@ -14,14 +14,6 @@ import java.awt.RenderingHints;
 import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
 import java.awt.image.renderable.RenderedImageFactory;
-import java.io.InputStream;
-import javax.media.jai.JAI;
-import javax.media.jai.NullOpImage;
-import javax.media.jai.OpImage;
-import com.sun.media.jai.codec.ImageCodec;
-import com.sun.media.jai.codec.ImageDecoder;
-import com.sun.media.jai.codec.TIFFDecodeParam;
-import com.sun.media.jai.codec.SeekableStream;
 
 /**
  * @since EA2

@@ -17,6 +17,7 @@ import java.awt.Shape;
 import java.awt.geom.Area;
 import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
+
 import javax.media.jai.BorderExtender;
 import javax.media.jai.JAI;
 import javax.media.jai.OperationDescriptorImpl;

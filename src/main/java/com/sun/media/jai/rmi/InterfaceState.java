@@ -15,15 +15,15 @@ import java.awt.RenderingHints;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.lang.reflect.Proxy;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.lang.reflect.Proxy;
 import java.util.Hashtable;
+
 import javax.media.jai.JAI;
 import javax.media.jai.remote.SerializableState;
 import javax.media.jai.remote.Serializer;
-import javax.media.jai.remote.SerializerFactory;
 
 /**
  * Class enabling serialization of an object which implements multiple

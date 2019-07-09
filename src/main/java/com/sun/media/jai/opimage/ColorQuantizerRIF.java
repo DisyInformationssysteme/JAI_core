@@ -10,14 +10,13 @@
  * $State: Exp $
  */package com.sun.media.jai.opimage;
 import java.awt.RenderingHints;
+import java.awt.image.DataBuffer;
 import java.awt.image.RenderedImage;
 import java.awt.image.SampleModel;
-import java.awt.image.DataBuffer;
-import java.awt.image.MultiPixelPackedSampleModel;
-import java.awt.image.renderable.RenderedImageFactory;
 import java.awt.image.renderable.ParameterBlock;
+import java.awt.image.renderable.RenderedImageFactory;
 import java.util.Map;
-import javax.media.jai.BorderExtender;
+
 import javax.media.jai.ImageLayout;
 import javax.media.jai.JAI;
 import javax.media.jai.ROI;

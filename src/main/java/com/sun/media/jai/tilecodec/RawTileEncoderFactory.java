@@ -13,6 +13,7 @@
 import java.awt.image.SampleModel;
 import java.io.OutputStream;
 import java.util.Vector;
+
 import javax.media.jai.ParameterListDescriptorImpl;
 import javax.media.jai.remote.NegotiableCapability;
 import javax.media.jai.tilecodec.TileCodecParameterList ;

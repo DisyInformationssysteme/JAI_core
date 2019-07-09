@@ -13,10 +13,9 @@ package com.sun.media.jai.util;
 import java.awt.image.DataBuffer;
 import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
-import java.lang.ref.SoftReference;
 import java.lang.ref.WeakReference;
-import java.lang.reflect.Method;
 import java.math.BigInteger;
+
 import javax.media.jai.CachedTile;
 import javax.media.jai.PlanarImage;
 import javax.media.jai.remote.SerializableRenderedImage;

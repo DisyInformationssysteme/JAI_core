@@ -10,16 +10,13 @@
  * $State: Exp $
  */
 package com.sun.media.jai.opimage;
-import java.awt.Point;
 import java.awt.Rectangle;
 import java.awt.geom.Rectangle2D;
 import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
-import java.awt.image.WritableRaster;
-import java.util.Vector;
+
 import javax.media.jai.ImageLayout;
 import javax.media.jai.PointOpImage;
-import javax.media.jai.RasterFactory;
 
 /**
  * An OpImage to crop an image by a rectangular region.

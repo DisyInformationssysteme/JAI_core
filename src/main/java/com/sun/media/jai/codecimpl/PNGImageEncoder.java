@@ -11,15 +11,14 @@
  * $State: Exp $
  */
 package com.sun.media.jai.codecimpl;
-import java.awt.image.IndexColorModel;
 import java.awt.image.ColorModel;
+import java.awt.image.IndexColorModel;
 import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
 import java.awt.image.SampleModel;
 import java.io.ByteArrayOutputStream;
 import java.io.DataOutput;
 import java.io.DataOutputStream;
-import java.io.FileOutputStream;
 import java.io.FilterOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
@@ -29,14 +28,9 @@ import java.util.GregorianCalendar;
 import java.util.TimeZone;
 import java.util.zip.Deflater;
 import java.util.zip.DeflaterOutputStream;
-import com.sun.media.jai.codec.FileSeekableStream;
-import com.sun.media.jai.codec.ImageCodec;
-import com.sun.media.jai.codec.ImageDecoder;
-import com.sun.media.jai.codec.ImageEncoder;
+
 import com.sun.media.jai.codec.ImageEncoderImpl;
-import com.sun.media.jai.codec.PNGDecodeParam;
 import com.sun.media.jai.codec.PNGEncodeParam;
-import com.sun.media.jai.codec.SeekableStream;
 
 class CRC {
 

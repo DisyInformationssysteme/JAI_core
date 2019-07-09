@@ -14,15 +14,14 @@ import java.awt.Rectangle;
 import java.awt.image.DataBuffer;
 import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
-import java.awt.image.SampleModel;
 import java.awt.image.WritableRaster;
+import java.lang.ref.SoftReference;
+import java.util.Map;
+
 import javax.media.jai.ImageLayout;
-import javax.media.jai.OpImage;
 import javax.media.jai.PointOpImage;
 import javax.media.jai.RasterAccessor;
 import javax.media.jai.RasterFormatTag;
-import java.util.Map;
-import java.lang.ref.SoftReference;
 
 /**
  * An <code>OpImage</code> implementing the "Min" operation as

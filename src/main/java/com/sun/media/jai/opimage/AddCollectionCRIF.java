@@ -14,9 +14,9 @@ import java.awt.RenderingHints;
 import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
 import java.util.Collection;
+
 import javax.media.jai.CRIFImpl;
 import javax.media.jai.ImageLayout;
-import java.util.Map;
 
 /**
  * A <code>CRIF</code> supporting the "AddCollection" operation

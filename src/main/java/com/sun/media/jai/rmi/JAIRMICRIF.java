@@ -10,36 +10,37 @@
  * $State: Exp $
  */package com.sun.media.jai.rmi;
 
-import java.awt.Rectangle;
 import java.awt.RenderingHints;
 import java.awt.geom.Rectangle2D;
 import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
 import java.awt.image.renderable.RenderContext;
 import java.awt.image.renderable.RenderableImage;
-import java.rmi.RemoteException;
-import java.rmi.Naming;
 import java.net.InetAddress;
+import java.rmi.Naming;
+import java.rmi.RemoteException;
 import java.util.Iterator;
 import java.util.Vector;
+
 import javax.media.jai.JAI;
-import javax.media.jai.OperationRegistry;
 import javax.media.jai.OperationNode;
+import javax.media.jai.OperationRegistry;
 import javax.media.jai.PropertyChangeEventJAI;
 import javax.media.jai.RenderedOp;
-import javax.media.jai.remote.RemoteCRIF;
 import javax.media.jai.remote.JAIRMIDescriptor;
 import javax.media.jai.remote.NegotiableCapabilitySet;
 import javax.media.jai.remote.PlanarImageServerProxy;
+import javax.media.jai.remote.RemoteCRIF;
 import javax.media.jai.remote.RemoteImagingException;
 import javax.media.jai.remote.RemoteRenderableOp;
 import javax.media.jai.remote.RemoteRenderedImage;
 import javax.media.jai.remote.RemoteRenderedOp;
+import javax.media.jai.remote.SerializableRenderedImage;
 import javax.media.jai.remote.SerializableState;
 import javax.media.jai.remote.SerializerFactory;
-import javax.media.jai.remote.SerializableRenderedImage;
 import javax.media.jai.tilecodec.TileDecoderFactory;
 import javax.media.jai.util.ImagingListener;
+
 import com.sun.media.jai.util.ImageUtil;
 
 /**

@@ -13,14 +13,14 @@
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Enumeration;
-import java.util.List;
 import java.util.Hashtable;
+import java.util.List;
 import java.util.Vector;
-import javax.media.jai.OperationDescriptor;
+
 import javax.media.jai.ParameterList;
-import javax.media.jai.ParameterListImpl;
 import javax.media.jai.ParameterListDescriptor;
 import javax.media.jai.ParameterListDescriptorImpl;
+import javax.media.jai.ParameterListImpl;
 import javax.media.jai.util.CaselessStringKey;
 
 /**
