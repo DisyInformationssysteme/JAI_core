@@ -451,11 +451,26 @@ class RegistryFileParser {
     private void setFactoryPreference(RegistryMode mode, String[] keys) {
 
 	String modeName = mode.getName();
-	Object factory;
 
 	if (mode.arePreferencesSupported()) {
 
-	    if (keys.length >= 6) {
+	    if (keys.length == 5) {
+
+			Object preferred = getObjectFromLocalName(modeName, keys[4]);
+			Object other     = preferred;
+
+			if ((preferred != null) && (other != null)) {
+
+			    try {
+				or.setFactoryPreference(
+				    modeName, keys[2], keys[3], preferred, other);
+
+			    } catch (Exception e) {
+				registryFileError(e.getMessage());
+			    }
+			}
+
+	    } else if (keys.length >= 6) {
 
 		Object preferred = getObjectFromLocalName(modeName, keys[4]);
 		Object other     = getObjectFromLocalName(modeName, keys[5]);

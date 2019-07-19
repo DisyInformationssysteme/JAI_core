@@ -12,7 +12,6 @@
 
 import java.awt.image.Raster;
 import java.awt.image.SampleModel;
-import java.text.MessageFormat;
 
 import javax.media.jai.JAI;
 import javax.media.jai.remote.SerializableState;
@@ -24,7 +23,6 @@ import javax.media.jai.tilecodec.TileCodecDescriptor;
  */
 public class TileCodecUtils {
     /* Required to I18N compound messages. */
-    private static MessageFormat formatter = new MessageFormat("");
 
     /**
      * Get the <code>TileCodecDescriptor</code> associated with the

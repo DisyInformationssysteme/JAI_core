@@ -101,8 +101,6 @@ import com.sun.media.jai.util.Service;
 public class JAIRMIImageServer extends UnicastRemoteObject
     implements ImageServer {
 
-    private boolean DEBUG = true;
-
     /** Tag to represent a null property. */
     public static final Object NULL_PROPERTY = RMIImageImpl.NULL_PROPERTY;
 

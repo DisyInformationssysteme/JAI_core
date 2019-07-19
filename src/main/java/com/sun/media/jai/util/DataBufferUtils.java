@@ -29,7 +29,6 @@ public final class DataBufferUtils {
     private static final String[] FLOAT_CLASS_NAMES = {
         "java.awt.image.DataBufferFloat",
         "javax.media.jai.DataBufferFloat",
-        "com.sun.media.jai.codecimpl.util.DataBufferFloat"
     };
 
     /**
@@ -38,7 +37,6 @@ public final class DataBufferUtils {
     private static final String[] DOUBLE_CLASS_NAMES = {
         "java.awt.image.DataBufferDouble",
         "javax.media.jai.DataBufferDouble",
-        "com.sun.media.jai.codecimpl.util.DataBufferDouble"
     };
 
     /**
